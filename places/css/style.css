@@ -1,0 +1,3934 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  font-family: "Roboto Condensed", san-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+:root {
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --sm-smooth-box: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3);
+  --lg-smooth-box:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  --red: #ee5518;
+  --lighter-red: #ff5c1c;
+  --light-red: #ff5c1c;
+  --dark-red: #d73504;
+  --border-radius: 15px;
+  --app-max-width: 1650px;
+}
+
+.fade-in, #app main .content * .carousel-widget, #app main .fade-in, #app main nav .tab-nav .link-container ul, #app nav .tab-nav .link-container main ul, #app nav .tab-nav .link-container ul, #app nav .map .sub-marker-container, #app nav .map .zoom-map, #app nav .map, #app nav .tab-nav {
+  -webkit-animation: fade-in 3s var(--ease-out-quint);
+          animation: fade-in 3s var(--ease-out-quint);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  -webkit-animation: slide-in 1s var(--ease-out-quint);
+          animation: slide-in 1s var(--ease-out-quint);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes slide-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-25px);
+            transform: translateX(-25px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-25px);
+            transform: translateX(-25px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.slide-up, #app nav.full-list .tab-nav {
+  -webkit-animation: slide-up 0.5s var(--ease-out-quint);
+          animation: slide-up 0.5s var(--ease-out-quint);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes slide-up {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.pop-in, .pinned::before, #app nav .tab-nav .link-container ul li details summary.selected::before, #app nav .tab-nav .link-container a.selected::before, #app nav .map .marker-container .marker.selected::before, #app nav .map .sub-marker-container .marker.selected::before {
+  -webkit-animation: pop-in 0.5s var(--ease-out-quint);
+          animation: pop-in 0.5s var(--ease-out-quint);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes pop-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(40%, -40%) scale(0);
+            transform: translate(40%, -40%) scale(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate(40%, -40%) scale(1);
+            transform: translate(40%, -40%) scale(1);
+  }
+}
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(40%, -40%) scale(0);
+            transform: translate(40%, -40%) scale(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate(40%, -40%) scale(1);
+            transform: translate(40%, -40%) scale(1);
+  }
+}
+
+.pinned::before, #app nav .tab-nav .link-container ul li details summary.selected::before, #app nav .tab-nav .link-container a.selected::before, #app nav .map .marker-container .marker.selected::before, #app nav .map .sub-marker-container .marker.selected::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  background-image: url("../images/svg/current-loc.svg");
+  background-size: 75%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid var(--light-red);
+  padding: 3px;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(40%, -40%);
+          transform: translate(40%, -40%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 17px;
+  -webkit-transition: all 0.25s var(--ease-out-quint);
+  transition: all 0.25s var(--ease-out-quint);
+}
+.pinned.no-animation::before, #app nav .tab-nav .link-container ul li details summary.no-animation.selected::before, #app nav .tab-nav .link-container a.no-animation.selected::before, #app nav .map .marker-container .no-animation.marker.selected::before, #app nav .map .sub-marker-container .no-animation.marker.selected::before {
+  -webkit-animation: none;
+          animation: none;
+}
+
+.visually-hidden, #app nav .tab-nav .tab-container .tab .count {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.center-number span, #app nav .map .marker-container .marker#catalina span, #app nav .map .sub-marker-container .marker#catalina span, #app nav .map .marker-container .marker#sfv-more span, #app nav .map .sub-marker-container .marker#sfv-more span, #app nav .map .marker-container .marker#nela-eastside span, #app nav .map .sub-marker-container .marker#nela-eastside span, #app nav .map .marker-container .marker#central span, #app nav .map .sub-marker-container .marker#central span {
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, calc(-50% - 11px));
+          transform: translate(-50%, calc(-50% - 11px));
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0 auto;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, #eee), color-stop(40%, white));
+  background-image: linear-gradient(to right, #eee 40%, white 40%);
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: black;
+  z-index: 1;
+  border-bottom: 10px solid var(--red);
+  -webkit-box-shadow: var(--sm-smooth-box);
+          box-shadow: var(--sm-smooth-box);
+}
+header #header-wrapper {
+  margin: 0 auto;
+  max-width: var(--app-max-width);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header #header-wrapper h1 {
+  color: #555;
+  padding: 0 15px;
+  margin: 0;
+  margin-right: 13px;
+  padding: 0 20px 2px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  margin-left: auto;
+  text-align: right;
+  font-size: 21px;
+  border-right: 1px solid white;
+  font-weight: 300;
+  line-height: 1;
+  font-family: "Bricolage Grotesque";
+  position: relative;
+  top: -1px;
+}
+header #header-wrapper h1 span {
+  font-family: "Bricolage Grotesque";
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--red);
+  position: relative;
+  left: 0px;
+  padding-bottom: 0px;
+  display: block;
+}
+header #header-wrapper .header-tab, header #header-wrapper #about {
+  color: white;
+  font-family: "Bricolage Grotesque";
+  font-weight: 700;
+  padding: 0 30px;
+  font-size: 30px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -webkit-transition: all 0.5s var(--ease-out-quint);
+  transition: all 0.5s var(--ease-out-quint);
+  cursor: pointer;
+}
+header #header-wrapper .header-tab:hover, header #header-wrapper #about:hover {
+  color: var(--light-red);
+}
+header #header-wrapper .header-tab.selected, header #header-wrapper #about.selected {
+  color: black;
+  position: relative;
+  text-decoration: underline;
+  text-decoration-color: var(--light-red);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 3px;
+  text-decoration-style: solid;
+  z-index: 1;
+}
+header #header-wrapper #about {
+  border: none;
+  background: none;
+}
+header #header-wrapper #tab-selector {
+  position: absolute;
+  display: block;
+  top: 0px;
+  height: 125px;
+  background-color: #eee;
+  border-top: 8px solid var(--light-red);
+  -webkit-transition: all 0.5s var(--ease-out-quint);
+  transition: all 0.5s var(--ease-out-quint);
+}
+header #header-wrapper #tab-selector.scrolled {
+  -webkit-transition: none;
+  transition: none;
+  height: 85px;
+}
+header #header-wrapper #tab-selector.los-angeles {
+  width: 230px;
+  left: 30px;
+}
+header #header-wrapper #tab-selector.japan {
+  width: 143px;
+  left: 260px;
+}
+header #header-wrapper #logo-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+header #header-wrapper #logo-link #logo {
+  width: 75px;
+  padding: 7px;
+  border-radius: 50%;
+}
+
+#app {
+  display: grid;
+  grid-template-areas: "nav-space nav content";
+  grid-template-columns: auto auto 1fr;
+  height: calc(100% - 95px);
+  margin: 0 auto;
+}
+#app .nav-space {
+  grid-area: nav-space;
+}
+#app nav {
+  background-color: #eee;
+  grid-area: nav;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+  left: -40px;
+  overflow: hidden;
+}
+#app nav #mobile-toggle {
+  display: none;
+}
+#app nav .map, #app nav .tab-nav {
+  background-color: white;
+  position: relative;
+  -webkit-box-shadow: var(--lg-smooth-box);
+          box-shadow: var(--lg-smooth-box);
+  margin: 30px;
+  margin-left: 70px;
+  border-radius: var(--border-radius);
+  opacity: 0;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+#app nav .nav-label {
+  font-family: "Bricolage Grotesque";
+  font-size: 17px;
+  font-weight: 800;
+  color: white;
+  background-color: var(--red);
+  border-radius: 0 14px 0 15px;
+  border: none;
+  padding: 5px 12px 7px;
+  cursor: default;
+}
+#app nav .nav-label i {
+  font-size: 14px;
+  padding-right: 3px;
+}
+#app nav .nav-label.hide {
+  display: none;
+}
+#app nav button.nav-label {
+  cursor: pointer !important;
+  z-index: 1;
+  -webkit-transition: all 0.25s var(--ease-out-quint);
+  transition: all 0.25s var(--ease-out-quint);
+}
+#app nav button.nav-label:hover, #app nav button.nav-label:focus {
+  background-color: var(--dark-red);
+}
+#app nav button.nav-label#zoom-out {
+  position: absolute;
+  right: 0;
+}
+#app nav button.nav-label#expand-list, #app nav button.nav-label#open-map {
+  position: absolute;
+  left: 0;
+  border-radius: 14px 0 15px 0;
+}
+#app nav button.nav-label#open-map {
+  border-radius: 14px 0 0 0;
+  width: 230px;
+}
+#app nav .map {
+  grid-area: map;
+  max-width: 620px;
+  min-width: 550px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  position: relative;
+  overflow: hidden;
+}
+#app nav .map .main-map {
+  width: 100%;
+  -webkit-transition: all 1.5s var(--ease-out-quint);
+  transition: all 1.5s var(--ease-out-quint);
+  opacity: 0;
+}
+#app nav .map .main-map-overlay, #app nav .map .zoom-map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-position: 50% 50%;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+#app nav .map .zoom-map-overlay {
+  opacity: 0;
+}
+#app nav .map .zoom-map {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+#app nav .map .marker-container, #app nav .map .sub-marker-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: all 0.5s var(--ease-out-quint);
+  transition: all 0.5s var(--ease-out-quint);
+}
+#app nav .map .marker-container div, #app nav .map .marker-container button, #app nav .map .sub-marker-container div, #app nav .map .sub-marker-container button {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.2;
+}
+#app nav .map .marker-container .marker, #app nav .map .sub-marker-container .marker {
+  font-size: 13.5px;
+  font-weight: 400;
+  position: absolute;
+  background-color: white;
+  color: var(--dark-red);
+  -webkit-box-shadow: var(--sm-smooth-box);
+          box-shadow: var(--sm-smooth-box);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  -webkit-transition: all 0.25s var(--ease-out-quint);
+  transition: all 0.25s var(--ease-out-quint);
+}
+#app nav .map .marker-container .marker:hover, #app nav .map .sub-marker-container .marker:hover {
+  -webkit-transform: scale(1.05) translate(-50%, -50%);
+          transform: scale(1.05) translate(-50%, -50%);
+  z-index: 1;
+}
+#app nav .map .marker-container .marker:focus, #app nav .map .sub-marker-container .marker:focus {
+  z-index: 1;
+}
+#app nav .map .marker-container .marker:disabled, #app nav .map .sub-marker-container .marker:disabled {
+  background-color: #ddd;
+}
+#app nav .map .marker-container .marker:disabled:hover, #app nav .map .sub-marker-container .marker:disabled:hover {
+  -webkit-transform: scale(1) translate(-50%, -50%);
+          transform: scale(1) translate(-50%, -50%);
+  z-index: 1;
+  cursor: not-allowed;
+}
+#app nav .map .marker-container .marker:disabled:hover .coming-soon, #app nav .map .sub-marker-container .marker:disabled:hover .coming-soon {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+#app nav .map .marker-container .marker:disabled .coming-soon, #app nav .map .sub-marker-container .marker:disabled .coming-soon {
+  color: var(--red);
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+  position: absolute;
+  font-family: "Roboto Condensed";
+  position: absolute;
+  background: White;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 15px;
+  padding: 2px 4px;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  min-width: 75px;
+  -webkit-transform: translate(-50%, -50%) scale(0.5);
+          transform: translate(-50%, -50%) scale(0.5);
+  -webkit-transition: all 0.5s var(--ease-out-quint);
+  transition: all 0.5s var(--ease-out-quint);
+  font-style: italic;
+}
+#app nav .map .marker-container .marker.selected, #app nav .map .sub-marker-container .marker.selected {
+  z-index: 1;
+  background-color: #fff0d8;
+  color: #b30e0e;
+}
+#app nav .map .marker-container .marker span, #app nav .map .sub-marker-container .marker span {
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--light-red)), to(rgb(207, 1, 1)));
+  background-image: linear-gradient(to bottom, var(--light-red), rgb(207, 1, 1));
+  color: white;
+  font-size: 14.5px;
+  font-weight: 900;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  font-family: "Bricolage Grotesque";
+}
+#app nav .map .marker-container .marker#central, #app nav .map .sub-marker-container .marker#central {
+  top: 34%;
+  left: 49.75%;
+  padding: 5px;
+  padding-top: 7px;
+}
+#app nav .map .marker-container .marker#central span, #app nav .map .sub-marker-container .marker#central span {
+  width: 35px;
+  height: 35px;
+  font-size: 17px;
+  -webkit-transform: translate(-50%, calc(-50% - 13px));
+          transform: translate(-50%, calc(-50% - 13px));
+}
+#app nav .map .marker-container .marker#nela-eastside, #app nav .map .sub-marker-container .marker#nela-eastside {
+  top: 33.5%;
+  left: 60%;
+  padding: 2px 4px;
+  padding-top: 7px;
+  width: 56px;
+}
+#app nav .map .marker-container .marker#nela-eastside span, #app nav .map .sub-marker-container .marker#nela-eastside span {
+  width: 25px;
+  height: 25px;
+  -webkit-transform: translate(-50%, calc(-50% - 8px));
+          transform: translate(-50%, calc(-50% - 8px));
+}
+#app nav .map .marker-container .marker#sgv-more, #app nav .map .sub-marker-container .marker#sgv-more {
+  top: 30.5%;
+  left: 78.6%;
+  padding: 3px 10px 3px;
+  text-align: left;
+  width: 170px;
+  height: 10%;
+  font-size: 13.25px;
+}
+#app nav .map .marker-container .marker#sgv-more span, #app nav .map .sub-marker-container .marker#sgv-more span {
+  left: 0;
+  top: 0;
+  -webkit-transform: translate(-58%, -72%);
+          transform: translate(-58%, -72%);
+}
+#app nav .map .marker-container .marker#westside-more, #app nav .map .sub-marker-container .marker#westside-more {
+  top: 32%;
+  left: 30.5%;
+  padding-right: 12px;
+  width: 112px;
+  text-align: right;
+}
+#app nav .map .marker-container .marker#westside-more span, #app nav .map .sub-marker-container .marker#westside-more span {
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(80%, -50%);
+          transform: translate(80%, -50%);
+}
+#app nav .map .marker-container .marker#south-bay-harbor, #app nav .map .sub-marker-container .marker#south-bay-harbor {
+  top: 60.5%;
+  left: 54%;
+  padding: 8px 3px 7px 8px;
+  width: 85px;
+  text-align: left;
+}
+#app nav .map .marker-container .marker#south-bay-harbor span, #app nav .map .sub-marker-container .marker#south-bay-harbor span {
+  left: 0;
+  top: 0;
+  -webkit-transform: translate(-58%, -72%);
+          transform: translate(-58%, -72%);
+}
+#app nav .map .marker-container .marker#south-la-gateway, #app nav .map .sub-marker-container .marker#south-la-gateway {
+  top: 46.75%;
+  left: 60.25%;
+  padding: 8px 5px 7px 10px;
+  width: 100px;
+  text-align: left;
+}
+#app nav .map .marker-container .marker#south-la-gateway span, #app nav .map .sub-marker-container .marker#south-la-gateway span {
+  left: 0;
+  top: 0;
+  -webkit-transform: translate(-60%, -72%);
+          transform: translate(-60%, -72%);
+}
+#app nav .map .marker-container .marker#sfv-more, #app nav .map .sub-marker-container .marker#sfv-more {
+  top: 18%;
+  left: 37.5%;
+  width: 130px;
+  padding-top: 8px;
+}
+#app nav .map .marker-container .marker#sfv-more span, #app nav .map .sub-marker-container .marker#sfv-more span {
+  -webkit-transform: translate(-50%, calc(-50% - 8px));
+          transform: translate(-50%, calc(-50% - 8px));
+}
+#app nav .map .marker-container .marker#catalina, #app nav .map .sub-marker-container .marker#catalina {
+  top: 91%;
+  left: 47.5%;
+  padding-top: 7px;
+}
+#app nav .map .marker-container .marker#catalina span, #app nav .map .sub-marker-container .marker#catalina span {
+  width: 25px;
+  height: 25px;
+  -webkit-transform: translate(-50%, calc(-50% - 8px));
+          transform: translate(-50%, calc(-50% - 8px));
+}
+#app nav .map .marker-container .marker#kanto, #app nav .map .sub-marker-container .marker#kanto {
+  top: 66.5%;
+  left: 65.25%;
+  font-size: 15px;
+}
+#app nav .map .marker-container .marker#kanto span, #app nav .map .sub-marker-container .marker#kanto span {
+  width: 35px;
+  height: 35px;
+  font-size: 17px;
+  -webkit-transform: translate(-50%, calc(-50% - 13px));
+          transform: translate(-50%, calc(-50% - 13px));
+  top: 0;
+  left: 50%;
+}
+#app nav .map .marker-container .marker#chubu, #app nav .map .sub-marker-container .marker#chubu {
+  top: 67%;
+  left: 53%;
+  font-size: 15px;
+}
+#app nav .map .marker-container .marker#chubu span, #app nav .map .sub-marker-container .marker#chubu span {
+  width: 30px;
+  height: 30px;
+  font-size: 17px;
+  -webkit-transform: translate(-50%, calc(-50% - 13px));
+          transform: translate(-50%, calc(-50% - 13px));
+  top: 0;
+  left: 50%;
+}
+#app nav .map .marker-container .marker#kansai, #app nav .map .sub-marker-container .marker#kansai {
+  top: 75.5%;
+  left: 42%;
+  font-size: 15px;
+}
+#app nav .map .marker-container .marker#kansai span, #app nav .map .sub-marker-container .marker#kansai span {
+  width: 35px;
+  height: 35px;
+  font-size: 17px;
+  -webkit-transform: translate(-50%, calc(-50% - 13px));
+          transform: translate(-50%, calc(-50% - 13px));
+  top: 0;
+  left: 50%;
+}
+#app nav .map .marker-container .marker#chugoku, #app nav .map .sub-marker-container .marker#chugoku {
+  top: 72%;
+  left: 24%;
+  font-size: 15px;
+  padding-left: 10px;
+}
+#app nav .map .marker-container .marker#chugoku span, #app nav .map .sub-marker-container .marker#chugoku span {
+  width: 26px;
+  height: 26px;
+  font-size: 17px;
+  -webkit-transform: translate(calc(-50% - 7px), -50%);
+          transform: translate(calc(-50% - 7px), -50%);
+  top: 50%;
+  left: 0;
+}
+#app nav .map .marker-container .arrow, #app nav .map .sub-marker-container .arrow {
+  background-color: #e9e9e9;
+  width: 35px;
+  height: 35px;
+  max-width: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100px;
+  -webkit-box-shadow: var(--sm-smooth-box);
+          box-shadow: var(--sm-smooth-box);
+  cursor: pointer;
+  border: 2px solid white;
+  -webkit-transition: all 0.25s var(--ease-out-quint);
+  transition: all 0.25s var(--ease-out-quint);
+  overflow: hidden;
+}
+#app nav .map .marker-container .arrow i, #app nav .map .marker-container .arrow span, #app nav .map .sub-marker-container .arrow i, #app nav .map .sub-marker-container .arrow span {
+  color: #777;
+  font-size: 14px;
+}
+#app nav .map .marker-container .arrow:hover i, #app nav .map .sub-marker-container .arrow:hover i {
+  color: var(--light-red);
+}
+#app nav .map .marker-container .arrow.right, #app nav .map .sub-marker-container .arrow.right {
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+#app nav .map .marker-container .arrow.right:hover, #app nav .map .sub-marker-container .arrow.right:hover {
+  -webkit-transform: scale(1.05) translate(-50%, -50%);
+          transform: scale(1.05) translate(-50%, -50%);
+}
+#app nav .map .marker-container .arrow.left, #app nav .map .sub-marker-container .arrow.left {
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+#app nav .map .marker-container .arrow.left:hover, #app nav .map .sub-marker-container .arrow.left:hover {
+  -webkit-transform: scale(1.05) translate(50%, -50%);
+          transform: scale(1.05) translate(50%, -50%);
+}
+#app nav .map .marker-container .arrow.left i, #app nav .map .sub-marker-container .arrow.left i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+#app nav .map .marker-container .arrow.up, #app nav .map .sub-marker-container .arrow.up {
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+}
+#app nav .map .marker-container .arrow.up:hover, #app nav .map .sub-marker-container .arrow.up:hover {
+  -webkit-transform: scale(1.05) translate(-50%, 50%);
+          transform: scale(1.05) translate(-50%, 50%);
+}
+#app nav .map .marker-container .arrow.up i, #app nav .map .sub-marker-container .arrow.up i {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+#app nav .map .marker-container .arrow.up.diagonal.right, #app nav .map .sub-marker-container .arrow.up.diagonal.right {
+  right: 0;
+  left: unset;
+  -webkit-transform: translate(-50%, 125%);
+          transform: translate(-50%, 125%);
+}
+#app nav .map .marker-container .arrow.up.diagonal.right i, #app nav .map .sub-marker-container .arrow.up.diagonal.right i {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+#app nav .map .marker-container .arrow.up.diagonal.right:hover, #app nav .map .sub-marker-container .arrow.up.diagonal.right:hover {
+  -webkit-transform: scale(1.05) translate(-50%, 125%);
+          transform: scale(1.05) translate(-50%, 125%);
+}
+#app nav .map .marker-container .arrow.up.diagonal.left, #app nav .map .sub-marker-container .arrow.up.diagonal.left {
+  left: 0;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+}
+#app nav .map .marker-container .arrow.up.diagonal.left i, #app nav .map .sub-marker-container .arrow.up.diagonal.left i {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+#app nav .map .marker-container .arrow.up.diagonal.left:hover, #app nav .map .sub-marker-container .arrow.up.diagonal.left:hover {
+  -webkit-transform: scale(1.05) translate(50%, 50%);
+          transform: scale(1.05) translate(50%, 50%);
+}
+#app nav .map .marker-container .arrow.down, #app nav .map .sub-marker-container .arrow.down {
+  bottom: 0;
+  top: unset;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+#app nav .map .marker-container .arrow.down:hover, #app nav .map .sub-marker-container .arrow.down:hover {
+  -webkit-transform: scale(1.1) translate(-50%, -50%);
+          transform: scale(1.1) translate(-50%, -50%);
+}
+#app nav .map .marker-container .arrow.down i, #app nav .map .sub-marker-container .arrow.down i {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+#app nav .map .marker-container .arrow.down.plus i, #app nav .map .sub-marker-container .arrow.down.plus i {
+  -webkit-transform: unset;
+          transform: unset;
+}
+#app nav .map .marker-container .arrow.down.diagonal.right, #app nav .map .sub-marker-container .arrow.down.diagonal.right {
+  right: 0;
+  left: unset;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+#app nav .map .marker-container .arrow.down.diagonal.right i, #app nav .map .sub-marker-container .arrow.down.diagonal.right i {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+#app nav .map .marker-container .arrow.down.diagonal.right:hover, #app nav .map .sub-marker-container .arrow.down.diagonal.right:hover {
+  -webkit-transform: scale(1.05) translate(-50%, -50%);
+          transform: scale(1.05) translate(-50%, -50%);
+}
+#app nav .map .marker-container .arrow.down.diagonal.left, #app nav .map .sub-marker-container .arrow.down.diagonal.left {
+  left: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+#app nav .map .marker-container .arrow.down.diagonal.left i, #app nav .map .sub-marker-container .arrow.down.diagonal.left i {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+#app nav .map .marker-container .arrow.down.diagonal.left:hover, #app nav .map .sub-marker-container .arrow.down.diagonal.left:hover {
+  -webkit-transform: scale(1.05) translate(50%, -50%);
+          transform: scale(1.05) translate(50%, -50%);
+}
+#app nav .map .marker-container .non-marker, #app nav .map .sub-marker-container .non-marker {
+  color: #888;
+  font-size: 13.5px;
+  cursor: default;
+  line-height: 1.1;
+}
+#app nav .map .marker-container .non-marker i, #app nav .map .sub-marker-container .non-marker i {
+  font-size: inherit;
+  position: relative;
+  top: 0.5px;
+  padding-right: 2px;
+}
+#app nav .map .marker-container .non-marker#sm-bay, #app nav .map .sub-marker-container .non-marker#sm-bay {
+  top: 50%;
+  left: 27%;
+}
+#app nav .map .marker-container .non-marker#pv-peninsula, #app nav .map .sub-marker-container .non-marker#pv-peninsula {
+  top: 67%;
+  left: 46%;
+  line-height: 1.1;
+  font-size: 9px;
+  text-align: left;
+}
+#app nav .map .marker-container .non-marker#pv-peninsula i, #app nav .map .sub-marker-container .non-marker#pv-peninsula i {
+  left: 0px;
+  padding-right: 1px;
+}
+#app nav .map .marker-container .non-marker#sp-channel, #app nav .map .sub-marker-container .non-marker#sp-channel {
+  top: 77%;
+  left: 48.5%;
+}
+#app nav .map .marker-container .non-marker#angeles-forest-sgm, #app nav .map .sub-marker-container .non-marker#angeles-forest-sgm {
+  top: 13%;
+  left: 78%;
+  line-height: 1.4;
+  width: 200px;
+}
+#app nav .map .marker-container .non-marker#sm-mountains, #app nav .map .sub-marker-container .non-marker#sm-mountains {
+  top: 31%;
+  left: 14%;
+}
+#app nav .map .marker-container .non-marker#sm-mountains i, #app nav .map .sub-marker-container .non-marker#sm-mountains i {
+  display: block;
+  padding-bottom: 5px;
+}
+#app nav .map .marker-container .non-marker#ss-mountains, #app nav .map .sub-marker-container .non-marker#ss-mountains {
+  top: 8%;
+  left: 24%;
+  text-align: left;
+  width: 100px;
+}
+#app nav .map .marker-container .non-marker#ss-mountains i, #app nav .map .sub-marker-container .non-marker#ss-mountains i {
+  position: absolute;
+  left: -17px;
+  top: 1px;
+}
+#app nav .map .marker-container .non-marker#ventura, #app nav .map .sub-marker-container .non-marker#ventura {
+  top: 18%;
+  left: 14%;
+  font-style: italic;
+}
+#app nav .map .marker-container .non-marker#puente-hills, #app nav .map .sub-marker-container .non-marker#puente-hills {
+  top: 44%;
+  left: 78%;
+}
+#app nav .map .marker-container .non-marker#ie, #app nav .map .sub-marker-container .non-marker#ie {
+  top: 43.5%;
+  left: 95%;
+  width: 50px;
+  font-style: italic;
+}
+#app nav .map .marker-container .non-marker#oc, #app nav .map .sub-marker-container .non-marker#oc {
+  top: 61%;
+  left: 83%;
+  font-style: italic;
+}
+#app nav .map .marker-container .non-marker#la-map-source, #app nav .map .marker-container .non-marker#jp-map-source, #app nav .map .sub-marker-container .non-marker#la-map-source, #app nav .map .sub-marker-container .non-marker#jp-map-source {
+  bottom: 10px;
+  right: 0;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+  font-style: italic;
+  width: 190px;
+  text-align: right;
+}
+#app nav .map .marker-container .non-marker#la-map-source a, #app nav .map .marker-container .non-marker#jp-map-source a, #app nav .map .sub-marker-container .non-marker#la-map-source a, #app nav .map .sub-marker-container .non-marker#jp-map-source a {
+  font-size: inherit;
+  color: inherit;
+  text-align: right;
+  -webkit-transition: all 0.25s var(--ease-out-quint);
+  transition: all 0.25s var(--ease-out-quint);
+}
+#app nav .map .marker-container .non-marker#la-map-source a:hover, #app nav .map .marker-container .non-marker#jp-map-source a:hover, #app nav .map .sub-marker-container .non-marker#la-map-source a:hover, #app nav .map .sub-marker-container .non-marker#jp-map-source a:hover {
+  color: var(--red);
+}
+#app nav .map .marker-container .non-marker#la-map-source a i, #app nav .map .marker-container .non-marker#jp-map-source a i, #app nav .map .sub-marker-container .non-marker#la-map-source a i, #app nav .map .sub-marker-container .non-marker#jp-map-source a i {
+  font-size: 9px;
+  margin-left: 2px;
+  position: relative;
+  top: -1px;
+}
+#app nav .map .marker-container .non-marker#hokkaido, #app nav .map .sub-marker-container .non-marker#hokkaido {
+  top: 17%;
+  left: 82%;
+  font-size: 15px;
+  font-style: italic;
+}
+#app nav .map .marker-container .non-marker#tohoku, #app nav .map .sub-marker-container .non-marker#tohoku {
+  top: 48%;
+  left: 68%;
+  font-size: 15px;
+  background-color: white;
+  padding: 4px 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-style: italic;
+}
+#app nav .map .marker-container .non-marker#shikoku, #app nav .map .sub-marker-container .non-marker#shikoku {
+  top: 77.75%;
+  left: 30%;
+  font-size: 15px;
+  background-color: white;
+  padding: 3px 7px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-style: italic;
+}
+#app nav .map .marker-container .non-marker#kyushu, #app nav .map .sub-marker-container .non-marker#kyushu {
+  top: 84.75%;
+  left: 16%;
+  font-size: 15px;
+  background-color: white;
+  padding: 3px 7px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-style: italic;
+}
+#app nav .map .marker-container .non-marker#okinawa, #app nav .map .sub-marker-container .non-marker#okinawa {
+  z-index: 1;
+}
+#app nav .map .marker-container .non-marker#okinawa, #app nav .map .marker-container .non-marker#okinawa-box, #app nav .map .sub-marker-container .non-marker#okinawa, #app nav .map .sub-marker-container .non-marker#okinawa-box {
+  top: 35%;
+  left: 31%;
+}
+#app nav .map .marker-container .non-marker#okinawa-box, #app nav .map .sub-marker-container .non-marker#okinawa-box {
+  border-radius: 15px;
+  -webkit-box-shadow: var(--sm-smooth-box);
+          box-shadow: var(--sm-smooth-box);
+  width: 260px;
+  height: 170px;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+}
+#app nav .map .marker-container .non-marker#okinawa-box::after, #app nav .map .sub-marker-container .non-marker#okinawa-box::after {
+  content: "";
+  position: absolute;
+  display: box;
+  width: 45px;
+  height: 1000px;
+  border: 1.5px solid rgba(0, 0, 0, 0.1);
+  border-right: none;
+  border-bottom: none;
+  top: 50%;
+  left: -47px;
+  border-radius: 15px;
+  border-top-right-radius: 0;
+}
+#app nav .map .sub-marker-container {
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+#app nav .map .sub-marker-container.hide {
+  display: none;
+}
+#app nav .map .sub-marker-container .marker {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 7px;
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#app nav .map .sub-marker-container .marker .pin {
+  background-image: url("../images/svg/pin.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: transparent;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: relative;
+  left: 7px;
+  top: 8px;
+}
+#app nav .map .sub-marker-container .marker#dtla-marker, #app nav .map .sub-marker-container .marker#echo-park-marker, #app nav .map .sub-marker-container .marker#elysian-park-marker, #app nav .map .sub-marker-container .marker#silver-lake-marker, #app nav .map .sub-marker-container .marker#griffith-marker, #app nav .map .sub-marker-container .marker#east-hw-marker, #app nav .map .sub-marker-container .marker#ktown-marker, #app nav .map .sub-marker-container .marker#windsor-larchmont-marker, #app nav .map .sub-marker-container .marker#mid-wilshire-marker, #app nav .map .sub-marker-container .marker#fairfax-marker, #app nav .map .sub-marker-container .marker#hw-marker, #app nav .map .sub-marker-container .marker#atwater-marker, #app nav .map .sub-marker-container .marker#glassell-cypress-marker, #app nav .map .sub-marker-container .marker#mtwash-marker, #app nav .map .sub-marker-container .marker#bh-lh-marker, #app nav .map .sub-marker-container .marker#el-sereno-marker, #app nav .map .sub-marker-container .marker#culver-marker, #app nav .map .sub-marker-container .marker#bh-bc-marker, #app nav .map .sub-marker-container .marker#sawtelle-marker, #app nav .map .sub-marker-container .marker#malibu-marker, #app nav .map .sub-marker-container .marker#vc-coast-marker, #app nav .map .sub-marker-container .marker#westchester-marker, #app nav .map .sub-marker-container .marker#inglewood-marker, #app nav .map .sub-marker-container .marker#mb-hb-marker, #app nav .map .sub-marker-container .marker#gtl-marker, #app nav .map .sub-marker-container .marker#pv-marker, #app nav .map .sub-marker-container .marker#lb-sh-marker, #app nav .map .sub-marker-container .marker#arcadia-marker, #app nav .map .sub-marker-container .marker#monrovia-marker, #app nav .map .sub-marker-container .marker#whittier-narrows-marker, #app nav .map .sub-marker-container .marker#ie-marker, #app nav .map .sub-marker-container .marker#expo-marker, #app nav .map .sub-marker-container .marker#watts-marker, #app nav .map .sub-marker-container .marker#leimert-marker, #app nav .map .sub-marker-container .marker#montebello-marker, #app nav .map .sub-marker-container .marker#commerce-marker, #app nav .map .sub-marker-container .marker#burbank-marker, #app nav .map .sub-marker-container .marker#noho-marker, #app nav .map .sub-marker-container .marker#balboa-marker, #app nav .map .sub-marker-container .marker#chatsworth-marker, #app nav .map .sub-marker-container .marker#woodland-hills-marker, #app nav .map .sub-marker-container .marker#port-marker, #app nav .map .sub-marker-container .marker#east-sgv-marker, #app nav .map .sub-marker-container .marker#hsc-marker, #app nav .map .sub-marker-container .marker#van-nuys-marker, #app nav .map .sub-marker-container .marker#pasadena-marker, #app nav .map .sub-marker-container .marker#mt-takao-marker, #app nav .map .sub-marker-container .marker#otsu-marker, #app nav .map .sub-marker-container .marker#kyoto-marker, #app nav .map .sub-marker-container .marker#osaka-marker, #app nav .map .sub-marker-container .marker#narita-marker, #app nav .map .sub-marker-container .marker#atami-marker, #app nav .map .sub-marker-container .marker#hiroshima-marker, #app nav .map .sub-marker-container .marker#okayama-marker {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#app nav .map .sub-marker-container .marker#dtla-marker .pin, #app nav .map .sub-marker-container .marker#echo-park-marker .pin, #app nav .map .sub-marker-container .marker#elysian-park-marker .pin, #app nav .map .sub-marker-container .marker#silver-lake-marker .pin, #app nav .map .sub-marker-container .marker#griffith-marker .pin, #app nav .map .sub-marker-container .marker#east-hw-marker .pin, #app nav .map .sub-marker-container .marker#ktown-marker .pin, #app nav .map .sub-marker-container .marker#windsor-larchmont-marker .pin, #app nav .map .sub-marker-container .marker#mid-wilshire-marker .pin, #app nav .map .sub-marker-container .marker#fairfax-marker .pin, #app nav .map .sub-marker-container .marker#hw-marker .pin, #app nav .map .sub-marker-container .marker#atwater-marker .pin, #app nav .map .sub-marker-container .marker#glassell-cypress-marker .pin, #app nav .map .sub-marker-container .marker#mtwash-marker .pin, #app nav .map .sub-marker-container .marker#bh-lh-marker .pin, #app nav .map .sub-marker-container .marker#el-sereno-marker .pin, #app nav .map .sub-marker-container .marker#culver-marker .pin, #app nav .map .sub-marker-container .marker#bh-bc-marker .pin, #app nav .map .sub-marker-container .marker#sawtelle-marker .pin, #app nav .map .sub-marker-container .marker#malibu-marker .pin, #app nav .map .sub-marker-container .marker#vc-coast-marker .pin, #app nav .map .sub-marker-container .marker#westchester-marker .pin, #app nav .map .sub-marker-container .marker#inglewood-marker .pin, #app nav .map .sub-marker-container .marker#mb-hb-marker .pin, #app nav .map .sub-marker-container .marker#gtl-marker .pin, #app nav .map .sub-marker-container .marker#pv-marker .pin, #app nav .map .sub-marker-container .marker#lb-sh-marker .pin, #app nav .map .sub-marker-container .marker#arcadia-marker .pin, #app nav .map .sub-marker-container .marker#monrovia-marker .pin, #app nav .map .sub-marker-container .marker#whittier-narrows-marker .pin, #app nav .map .sub-marker-container .marker#ie-marker .pin, #app nav .map .sub-marker-container .marker#expo-marker .pin, #app nav .map .sub-marker-container .marker#watts-marker .pin, #app nav .map .sub-marker-container .marker#leimert-marker .pin, #app nav .map .sub-marker-container .marker#montebello-marker .pin, #app nav .map .sub-marker-container .marker#commerce-marker .pin, #app nav .map .sub-marker-container .marker#burbank-marker .pin, #app nav .map .sub-marker-container .marker#noho-marker .pin, #app nav .map .sub-marker-container .marker#balboa-marker .pin, #app nav .map .sub-marker-container .marker#chatsworth-marker .pin, #app nav .map .sub-marker-container .marker#woodland-hills-marker .pin, #app nav .map .sub-marker-container .marker#port-marker .pin, #app nav .map .sub-marker-container .marker#east-sgv-marker .pin, #app nav .map .sub-marker-container .marker#hsc-marker .pin, #app nav .map .sub-marker-container .marker#van-nuys-marker .pin, #app nav .map .sub-marker-container .marker#pasadena-marker .pin, #app nav .map .sub-marker-container .marker#mt-takao-marker .pin, #app nav .map .sub-marker-container .marker#otsu-marker .pin, #app nav .map .sub-marker-container .marker#kyoto-marker .pin, #app nav .map .sub-marker-container .marker#osaka-marker .pin, #app nav .map .sub-marker-container .marker#narita-marker .pin, #app nav .map .sub-marker-container .marker#atami-marker .pin, #app nav .map .sub-marker-container .marker#hiroshima-marker .pin, #app nav .map .sub-marker-container .marker#okayama-marker .pin {
+  margin-bottom: 3px;
+  left: 8px;
+}
+#app nav .map .sub-marker-container .marker#hw-marker {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 20px;
+}
+#app nav .map .sub-marker-container .marker#culver-marker ~ .arrow.down.diagonal.right i {
+  -webkit-transform: rotate(70deg);
+          transform: rotate(70deg);
+}
+#app nav .map .sub-marker-container .marker#woodland-hills-marker ~ .arrow.down.diagonal.left i {
+  -webkit-transform: rotate(120deg);
+          transform: rotate(120deg);
+}
+#app nav .map .sub-marker-container .marker#inglewood-marker ~ .arrow.diagonal.up.left i {
+  -webkit-transform: rotate(-125deg);
+          transform: rotate(-125deg);
+}
+#app nav .map .sub-marker-container .non-marker {
+  font-size: 14px;
+}
+#app nav .map .sub-marker-container#central-sub-markers .marker, #app nav .map .sub-marker-container#nela-eastside-sub-markers .marker, #app nav .map .sub-marker-container#south-la-gateway-sub-markers .marker {
+  font-size: 14px;
+}
+#app nav .map .sub-marker-container#central-sub-markers .marker#windsor-larchmont-marker, #app nav .map .sub-marker-container#nela-eastside-sub-markers .marker#windsor-larchmont-marker, #app nav .map .sub-marker-container#south-la-gateway-sub-markers .marker#windsor-larchmont-marker {
+  font-size: 11.5px;
+}
+#app nav .map .sub-marker-container#westside-more-sub-markers .marker, #app nav .map .sub-marker-container#sgv-more-sub-markers .marker, #app nav .map .sub-marker-container#sfv-more-sub-markers .marker {
+  font-size: 14px;
+}
+#app nav .map .sub-marker-container#westside-more-sub-markers .marker#sawtelle-marker .pin, #app nav .map .sub-marker-container#sgv-more-sub-markers .marker#sawtelle-marker .pin, #app nav .map .sub-marker-container#sfv-more-sub-markers .marker#sawtelle-marker .pin {
+  width: 15px;
+  height: 15px;
+}
+#app nav .map .sub-marker-container#south-bay-harbor-sub-markers .marker, #app nav .map .sub-marker-container#south-bay-harbor-sub-markers .non-marker {
+  font-size: 14px;
+}
+#app nav .map .sub-marker-container #mpk-marker .pin {
+  width: 24px;
+  height: 24px;
+}
+#app nav .map .sub-marker-container#kanto-sub-markers .arrow, #app nav .map .sub-marker-container#chubu-sub-markers .arrow, #app nav .map .sub-marker-container#kansai-sub-markers .arrow, #app nav .map .sub-marker-container#chugoku-sub-markers .arrow {
+  width: 45px;
+  height: 45px;
+  max-width: 45px;
+}
+#app nav .map .sub-marker-container#kanto-sub-markers .arrow i, #app nav .map .sub-marker-container#kanto-sub-markers .arrow span, #app nav .map .sub-marker-container#chubu-sub-markers .arrow i, #app nav .map .sub-marker-container#chubu-sub-markers .arrow span, #app nav .map .sub-marker-container#kansai-sub-markers .arrow i, #app nav .map .sub-marker-container#kansai-sub-markers .arrow span, #app nav .map .sub-marker-container#chugoku-sub-markers .arrow i, #app nav .map .sub-marker-container#chugoku-sub-markers .arrow span {
+  font-size: 16px;
+}
+#app nav .tab-nav {
+  grid-area: tab-nav;
+  width: calc(100% - 60px);
+  max-width: 620px;
+  min-width: 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.4s var(--ease-out-quint);
+  transition: all 0.4s var(--ease-out-quint);
+  position: fixed;
+  margin-bottom: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+  z-index: 1;
+}
+#app nav .tab-nav.japan {
+  max-width: 600px;
+}
+#app nav .tab-nav.fixed {
+  bottom: 0 !important;
+}
+#app nav .tab-nav:hover {
+  z-index: 1;
+}
+#app nav .tab-nav .tab-container {
+  border-radius: 14px 0 0 14px;
+  background: #CACACA;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+#app nav .tab-nav .tab-container .tab {
+  background: -webkit-gradient(linear, left top, right bottom, from(#eee), to(#CCC));
+  background: linear-gradient(to bottom right, #eee, #CCC);
+  display: block;
+  width: 230px;
+  font-family: "Bricolage Grotesque";
+  font-weight: 700;
+  color: #777;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  border-left: none;
+  border-right: none;
+  border-right-width: 1px;
+  text-align: right;
+  cursor: pointer;
+  padding: 10px 20px;
+  padding-left: 0;
+  position: relative;
+  min-height: 45px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  position: relative;
+}
+#app nav .tab-nav .tab-container .tab span {
+  font-family: inherit;
+  font-weight: inherit;
+}
+#app nav .tab-nav .tab-container .tab:first-of-type {
+  border-radius: 14px 0 0 0;
+  border-top: none;
+}
+#app nav .tab-nav .tab-container .tab:last-of-type {
+  border-bottom: none;
+  border-radius: 0 0 0 14px;
+}
+#app nav .tab-nav .tab-container .tab:hover, #app nav .tab-nav .tab-container .tab:focus {
+  background: var(--red);
+  color: white;
+}
+#app nav .tab-nav .tab-container .tab::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(-10px, -50%);
+          transform: translate(-10px, -50%);
+  -webkit-transition: all 0.5s var(--ease-out-quint);
+  transition: all 0.5s var(--ease-out-quint);
+  opacity: 0;
+  background-image: url("../images/svg/arrow.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#app nav .tab-nav .tab-container .tab.selected, #app nav .tab-nav .tab-container .tab.selected:hover {
+  background: white;
+  color: #333;
+  -webkit-transition: none;
+  transition: none;
+}
+#app nav .tab-nav .tab-container .tab.selected::before, #app nav .tab-nav .tab-container .tab.selected:hover::before {
+  content: "";
+  position: absolute;
+  right: -2px;
+  height: 100%;
+  width: 10px;
+  background-color: white;
+  top: 0;
+}
+#app nav .tab-nav .tab-container .tab.selected::after, #app nav .tab-nav .tab-container .tab.selected:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(7px, -50%);
+          transform: translate(7px, -50%);
+}
+#app nav .tab-nav .tab-container .tab#central-tab {
+  font-size: 20.325px;
+}
+#app nav .tab-nav .tab-container .tab#nela-eastside-tab {
+  font-size: 16.45px;
+}
+#app nav .tab-nav .tab-container .tab#westside-more-tab {
+  font-size: 15.4px;
+}
+#app nav .tab-nav .tab-container .tab#south-bay-harbor-tab {
+  font-size: 14.6px;
+}
+#app nav .tab-nav .tab-container .tab#south-la-gateway-tab {
+  font-size: 15px;
+  padding-left: 0;
+}
+#app nav .tab-nav .tab-container .tab#sgv-more-tab {
+  font-size: 14.2px;
+}
+#app nav .tab-nav .tab-container .tab#sfv-more-tab {
+  font-size: 14.7px;
+  padding-left: 0;
+}
+#app nav .tab-nav .tab-container .tab#catalina-tab {
+  font-size: 19px;
+}
+#app nav .tab-nav.japan .tab-container .tab {
+  font-size: 16.5px;
+  font-weight: 400;
+  font-family: "Roboto Condensed";
+  line-height: 1.3;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 23px;
+  padding-top: 8px;
+}
+#app nav .tab-nav.japan .tab-container .tab .big {
+  font-family: "Bricolage Grotesque";
+  font-weight: inherit;
+  font-size: 26.5px;
+  font-weight: 700;
+  display: block;
+  padding-bottom: 3px;
+}
+#app nav .tab-nav.japan .tab-container .tab#kanto-tab .small {
+  font-size: 17.1px;
+}
+#app nav .tab-nav.japan .tab-container .tab#kanto-tab .big {
+  font-size: 28.75px;
+}
+#app nav .tab-nav.japan .tab-container .tab#chubu-tab .small {
+  font-size: 15.5px;
+}
+#app nav .tab-nav.japan .tab-container .tab#chubu-tab .big {
+  font-size: 27.4px;
+}
+#app nav .tab-nav.japan .tab-container .tab#kansai-tab .small {
+  font-size: 15.2px;
+}
+#app nav .tab-nav.japan .tab-container .tab#kansai-tab .big {
+  font-size: 27px;
+}
+#app nav .tab-nav.japan .tab-container .tab#chugoku-tab .small {
+  font-size: 13.5px;
+}
+#app nav .tab-nav.japan .tab-container .tab#chugoku-tab .big {
+  font-size: 23.3px;
+}
+#app nav .tab-nav.japan .link-container {
+  max-height: 392px;
+}
+#app nav .tab-nav.japan .link-container .filter-container {
+  display: none;
+}
+#app nav .tab-nav.japan .link-container #to-filtered-list {
+  display: none;
+}
+#app nav .tab-nav.japan .link-container ul {
+  padding-right: 25px;
+}
+#app nav .tab-nav.japan .link-container ul details ul,
+#app nav .tab-nav.japan .link-container ul details ul li {
+  padding-right: 0px;
+}
+#app nav .tab-nav .link-container {
+  width: 100%;
+  max-height: 412px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+#app nav .tab-nav .link-container ul:focus {
+  outline: none;
+}
+#app nav .tab-nav .link-container .summary-link, #app nav .tab-nav .link-container .link-to-page {
+  -webkit-transition: all 0.5s var(--ease-out-quint);
+  transition: all 0.5s var(--ease-out-quint);
+}
+#app nav .tab-nav .link-container a {
+  cursor: pointer;
+  position: relative;
+  display: inline;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#app nav .tab-nav .link-container a.selected {
+  font-weight: 500;
+}
+#app nav .tab-nav .link-container a.selected span {
+  font-weight: 500 !important;
+}
+#app nav .tab-nav .link-container a.selected::before {
+  top: 12px;
+  left: -34px;
+  border: none;
+  background-color: none;
+}
+#app nav .tab-nav .link-container a.top-rec i {
+  color: orange;
+  font-size: 13px;
+}
+#app nav .tab-nav .link-container .disabled-link, #app nav .tab-nav .link-container .coming-soon {
+  font-size: inherit;
+  line-height: inherit;
+}
+#app nav .tab-nav .link-container .disabled-link {
+  font-style: italic;
+  color: #999;
+}
+#app nav .tab-nav .link-container .disabled-link:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  color: #999;
+  cursor: not-allowed;
+}
+#app nav .tab-nav .link-container .coming-soon {
+  color: var(--red);
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  text-decoration: underline;
+  top: -7px;
+  right: -2px;
+  font-style: italic;
+}
+#app nav .tab-nav .link-container details .coming-soon {
+  right: -5px;
+  font-style: italic;
+}
+#app nav .tab-nav .link-container .tag-match {
+  display: none;
+}
+#app nav .tab-nav .link-container.filtered a, #app nav .tab-nav .link-container.filtered summary {
+  opacity: 0.25;
+}
+#app nav .tab-nav .link-container.filtered a:hover, #app nav .tab-nav .link-container.filtered summary:hover {
+  opacity: 1;
+}
+#app nav .tab-nav .link-container.filtered a::before, #app nav .tab-nav .link-container.filtered summary::before {
+  opacity: 0 !important;
+}
+#app nav .tab-nav .link-container.filtered .matched {
+  opacity: 1;
+}
+#app nav .tab-nav .link-container.filtered .matched::before {
+  opacity: 1 !important;
+}
+#app nav .tab-nav .link-container.filtered .tag-match {
+  display: unset;
+}
+#app nav .tab-nav .link-container .filter-container {
+  position: sticky;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  top: 0;
+  right: 0;
+  float: right;
+  border-radius: var(--border-radius);
+  height: 100%;
+}
+#app nav .tab-nav .link-container .filter-container .nav-label {
+  margin-bottom: 0px;
+}
+#app nav .tab-nav .link-container .filter-container .filter {
+  background-color: white;
+  -webkit-box-shadow: var(--sm-smooth-box);
+          box-shadow: var(--sm-smooth-box);
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 3.25px 10px;
+  padding: 2px 6px;
+  min-height: 38px;
+  min-width: 38px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: all 0.25s var(--ease-out-quint);
+  transition: all 0.25s var(--ease-out-quint);
+  border: 2.5px solid transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+#app nav .tab-nav .link-container .filter-container .filter.checked {
+  border-color: #fec252;
+  text-shadow: 0 0 10px white;
+  background-color: #fff0d8;
+  color: var(--dark-red);
+}
+#app nav .tab-nav .link-container .filter-container .filter.checked span {
+  font-weight: 500;
+  text-shadow: none;
+}
+#app nav .tab-nav .link-container .filter-container .filter input {
+  display: none;
+  margin: 0 3px 0 5px;
+}
+#app nav .tab-nav .link-container .filter-container .filter label {
+  font-size: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+#app nav .tab-nav .link-container .filter-container .filter label span.emoji {
+  font-size: inherit;
+}
+#app nav .tab-nav .link-container .filter-container .filter label span.text-label {
+  font-size: 14px;
+  padding: 0 8px 0 2px;
+  display: none;
+}
+#app nav .tab-nav .link-container .filter-container .filter:hover, #app nav .tab-nav .link-container .filter-container .filter:focus, #app nav .tab-nav .link-container .filter-container .filter:active {
+  -webkit-transform: translate(-5px, 0) scale(1.1);
+          transform: translate(-5px, 0) scale(1.1);
+}
+#app nav .tab-nav .link-container .filter-container .filter:hover input, #app nav .tab-nav .link-container .filter-container .filter:hover span.text-label, #app nav .tab-nav .link-container .filter-container .filter:focus input, #app nav .tab-nav .link-container .filter-container .filter:focus span.text-label, #app nav .tab-nav .link-container .filter-container .filter:active input, #app nav .tab-nav .link-container .filter-container .filter:active span.text-label {
+  display: unset;
+}
+#app nav .tab-nav .link-container ul {
+  margin: 0;
+  padding: 5px 55px 10px 45px;
+  line-height: 1.8;
+  list-style: none;
+  display: block;
+  width: 100%;
+  position: absolute;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+#app nav .tab-nav .link-container ul.hide {
+  display: none;
+}
+#app nav .tab-nav .link-container ul li, #app nav .tab-nav .link-container ul li a {
+  font-size: 16px;
+  color: #333;
+  font-weight: 400;
+  -webkit-transition: all 0.25s var(--ease-out-quint);
+  transition: all 0.25s var(--ease-out-quint);
+  display: block;
+}
+#app nav .tab-nav .link-container ul li a:hover {
+  color: var(--dark-red);
+  -webkit-transform: scale(1.025) translate(1%, 0);
+          transform: scale(1.025) translate(1%, 0);
+}
+#app nav .tab-nav .link-container ul li {
+  width: 100%;
+  padding: 7px 5px 7px 0;
+  border-bottom: 1px solid #ddd;
+}
+#app nav .tab-nav .link-container ul li details summary {
+  font-size: 16px;
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  cursor: pointer;
+  -webkit-transition: all 0.25s var(--ease-out-quint);
+  transition: all 0.25s var(--ease-out-quint);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#app nav .tab-nav .link-container ul li details summary::-webkit-details-marker {
+  display: none;
+}
+#app nav .tab-nav .link-container ul li details summary::after {
+  content: "Expand";
+  display: inline-block;
+  color: white;
+  background-color: var(--red);
+  padding: 0 10px;
+  margin-left: 7px;
+  border-radius: 50px;
+  font-size: 14px;
+  -webkit-transition: all 0.25s var(--ease-out-quint);
+  transition: all 0.25s var(--ease-out-quint);
+}
+#app nav .tab-nav .link-container ul li details summary:hover {
+  color: var(--dark-red);
+  -webkit-transform: scale(1.025) translate(1%, 0);
+          transform: scale(1.025) translate(1%, 0);
+}
+#app nav .tab-nav .link-container ul li details summary:hover::after {
+  background-color: var(--dark-red);
+}
+#app nav .tab-nav .link-container ul li details summary.selected {
+  font-weight: 500;
+}
+#app nav .tab-nav .link-container ul li details summary.selected::before {
+  top: 12px;
+  left: -34px;
+  border: none;
+  background-color: none;
+}
+#app nav .tab-nav .link-container ul li details[open] summary::after {
+  content: "Minimize";
+  display: inline-block;
+  color: white;
+  padding: 0 10px;
+  margin-left: 7px;
+  border-radius: 50px;
+  font-size: 14px;
+  -webkit-transition: all 0.25s var(--ease-out-quint);
+  transition: all 0.25s var(--ease-out-quint);
+}
+#app nav .tab-nav .link-container ul li details ul {
+  padding: 0 0 0 21px;
+  position: relative;
+  -webkit-animation: none;
+          animation: none;
+}
+#app nav .tab-nav .link-container ul li:last-of-type {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+#app nav .tab-nav .link-container ul li:before {
+  content: "";
+  padding: 0px;
+  position: absolute;
+  top: 12px;
+  left: -24px;
+  background-image: url("../images/svg/pin.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: transparent;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+#app nav .tab-nav .link-container ul.intro {
+  text-align: center;
+  line-height: 1.3;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#app nav .tab-nav .link-container ul.intro div {
+  font-size: 18px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  color: #333;
+}
+#app nav .tab-nav .link-container ul.intro img {
+  margin-bottom: 30px;
+}
+#app nav .tab-nav .link-container ul.intro.hide {
+  display: none;
+}
+#app nav.grid, #app nav.full-list {
+  display: grid;
+  grid-template-areas: "map" "tab-nav";
+  grid-template-rows: auto 1fr;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+#app nav.grid .tab-nav, #app nav.full-list .tab-nav {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: calc(100% - 60px);
+  bottom: 0px !important;
+}
+#app nav.grid .tab-nav .tab:last-of-type, #app nav.full-list .tab-nav .tab:last-of-type {
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.4);
+}
+#app nav.grid .tab-nav .link-container, #app nav.full-list .tab-nav .link-container {
+  max-height: 100% !important;
+}
+#app nav.full-list {
+  grid-template-rows: 0 1fr !important;
+}
+#app nav.full-list .map {
+  -webkit-animation: none;
+          animation: none;
+}
+#app nav.full-list .tab-nav {
+  -webkit-animation-duration: 1.25s;
+          animation-duration: 1.25s;
+}
+#app nav.full-list .tab-nav .tab-container {
+  padding-top: 33px;
+}
+#app nav.full-list .tab-nav .tab-container .tab:first-of-type {
+  border-radius: 0;
+  border-top: 0.5px solid transparent;
+}
+#app nav.full-list .tab-nav .tab-container .tab:first-of-type:hover {
+  border-top: 0.5px solid rgba(0, 0, 0, 0.4);
+}
+#app nav.full-list .tab-nav .tab-container .tab:first-of-type.selected:hover {
+  border-top: 0.5px solid transparent;
+}
+#app main {
+  grid-area: content;
+  padding: 30px 30px 20px 30px;
+  overflow-y: auto;
+  background-color: white;
+  position: relative;
+  left: -40px;
+  width: calc(100% + 40px);
+  display: grid;
+  grid-template-areas: "title-area main-space" "content-area main-space" "bottom-row main-space";
+  grid-template-columns: auto auto;
+  grid-template-rows: auto 1fr auto;
+  position: relative;
+}
+#app main:focus {
+  outline: none;
+}
+#app main .fade-in, #app main .content * .carousel-widget, #app main nav .map, #app nav main .map, #app main nav .tab-nav, #app nav main .tab-nav, #app main nav .map .zoom-map, #app nav .map main .zoom-map, #app main nav .map .sub-marker-container, #app nav .map main .sub-marker-container, #app main nav .tab-nav .link-container ul, #app nav .tab-nav .link-container main ul, #app main nav .tab-nav .link-container ul, #app nav .tab-nav .link-container main ul {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+#app main .share {
+  position: absolute;
+  font-family: "Bricolage Grotesque";
+  font-weight: 600;
+  font-size: 16px;
+  background-color: var(--red);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.25s var(--ease-out-quint);
+  transition: all 0.25s var(--ease-out-quint);
+  -webkit-transition-property: background-color, -webkit-transform;
+  transition-property: background-color, -webkit-transform;
+  transition-property: background-color, transform;
+  transition-property: background-color, transform, -webkit-transform;
+  border: 1.5px solid transparent;
+  z-index: 1;
+  -webkit-box-shadow: var(--sm-smooth-box);
+          box-shadow: var(--sm-smooth-box);
+}
+#app main .share:hover {
+  background-color: var(--dark-red);
+}
+#app main .share:disabled {
+  background-color: white;
+  color: var(--dark-red);
+  border-color: rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+#app main .share i {
+  font-size: 13px;
+}
+#app main .share span {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+#app main .share.top {
+  top: 10px;
+  margin-right: 30px;
+  width: 120px;
+  padding: 4px 10px 5px;
+}
+#app main .share.top span {
+  display: none;
+}
+#app main .share.bottom {
+  position: relative;
+  padding: 7px 12px 9px;
+  width: 187px;
+  display: block;
+}
+#app main .title {
+  grid-area: title-area;
+  margin-bottom: 15px;
+}
+#app main .title div {
+  font-family: "Bricolage Grotesque";
+  font-size: 37px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  padding: 15px 0 20px 0;
+  border-bottom: 2px solid #dfdfdf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+#app main .title div span {
+  font-size: inherit !important;
+  font-family: inherit;
+  font-weight: inherit;
+  display: inline;
+}
+#app main .title div .title-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 5px;
+  border-bottom: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+#app main .title div .title-text .title-pin {
+  height: auto;
+  display: block;
+  width: 30px;
+  margin-top: 7px;
+}
+#app main .title div .title-text.disney-and-grand-la {
+  gap: 10px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 32px;
+}
+#app main .title div .title-text.disney-and-grand-la .title-pin {
+  margin-top: 5px;
+}
+#app main .title div .parent-regions {
+  font-size: 18px !important;
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  color: #bbb;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  line-height: 1.5;
+}
+#app main .title div .parent-regions i {
+  font-size: 13px;
+  margin: 0 3px;
+  position: relative;
+  top: -1px;
+}
+#app main .title div .parent-regions a {
+  font-size: inherit !important;
+  color: #777;
+  font-family: inherit;
+  -webkit-transition: all 0.5s var(--ease-out-quint);
+  transition: all 0.5s var(--ease-out-quint);
+}
+#app main .title div .parent-regions a:hover {
+  color: var(--light-red);
+}
+#app main .title div .parent-regions .small {
+  display: none;
+}
+#app main .title div br {
+  display: none;
+}
+#app main .title div.westside-more .title-text {
+  font-size: 29px;
+}
+#app main .title div.sgv-more {
+  font-weight: 1000;
+  padding: 5px 0 20px 0;
+}
+#app main .title div.sgv-more .title-text {
+  font-size: 23.5px;
+}
+#app main .title div.sfv-more {
+  padding: 5px 0 20px 0;
+}
+#app main .title div.sfv-more .title-text {
+  font-size: 28.5px;
+}
+#app main .title div.kanto .small, #app main .title div.chubu .small, #app main .title div.kansai .small, #app main .title div.chugoku .small {
+  display: none;
+}
+#app main .content {
+  grid-area: content-area;
+}
+#app main #tag-div {
+  display: none;
+  gap: 10px;
+  margin: 0 0 30px 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+#app main #tag-div i {
+  color: #8EBE6F;
+}
+#app main #tag-div div {
+  font-style: normal;
+  padding: 5px 13px;
+  border-radius: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #f9f9f9;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#app main #tag-div .top-rec {
+  font-weight: 600;
+}
+#app main #tag-div .top-rec i {
+  color: orange;
+  margin-left: 0;
+  margin-right: 5px;
+}
+#app main hr {
+  background-color: #DFDFDF;
+  border: none;
+  height: 2px;
+  margin: 20px 0 30px;
+}
+#app main .content * {
+  font-size: 17px;
+  line-height: 1.35;
+  color: #333;
+}
+#app main .content * strong {
+  font-weight: 600;
+}
+#app main .content * a {
+  color: var(--dark-red);
+  -webkit-transition: all 0.5s var(--ease-out-quint);
+  transition: all 0.5s var(--ease-out-quint);
+  font-weight: 600;
+}
+#app main .content * a i {
+  font-size: 11px;
+  position: relative;
+  top: -2px;
+  padding-right: 3px;
+  color: inherit;
+}
+#app main .content * a:hover {
+  color: var(--red);
+}
+#app main .content * p {
+  margin-top: 0;
+}
+#app main .content * .item-links-container {
+  -webkit-box-shadow: var(--sm-smooth-box);
+          box-shadow: var(--sm-smooth-box);
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  margin: 20px 0;
+  clear: both;
+}
+#app main .content * .item-links-container hr {
+  margin: 10px 0;
+}
+#app main .content * .item-links-container .item-links-title {
+  font-family: "Bricolage Grotesque";
+  font-size: 22px;
+  font-weight: 900;
+  margin: 0;
+}
+#app main .content * .item-links-container .item-links-title i {
+  color: var(--light-red);
+  font-size: 15px;
+  margin-right: 3px;
+}
+#app main .content * .item-links-container .item-links {
+  list-style: none;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-height: 300px;
+  padding-left: 18px;
+  margin: 0;
+}
+#app main .content * .item-links-container .item-links#central--links {
+  max-height: 260px;
+}
+#app main .content * .item-links-container .item-links#central-dtla-links {
+  max-height: 350px;
+}
+#app main .content * .item-links-container .item-links li {
+  margin: 5px;
+  padding-right: 40px;
+  width: 50%;
+}
+#app main .content * .item-links-container .item-links li br {
+  display: none;
+}
+#app main .content * .item-links-container .item-links li:before {
+  content: "";
+  padding: 0px;
+  position: absolute;
+  top: 3px;
+  left: -24px;
+  background-image: url("../images/svg/pin.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: transparent;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+#app main .content * .item-links-container .item-links li a, #app main .content * .item-links-container .item-links li a span {
+  font-weight: 400;
+  font-size: 17px !important;
+  color: #333;
+  -webkit-transition: all 0.5s var(--ease-out-quint);
+  transition: all 0.5s var(--ease-out-quint);
+  display: block;
+}
+#app main .content * .item-links-container .item-links li a:hover, #app main .content * .item-links-container .item-links li a span:hover {
+  color: var(--dark-red);
+  -webkit-transform: scale(1.025) translate(1%, 0);
+          transform: scale(1.025) translate(1%, 0);
+}
+#app main .content * .item-links-container .item-links li a i, #app main .content * .item-links-container .item-links li a span i {
+  color: orange;
+  font-size: 13px;
+  position: relative;
+  top: -1px;
+}
+#app main .content * .item-links-container .item-links .disabled-link, #app main .content * .item-links-container .item-links .coming-soon {
+  font-size: inherit;
+  line-height: inherit;
+}
+#app main .content * .item-links-container .item-links .disabled-link {
+  font-style: italic;
+  color: #999;
+}
+#app main .content * .item-links-container .item-links .disabled-link:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  color: #999;
+  cursor: not-allowed;
+}
+#app main .content * .item-links-container .item-links .coming-soon {
+  color: var(--red);
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 12px !important;
+  font-weight: bold;
+  position: relative;
+  text-decoration: underline;
+  top: -7px;
+  right: -2px;
+  display: inline;
+  font-style: italic;
+}
+#app main .content * .item-links-container .item-links .coming-soon:hover {
+  color: var(--red);
+}
+#app main .content * figure {
+  position: relative;
+  margin: 25px auto;
+}
+#app main .content * figure figcaption {
+  position: absolute;
+  bottom: 12px;
+  left: 6px;
+  width: calc(100% - 11px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+#app main .content * figure figcaption span {
+  font-size: 13.5px;
+  padding: 5px 8px;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(7px) saturate(180%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left-color: rgba(255, 255, 255, 0.5);
+  border-top-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  margin-top: auto;
+  line-height: 1.3;
+  min-height: 30px;
+  text-align: left;
+}
+#app main .content * figure figcaption span strong {
+  font-size: inherit;
+  margin-right: 3px;
+}
+#app main .content * figure figcaption span:first-of-type {
+  margin-right: 5px;
+}
+#app main .content * figure figcaption span:last-of-type {
+  margin-top: auto;
+  min-width: 72px;
+  font-size: 12.5px;
+  text-align: center;
+  font-weight: 400;
+  padding: 3px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3px;
+}
+#app main .content * figure figcaption span:last-of-type i {
+  font-size: 10px;
+}
+#app main .content * figure .photo {
+  width: 100%;
+  border-radius: var(--border-radius);
+  -webkit-box-shadow: var(--sm-smooth-box);
+          box-shadow: var(--sm-smooth-box);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+#app main .content * figure .mobile {
+  display: none !important;
+}
+#app main .content * .carousel-widget {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+#app main .content * .carousel-widget::before, #app main .content * .carousel-widget::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  z-index: 1;
+}
+#app main .content * .carousel-widget::before {
+  left: 0px;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to right, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0));
+}
+#app main .content * .carousel-widget::after {
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to left, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0));
+  right: 0px;
+  z-index: unset;
+}
+#app main .content * .carousel-widget figure {
+  width: calc(100% - 150px);
+}
+#app main .content * .carousel-widget .scene {
+  position: relative;
+  height: 100%;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+#app main .content * .carousel-widget .carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+#app main .content * .carousel-widget .carousel-cell {
+  position: absolute;
+  height: 100%;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(3px) saturate(130%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#app main .content * .carousel-widget .carousel-options {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 900px;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 15px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+#app main .content * .carousel-widget .carousel-options .carousel-nav {
+  border-radius: 50%;
+  background-color: var(--light-red);
+  color: white;
+  -webkit-box-shadow: var(--sm-smooth-box);
+          box-shadow: var(--sm-smooth-box);
+  width: 50px;
+  height: 50px;
+  border: 1px solid transparent;
+  -webkit-transition: all 0.5s var(--ease-out-quint);
+  transition: all 0.5s var(--ease-out-quint);
+  cursor: pointer;
+}
+#app main .content * .carousel-widget .carousel-options .carousel-nav i {
+  font-size: 20px;
+  color: white;
+}
+#app main .content * .carousel-widget .carousel-options .carousel-nav:hover {
+  background-color: var(--dark-red);
+  border-color: transparent;
+}
+#app main .content * .carousel-widget .carousel-options .carousel-nav:active {
+  background-color: white;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+#app main .content * .carousel-widget .carousel-options .carousel-nav:active i {
+  color: var(--light-red);
+}
+#app main .content * .carousel-widget .carousel-options .cells-range, #app main .content * .carousel-widget .carousel-options .orientation {
+  display: none;
+}
+#app main .main-space {
+  grid-area: main-space;
+}
+#app main .bottom-row {
+  grid: bottom-row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 2px solid #dfdfdf;
+  padding: 15px 0 0;
+  margin-top: 10px;
+}
+#app main .bottom-row #scroll-to-top, #app main .bottom-row #copyright {
+  font-size: 16px !important;
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  background: none;
+  color: #777;
+  min-width: 87px;
+}
+#app main .bottom-row #scroll-to-top span, #app main .bottom-row #copyright span {
+  font-size: inherit;
+}
+#app main .bottom-row #copyright {
+  margin-right: auto;
+}
+#app main .bottom-row #scroll-to-top {
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.5s var(--ease-out-quint);
+  transition: all 0.5s var(--ease-out-quint);
+  margin: 0 auto;
+}
+#app main .bottom-row #scroll-to-top i {
+  font-size: 13px;
+  margin: 0 3px;
+  position: relative;
+  top: -1px;
+  color: #bbb;
+}
+#app main .bottom-row #scroll-to-top:hover {
+  color: var(--light-red);
+}
+#app main .bottom-row .parent-links div {
+  font-size: 16px !important;
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  color: #bbb;
+}
+#app main .bottom-row .parent-links div br {
+  display: none;
+}
+#app main .bottom-row .parent-links div i {
+  font-size: 13px;
+  margin: 0 3px;
+  position: relative;
+  top: -1px;
+}
+#app main .bottom-row .parent-links div a {
+  font-size: inherit !important;
+  color: #777;
+  font-family: inherit;
+  -webkit-transition: all 0.5s var(--ease-out-quint);
+  transition: all 0.5s var(--ease-out-quint);
+  text-align: center;
+}
+#app main .bottom-row .parent-links div a:hover {
+  color: var(--light-red);
+}
+#app main .bottom-row .parent-links div .big {
+  font-size: inherit;
+}
+#app main .bottom-row .parent-links div .small {
+  display: none;
+}
+
+dialog {
+  -webkit-transition: all 0.5s var(--ease-out-quint);
+  transition: all 0.5s var(--ease-out-quint);
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  top: 0;
+  border: none;
+  border-radius: var(--border-radius);
+  -webkit-box-shadow: var(--lg-smooth-box);
+          box-shadow: var(--lg-smooth-box);
+  position: relative;
+  padding: 0;
+  max-width: 800px;
+  top: -80%;
+}
+dialog:focus {
+  outline: none;
+}
+dialog form {
+  position: relative;
+  padding: 10px 30px;
+}
+dialog form #about-close {
+  border-radius: 50%;
+  background-color: var(--light-red);
+  color: white;
+  -webkit-box-shadow: var(--sm-smooth-box);
+          box-shadow: var(--sm-smooth-box);
+  width: 50px;
+  height: 50px;
+  border: 1px solid transparent;
+  -webkit-transition: all 0.5s var(--ease-out-quint);
+  transition: all 0.5s var(--ease-out-quint);
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+dialog form #about-close i {
+  font-size: 20px;
+  color: white;
+}
+dialog form #about-close:hover {
+  background-color: var(--dark-red);
+  border-color: transparent;
+}
+dialog form #about-close:active {
+  background-color: white;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+dialog form #about-close:active i {
+  color: var(--light-red);
+}
+dialog form p {
+  font-size: 18px;
+  line-height: 1.35;
+  color: #333;
+}
+dialog form h2, dialog form h3 {
+  font-family: "Bricolage Grotesque";
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  padding: 0 30px 20px 0;
+  border-bottom: 2px solid #dfdfdf;
+  margin-top: 20px;
+}
+dialog.appear {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  top: -60%;
+}
+dialog::-ms-backdrop {
+  animation: backdrop-fade 0.5s var(--ease-out-quint) forwards;
+}
+dialog::backdrop {
+  -webkit-animation: backdrop-fade 0.5s var(--ease-out-quint) forwards;
+          animation: backdrop-fade 0.5s var(--ease-out-quint) forwards;
+}
+dialog.close::-ms-backdrop {
+  animation: backdrop-fade 0.5s var(--ease-out-quint) backwards;
+  animation-direction: reverse;
+}
+dialog.close::backdrop {
+  -webkit-animation: backdrop-fade 0.5s var(--ease-out-quint) backwards;
+          animation: backdrop-fade 0.5s var(--ease-out-quint) backwards;
+  animation-direction: reverse;
+}
+@-webkit-keyframes backdrop-fade {
+  from {
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    backdrop-filter: blur(5px);
+  }
+}
+@keyframes backdrop-fade {
+  from {
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    backdrop-filter: blur(5px);
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  #app {
+    grid-template-areas: "content";
+    grid-template-columns: 1fr !important;
+    position: relative;
+  }
+  #header-wrapper {
+    margin: 0 0 0 20px !important;
+  }
+  #tab-selector {
+    height: 85px !important;
+  }
+  #app nav .nav-label#filter-label, #filter-clear {
+    border-radius: 0 0 0 15px !important;
+    position: relative;
+    right: 0.5px;
+  }
+  nav {
+    position: absolute !important;
+    top: 0;
+    left: 0 !important;
+    grid-area: unset !important;
+    z-index: 1;
+    height: auto !important;
+    -webkit-box-shadow: var(--lg-smooth-box);
+            box-shadow: var(--lg-smooth-box);
+    -webkit-transition: all 0.75s var(--ease-out-quint);
+    transition: all 0.75s var(--ease-out-quint);
+    padding-right: 50px;
+    -webkit-transform: translateX(calc(-100% + 49px));
+            transform: translateX(calc(-100% + 49px));
+    border-bottom-right-radius: var(--border-radius);
+  }
+  nav #mobile-toggle {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5px;
+    border: none;
+    padding: 0;
+    background-color: #f5f5f5;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.25s var(--ease-out-quint);
+    transition: all 0.25s var(--ease-out-quint);
+    -webkit-box-shadow: var(--lg-smooth-box);
+            box-shadow: var(--lg-smooth-box);
+    cursor: pointer;
+  }
+  nav #mobile-toggle:focus::after {
+    content: "";
+    width: calc(100% - 5px);
+    height: calc(100% - 6px);
+    border-bottom-right-radius: var(--border-radius);
+    position: absolute;
+    top: 0;
+    left: -1px;
+    border: 3px solid #94B2F5;
+  }
+  nav #mobile-toggle:active::after {
+    display: none;
+  }
+  nav #mobile-toggle:hover #button-head {
+    background-color: var(--dark-red);
+  }
+  nav #mobile-toggle:hover #button-body span, nav #mobile-toggle:hover #button-body i {
+    color: var(--red);
+  }
+  nav #mobile-toggle #button-head {
+    background-color: var(--red);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px;
+    height: 50px;
+    width: calc(100% + 1px);
+    position: relative;
+    left: -1px;
+    cursor: pointer;
+    -webkit-transition: all 0.25s var(--ease-out-quint);
+    transition: all 0.25s var(--ease-out-quint);
+    pointer-events: none;
+  }
+  nav #mobile-toggle span {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white;
+    font-family: "Bricolage Grotesque";
+  }
+  nav #mobile-toggle i {
+    display: block;
+    color: white;
+    -webkit-transition: all 0.5s var(--ease-out-quint);
+    transition: all 0.5s var(--ease-out-quint);
+  }
+  nav #mobile-toggle #button-body {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin: 5px 0 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+    pointer-events: none;
+    width: 100%;
+  }
+  nav #mobile-toggle #button-body .mobile {
+    display: none;
+  }
+  nav #mobile-toggle #button-body #stripes {
+    border: 2.5px solid #E0DFE4;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    border-top: none;
+    border-bottom: none;
+    width: 9px;
+    -webkit-transition: 0.5s all var(--ease-out-quint);
+    transition: 0.5s all var(--ease-out-quint);
+  }
+  nav #mobile-toggle #button-body span, nav #mobile-toggle #button-body i {
+    color: #888;
+    background: #f5f5f5;
+    padding-bottom: 10px;
+    font-size: 15px;
+    -webkit-transition: all 0.25s var(--ease-out-quint);
+    transition: all 0.25s var(--ease-out-quint);
+  }
+  nav #mobile-toggle #button-body i {
+    color: #bbb;
+    font-size: 22px;
+    padding: 10px;
+  }
+  nav .tab-nav {
+    display: none !important;
+    -webkit-transform: translateY(0px) !important;
+            transform: translateY(0px) !important;
+    width: 100% !important;
+  }
+  nav .tab-nav .tab-container {
+    padding-top: 30px !important;
+  }
+  nav.full-list {
+    height: 100% !important;
+    border-bottom-right-radius: 0 !important;
+  }
+  nav.full-list .tab-nav {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  nav .map, nav .tab-nav {
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+  nav .tab-nav {
+    height: 100% !important;
+    width: 100 !important;
+    position: relative;
+    top: 0;
+    border: none !important;
+  }
+  nav .tab-nav .tab-container {
+    border-radius: 0 !important;
+  }
+  nav button.nav-label#open-map {
+    border-radius: 0 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+    width: 231px !important;
+  }
+  nav button.nav-label#expand-list {
+    border-radius: 0 0 15px 0 !important;
+  }
+  nav button.nav-label#zoom-out {
+    border-radius: 0 0 0 15px !important;
+    right: 1px !important;
+  }
+  nav.open {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  nav.open #mobile-toggle #button-head i {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  nav.open #mobile-toggle #button-body i {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  .nav-space {
+    display: none;
+    grid-area: unset !important;
+  }
+  main {
+    width: 100% !important;
+    left: unset !important;
+    padding-left: 80px !important;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #copyright {
+    margin-right: 0 !important;
+  }
+  #app main .bottom-row .parent-links div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 0px !important;
+    margin: 0 auto !important;
+    gap: 2px;
+  }
+  #app main .bottom-row .parent-links div a {
+    font-size: 16px !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 3px;
+  }
+  #app main .bottom-row .parent-links div a:last-of-type {
+    border: none !important;
+  }
+  #app main .bottom-row .parent-links div i {
+    font-size: 13px !important;
+  }
+  #scroll-to-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 0 !important;
+  }
+  .mobile-hide {
+    display: none !important;
+  }
+  .bottom.share {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 840px) {
+  #header-wrapper {
+    -webkit-transform: scale(0.8) translate(-11.75%, -13%);
+            transform: scale(0.8) translate(-11.75%, -13%);
+    width: 120%;
+  }
+  #app {
+    height: calc(100% - 77px) !important;
+  }
+  #tab-selector {
+    border-top-width: 10px !important;
+  }
+  header {
+    height: 77px;
+  }
+  nav {
+    height: 100%;
+  }
+  dialog.appear {
+    -webkit-transform: scale(0.925);
+            transform: scale(0.925);
+  }
+}
+@media only screen and (max-width: 780px) {
+  #app main .content * .item-links {
+    max-height: unset !important;
+  }
+  #app main .content * .item-links li {
+    width: 100% !important;
+    padding-right: 0 !important;
+    margin: 7px !important;
+  }
+  figure {
+    float: unset !important;
+    margin: 0 auto 20px !important;
+  }
+}
+@media only screen and (max-width: 660px) {
+  h1 {
+    display: none;
+  }
+  #logo-link {
+    margin-left: auto;
+  }
+  .carousel-widget {
+    overflow: visible !important;
+    height: unset !important;
+  }
+  .carousel-widget::before, .carousel-widget::after {
+    display: none !important;
+  }
+  .carousel {
+    position: relative !important;
+    -webkit-transform: none !important;
+            transform: none !important;
+  }
+  .carousel-cell {
+    position: relative !important;
+    -webkit-transform: none !important;
+            transform: none !important;
+    margin-bottom: 25px !important;
+  }
+  .carousel-options {
+    display: none !important;
+  }
+  figure {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    margin-bottom: 10px !important;
+  }
+  figure img {
+    width: 100% !important;
+  }
+  figure .standard {
+    display: none !important;
+  }
+  #app main .content * figure .mobile {
+    display: unset !important;
+  }
+}
+@media only screen and (max-width: 610px) {
+  nav .map, nav .tab-nav {
+    min-width: unset !important;
+  }
+  nav .tab-nav {
+    width: calc(100% - 110px) !important;
+  }
+  nav .tab-nav .big, nav .tab-nav .small {
+    font-family: "Roboto Condensed" !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+  }
+  nav .tab-nav .small {
+    display: none;
+  }
+  nav .tab-nav .tab {
+    font-family: "Roboto Condensed" !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    width: 170px !important;
+    height: 48.5px !important;
+    padding-right: 15px !important;
+  }
+  nav .tab-nav .tab#nela-eastside-tab {
+    font-size: 14px !important;
+  }
+  nav .tab-nav .tab#westside-more-tab {
+    font-size: 13px !important;
+  }
+  nav .tab-nav .tab#south-bay-harbor-tab {
+    font-size: 12.75px !important;
+  }
+  nav .tab-nav .tab#south-la-gateway-tab {
+    font-size: 13px !important;
+  }
+  nav .tab-nav .tab#sgv-more-tab {
+    font-size: 12px !important;
+  }
+  nav .tab-nav .tab#sfv-more-tab {
+    font-size: 12.75px !important;
+  }
+  nav .tab-nav ul {
+    padding-left: 32px !important;
+  }
+  nav .tab-nav summary::after {
+    font-size: 11px !important;
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    padding: 0 5px !important;
+    margin-left: 3px !important;
+  }
+  nav .tab-nav details ul {
+    position: relative !important;
+    left: -10px !important;
+    width: calc(100% + 10px) !important;
+  }
+  nav .tab-nav summary::before, nav .tab-nav a::before {
+    top: 10px !important;
+    right: -14px !important;
+  }
+  nav .tab-nav .link-to-page, nav .tab-nav .summary-link, nav .tab-nav .disabled-link {
+    font-size: 14.5px !important;
+  }
+  nav .tab-nav .link-to-page span, nav .tab-nav .summary-link span, nav .tab-nav .disabled-link span {
+    font-size: 14.5px !important;
+  }
+  nav .tab-nav.japan .tab {
+    min-height: 30px !important;
+  }
+  nav.grid .tab-nav {
+    width: calc(100% - 60px) !important;
+  }
+  nav.full-list .tab-nav {
+    width: 100% !important;
+    -webkit-transition-property: bottom !important;
+    transition-property: bottom !important;
+  }
+  nav .map .marker, nav .map .non-marker, nav .map #okinawa span {
+    font-size: 13px !important;
+  }
+  nav .map .marker {
+    text-align: center !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    max-width: 100px !important;
+    padding: 3px 5px !important;
+    border-top: 5px solid #8fba70 !important;
+  }
+  nav .map .marker:hover {
+    z-index: 1 !important;
+  }
+  nav .map .marker.selected {
+    border-top-color: var(--light-red) !important;
+    font-weight: 700 !important;
+  }
+  nav .map .marker.selected::before {
+    display: none !important;
+    top: -6px !important;
+    right: -5px !important;
+  }
+  nav .map .marker .count {
+    display: none !important;
+  }
+  nav .map .marker .pin {
+    display: none !important;
+  }
+  nav .map .marker#central {
+    width: 52px !important;
+    top: 32% !important;
+  }
+  nav .map .marker#nela-eastside {
+    width: 55px !important;
+  }
+  nav .map .marker#sfv-more {
+    width: 200px !important;
+  }
+  nav .map .marker#south-la-gateway {
+    width: 83px !important;
+  }
+  nav .map .marker#south-bay-harbor {
+    width: 70px !important;
+  }
+  nav .map .marker#echo-park-marker, nav .map .marker#elysian-park-marker {
+    width: 45px !important;
+  }
+  nav .map .marker#ktown-marker {
+    top: 68% !important;
+  }
+  nav .map .marker#east-hw-marker {
+    top: 42% !important;
+    left: 50.25% !important;
+  }
+  nav .map .marker#windsor-larchmont-marker {
+    top: 56% !important;
+    left: 40.75% !important;
+  }
+  nav .map .marker#atwater-marker {
+    width: 50px !important;
+  }
+  nav .map .marker#mtwash-marker {
+    width: 65px !important;
+  }
+  nav .map .marker#bh-bc-marker {
+    left: 87% !important;
+    width: 50px !important;
+  }
+  nav .map .marker#westwood-marker {
+    top: 48.75% !important;
+  }
+  nav .map .marker#venice-mdr-marker {
+    top: 62.25% !important;
+  }
+  nav .map .marker#malibu-marker {
+    max-width: 300px !important;
+  }
+  nav .map .marker#vc-coast-marker {
+    left: 9.2% !important;
+  }
+  nav .map .marker#ojai-marker {
+    top: 21% !important;
+  }
+  nav .map .marker#santa-barbara-marker {
+    top: 13% !important;
+    left: 9.2% !important;
+  }
+  nav .map .marker#inglewood-marker {
+    top: 21% !important;
+  }
+  nav .map .marker#southpas-sanmarino-marker {
+    font-size: 10px !important;
+  }
+  nav .map .marker#mpk-marker, nav .map .marker#whittier-narrows-marker {
+    width: 50px !important;
+  }
+  nav .map .marker#arcadia-marker {
+    width: 50px !important;
+  }
+  nav .map .marker#east-sgv-marker {
+    max-width: 200px !important;
+  }
+  nav .map .marker#scv-castaic-av-marker {
+    max-width: 120px !important;
+  }
+  nav .map .marker#balboa-marker {
+    width: 70px !important;
+    left: 41% !important;
+  }
+  nav .map .marker#hikone-marker {
+    top: 26.5% !important;
+    left: 77% !important;
+  }
+  nav .map .marker#nagahama-marker {
+    top: 22% !important;
+  }
+  nav .map .sub-marker-container .marker {
+    max-width: 80px !important;
+  }
+  nav .map #sgv-more-sub-markers .marker,
+  nav .map #westside-more-sub-markers .marker {
+    font-size: 11.5px !important;
+  }
+  nav .map #okinawa-box {
+    width: 220px !important;
+    height: 150px !important;
+  }
+  nav .tab-nav .disabled-link span.coming-soon {
+    font-size: 11px !important;
+  }
+  nav button.nav-label#open-map {
+    width: 171px !important;
+  }
+  nav .tab-nav summary::after {
+    content: "Show" !important;
+    position: relative !important;
+    top: -1px !important;
+    right: -1px !important;
+  }
+  nav .tab-nav details[open] summary::after {
+    content: "Hide" !important;
+  }
+}
+@media only screen and (max-width: 560px) {
+  #hsc-marker, #expo-marker {
+    width: 50px !important;
+  }
+  #expo-marker {
+    left: 23.75% !important;
+  }
+  #leimert-marker {
+    left: 12.5% !important;
+  }
+  #header-wrapper {
+    -webkit-transform: scale(0.65) translate(-25%, -27%);
+            transform: scale(0.65) translate(-25%, -27%);
+    width: 140%;
+  }
+  #app {
+    height: calc(100% - 65px) !important;
+  }
+  header {
+    height: 65px;
+  }
+  #tab-selector {
+    border-top-width: 13px !important;
+  }
+  .header-tab {
+    height: 75px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav .map .marker, nav .map .non-marker {
+    font-size: 11px !important;
+  }
+  nav .tab-nav .tab {
+    padding-right: 5px !important;
+    width: 150px !important;
+  }
+  nav button.nav-label#open-map {
+    width: 150px !important;
+  }
+  .tab.selected::after {
+    display: none !important;
+  }
+  .tab.selected::before {
+    width: 6px !important;
+  }
+  .filter {
+    min-width: 38px !important;
+    min-height: 38px !important;
+  }
+  .filter label {
+    font-size: 19px !important;
+  }
+  .filter span.text-label {
+    font-size: 13px !important;
+  }
+  #app nav .tab-nav .link-container ul {
+    padding-left: 30px !important;
+  }
+  .link-container ul li {
+    padding-right: 0 !important;
+  }
+  .tab-nav .link-container ul li:before {
+    width: 14px !important;
+    height: 14px !important;
+    top: 12px !important;
+    left: -19px !important;
+  }
+  #sgv-more-sub-markers .non-marker i + br,
+  #sfv-more-sub-markers .non-marker i + br {
+    display: block !important;
+  }
+  #sm-mountains, #puente-hills {
+    display: none !important;
+  }
+  #angeles-forest-sgm {
+    line-height: 1.2 !important;
+  }
+  #sp-channel {
+    left: 51.5% !important;
+  }
+  #ventura {
+    left: 12% !important;
+  }
+  #app nav .tab-nav .link-container a.selected::before,
+  #app nav .tab-nav .link-container ul li details summary.selected::before {
+    left: -31px !important;
+  }
+  #alhambra-marker {
+    top: 51.5% !important;
+  }
+}
+@media only screen and (max-width: 530px) {
+  nav .map #sgv-more-sub-markers .marker {
+    font-size: 10.5px !important;
+  }
+}
+@media only screen and (max-width: 520px) {
+  #nagahama-marker {
+    left: 79% !important;
+  }
+  .non-marker#la-map-source, .non-marker#jp-map-source {
+    display: block !important;
+  }
+  main {
+    grid-template-columns: 1fr 0 !important;
+  }
+}
+@media only screen and (max-width: 510px) {
+  nav {
+    width: 100% !important;
+  }
+  nav .nav-label {
+    font-size: 14px !important;
+  }
+  nav .nav-label i {
+    font-size: 12px !important;
+  }
+  nav .tab-nav #open-map, nav .tab-nav .nav-label, nav .tab-nav.japan #open-map, nav .tab-nav.japan .nav-label {
+    font-size: 14px !important;
+  }
+  nav .tab-nav #open-map i, nav .tab-nav .nav-label i, nav .tab-nav.japan #open-map i, nav .tab-nav.japan .nav-label i {
+    font-size: 12px !important;
+  }
+  nav .tab-nav.japan .tab {
+    width: 120px !important;
+    padding-right: 10px !important;
+    min-height: 30px !important;
+  }
+  .link-container {
+    max-height: 100% !important;
+  }
+  nav button.nav-label#open-map {
+    width: 120px !important;
+  }
+  nav .tab-nav .tab {
+    font-size: 13px !important;
+    width: 120px !important;
+    font-weight: 600 !important;
+  }
+  nav .tab-nav .tab#nela-eastside-tab {
+    font-size: 13px !important;
+  }
+  nav .tab-nav .tab#westside-more-tab {
+    font-size: 13px !important;
+    height: 63px !important;
+  }
+  nav .tab-nav .tab#westside-more-tab br {
+    display: none !important;
+  }
+  nav .tab-nav .tab#south-bay-harbor-tab {
+    font-size: 13px !important;
+  }
+  nav .tab-nav .tab#south-la-gateway-tab {
+    font-size: 13px !important;
+  }
+  nav .tab-nav .tab#sgv-more-tab {
+    font-size: 12px !important;
+    height: 63px !important;
+    padding-left: 10px !important;
+  }
+  nav .tab-nav .tab#sfv-more-tab {
+    font-size: 12.75px !important;
+    height: 63px !important;
+  }
+  nav .tab-nav .tab#catalina-tab {
+    font-size: 12.75px !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #header-wrapper {
+    -webkit-transform: scale(0.55) translate(-41.5%, -41%);
+            transform: scale(0.55) translate(-41.5%, -41%);
+    width: 175%;
+  }
+  #app {
+    height: calc(100% - 57px) !important;
+  }
+  header {
+    height: 56px;
+  }
+  #tab-selector {
+    border-top-width: 14px !important;
+  }
+  nav .tab-nav.japan {
+    width: 100% !important;
+  }
+  nav {
+    padding-right: 35px !important;
+    -webkit-transform: translateX(calc(-100% + 34px));
+            transform: translateX(calc(-100% + 34px));
+  }
+  main {
+    padding-left: 60px !important;
+  }
+  nav #mobile-toggle {
+    width: 35px !important;
+  }
+  nav #mobile-toggle #button-head {
+    height: 35px;
+  }
+  nav #mobile-toggle #button-head i {
+    font-size: 21px;
+  }
+  nav #mobile-toggle #button-body span {
+    font-size: 12px;
+  }
+  #mpk-marker {
+    top: 59% !important;
+  }
+}
+@media only screen and (max-width: 460px) {
+  #header-wrapper {
+    -webkit-transform: scale(0.6) translate(-35%, -33%);
+            transform: scale(0.6) translate(-35%, -33%);
+    width: 158%;
+  }
+  #app {
+    height: calc(100% - 61px) !important;
+  }
+  header {
+    height: 61px;
+  }
+  main {
+    padding-left: 30px !important;
+    padding-bottom: 60px !important;
+  }
+  #app main .bottom-row {
+    gap: 5px !important;
+  }
+  #app main .bottom-row #scroll-to-top,
+  #app main .bottom-row #copyright {
+    font-size: 13px !important;
+  }
+  #app main .bottom-row .parent-links div a {
+    font-size: 13px !important;
+  }
+  nav {
+    position: absolute !important;
+    bottom: 0px !important;
+    top: unset !important;
+    -webkit-transform: translate(0, calc(100% - 44px)) !important;
+            transform: translate(0, calc(100% - 44px)) !important;
+    padding-right: 0 !important;
+    padding-top: 45px !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) !important;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+    border-radius: 0 !important;
+  }
+  nav #mobile-toggle {
+    top: 0 !important;
+    right: unset !important;
+    left: 0 !important;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 45px !important;
+    width: calc(100% + 1px) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    z-index: 1;
+    gap: 0;
+  }
+  nav #mobile-toggle #button-body, nav #mobile-toggle #button-head {
+    -webkit-transition: 0.25s all var(--ease-out-quint);
+    transition: 0.25s all var(--ease-out-quint);
+    padding: 2px !important;
+  }
+  nav #mobile-toggle:hover #button-body, nav #mobile-toggle:hover #button-head {
+    background-color: var(--dark-red);
+  }
+  nav #mobile-toggle:hover #button-body i, nav #mobile-toggle:hover #button-body span, nav #mobile-toggle:hover #button-head i, nav #mobile-toggle:hover #button-head span {
+    color: white !important;
+  }
+  nav #mobile-toggle #button-head {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    border: none !important;
+    height: 44px;
+    padding-left: 30px !important;
+    width: 50px;
+  }
+  nav #mobile-toggle #button-body {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin: 0 !important;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background-color: var(--red);
+    border: none !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    left: -1px;
+    width: calc(100% + 1px);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-right: 25px !important;
+  }
+  nav #mobile-toggle #button-body span {
+    background: none;
+    color: white;
+    padding: 0 !important;
+    font-size: 17px !important;
+    display: none;
+  }
+  nav #mobile-toggle #button-body .mobile {
+    display: block !important;
+  }
+  nav #mobile-toggle #button-body i {
+    background: none;
+    margin-left: auto;
+    color: white;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  nav #mobile-toggle #button-body #stripes {
+    display: none;
+  }
+  nav.open {
+    -webkit-transform: translate(0) !important;
+            transform: translate(0) !important;
+  }
+  nav.open #mobile-toggle #button-body i {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .tab {
+    padding-top: 0 !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    padding-bottom: 0 !important;
+    -webkit-box-pack: end !important;
+        -ms-flex-pack: end !important;
+            justify-content: flex-end !important;
+  }
+  nav .tab-nav .link-to-page, nav .tab-nav .summary-link, nav .tab-nav .disabled-link {
+    font-size: 14px !important;
+  }
+  #app nav .tab-nav .link-container .filter-container .nav-label {
+    position: relative !important;
+    right: -1px !important;
+  }
+  nav button.nav-label#zoom-out {
+    right: 0 !important;
+  }
+  .title-text {
+    font-size: 25px !important;
+  }
+  .title-text img {
+    width: 20px !important;
+  }
+  #app main .title div .parent-regions {
+    padding-top: 10px !important;
+    font-size: 14px !important;
+  }
+  #app main .title div .parent-regions i {
+    font-size: 12px !important;
+    top: 0 !important;
+  }
+}
+@media only screen and (max-width: 430px) {
+  nav .map .marker {
+    border-top-width: 3px !important;
+    z-index: 1;
+  }
+  .arrow {
+    z-index: 1;
+  }
+  nav .map .marker, nav .map .non-marker {
+    font-size: 10px !important;
+  }
+  nav .map .marker#bh-bc-marker {
+    top: 37% !important;
+    left: 85% !important;
+    width: 40px !important;
+  }
+  nav .map .marker#windsor-larchmont-marker {
+    left: 43.75% !important;
+  }
+  #ojai-marker {
+    left: 22% !important;
+  }
+  #pbb-marker {
+    top: 37% !important;
+    left: 68.4% !important;
+  }
+  #pdr-marker {
+    top: 74% !important;
+  }
+  nav .map .marker#venice-mdr-marker {
+    top: 64% !important;
+  }
+  #santa-monica-marker {
+    top: 56% !important;
+  }
+  #frogtown-marker {
+    left: 78% !important;
+  }
+  #weho-marker {
+    left: 22% !important;
+  }
+  #mb-hb-marker {
+    left: 42% !important;
+  }
+  #scv-castaic-av-marker {
+    top: 13% !important;
+  }
+  #app nav .map .sub-marker-container .marker#balboa-marker {
+    left: 39% !important;
+  }
+  #lcf-cv-marker {
+    left: 23% !important;
+  }
+  #westchester-marker {
+    top: 18% !important;
+    left: 43% !important;
+  }
+  #mtwash-marker {
+    left: 49% !important;
+  }
+  #glendale-marker {
+    left: 11% !important;
+  }
+  #monrovia-marker {
+    top: 30% !important;
+  }
+  #alhambra-marker {
+    top: 53% !important;
+  }
+  #mpk-marker {
+    top: 61% !important;
+  }
+  #otsu-marker {
+    left: 65% !important;
+  }
+  nav .map .marker#central {
+    width: 40px !important;
+  }
+  nav .map .marker#nela-eastside {
+    width: 45px !important;
+    left: 61% !important;
+  }
+}
+@media only screen and (max-width: 420px) {
+  #header-wrapper {
+    -webkit-transform: scale(0.575) translate(-39%, -36%);
+            transform: scale(0.575) translate(-39%, -36%);
+    width: 162%;
+  }
+  #app {
+    height: calc(100% - 59px) !important;
+  }
+  header {
+    height: 59px;
+  }
+}
+@media only screen and (max-width: 405px) {
+  #header-wrapper {
+    -webkit-transform: scale(0.575) translate(-39%, -37%);
+            transform: scale(0.575) translate(-39%, -37%);
+    width: 165%;
+  }
+  #app {
+    height: calc(100% - 59px) !important;
+  }
+  header {
+    height: 59px;
+  }
+  #tab-selector {
+    border-top-width: 16px !important;
+  }
+  nav .tab-nav details ul {
+    position: relative !important;
+    left: -20px !important;
+    width: calc(100% + 20px) !important;
+  }
+  nav .map .marker,
+  nav .map #westside-more-sub-markers .marker {
+    font-size: 12px !important;
+  }
+  #app nav .map .marker-container .marker#central {
+    left: 48.5% !important;
+    width: 46px !important;
+  }
+  #app nav .map .marker-container .marker#sfv-more {
+    top: 17.5% !important;
+    left: 37.5%;
+    width: 110px !important;
+    max-width: 110px !important;
+    padding-top: 8px;
+    z-index: -1;
+  }
+  #app nav .map .marker-container .marker#nela-eastside {
+    top: 33.5%;
+    left: 61.4% !important;
+    padding: 2px 4px;
+    padding-top: 7px;
+    width: 52px !important;
+  }
+  #app nav .map .marker-container .marker#sgv-more {
+    top: 29.5%;
+    left: 83.25%;
+    padding: 3px 10px 3px;
+    text-align: left;
+    width: 115px !important;
+    max-width: 115px !important;
+    height: 10%;
+    font-size: 13.25px;
+  }
+  #app nav .map .sub-marker-container .marker#bh-bc-marker {
+    top: 33% !important;
+    width: 46px !important;
+  }
+  #app nav .map .sub-marker-container .marker#pbb-marker {
+    top: 33% !important;
+    left: 68% !important;
+    z-index: -1;
+  }
+  #app nav .map .sub-marker-container .marker#westwood-marker {
+    top: 47% !important;
+    z-index: 1;
+  }
+  #app nav .map .sub-marker-container .marker#santa-monica-marker {
+    max-width: 75px !important;
+    top: 55% !important;
+    left: 65% !important;
+  }
+  #app nav .map .sub-marker-container .marker#santa-monica-marker br {
+    display: none;
+  }
+  #app nav .map .sub-marker-container .marker#sawtelle-marker {
+    top: 55%;
+    left: 81% !important;
+  }
+  #app nav .map .sub-marker-container .marker#venice-mdr-marker {
+    top: 62.5% !important;
+    left: 77.75% !important;
+  }
+  #app nav .map .sub-marker-container .marker#culver-marker {
+    z-index: 1 !important;
+  }
+  #app nav .map .sub-marker-container .marker#pdr-marker {
+    top: 74.25% !important;
+  }
+  #app nav .map .sub-marker-container .marker#malibu-marker {
+    top: 42.25% !important;
+    left: 39% !important;
+  }
+  #app nav .map .sub-marker-container .marker#vc-coast-marker {
+    top: 26.5% !important;
+    left: 10.25% !important;
+    z-index: 1 !important;
+  }
+  #app nav .map .sub-marker-container .marker#santa-barbara-marker {
+    top: 13.75% !important;
+    left: 10.25% !important;
+    z-index: -1;
+  }
+  #app nav .map .sub-marker-container .marker#ojai-marker {
+    top: 22.25% !important;
+    left: 24.75% !important;
+  }
+  #app nav .map .sub-marker-container .marker#windsor-larchmont-marker {
+    max-width: 90px !important;
+    left: 46% !important;
+    z-index: -1;
+  }
+  #app nav .map .sub-marker-container .marker#echo-park-marker {
+    left: 69.25% !important;
+    top: 57.2% !important;
+  }
+  #app nav .map .sub-marker-container .marker#elysian-park-marker {
+    top: 57.2% !important;
+  }
+  #app nav .map .sub-marker-container .marker#ktown-marker {
+    top: 69.5% !important;
+    left: 52% !important;
+    padding: 8px !important;
+    max-width: 75px !important;
+    z-index: 1 !important;
+  }
+  #app nav .map .sub-marker-container .marker#dtla-marker {
+    padding: 8px !important;
+  }
+  #app nav .map .sub-marker-container .marker#los-feliz-marker {
+    top: 31% !important;
+    padding: 7px !important;
+    z-index: 1;
+  }
+  #app nav .map .sub-marker-container .marker#silver-lake-marker {
+    top: 44% !important;
+    left: 64.3% !important;
+    width: 46px !important;
+    z-index: 1;
+  }
+  #app nav .map .sub-marker-container .marker#weho-marker {
+    z-index: -1;
+  }
+  #app nav .map .sub-marker-container .marker#east-hw-marker {
+    z-index: -1;
+    left: 50% !important;
+  }
+  #app nav .map .sub-marker-container .marker#griffith-marker {
+    left: 52.25% !important;
+    z-index: -1;
+  }
+  #app nav .map .sub-marker-container .marker#atwater-marker {
+    left: 21% !important;
+  }
+  #app nav .map .sub-marker-container .marker#el-sereno-marker {
+    top: 55.5% !important;
+    padding: 5px !important;
+  }
+  #app nav .map .sub-marker-container .marker#southpas-sanmarino-marker {
+    top: 44.5% !important;
+    left: 29% !important;
+    font-size: 10.5px !important;
+  }
+  #app nav .map .sub-marker-container .marker#monrovia-marker {
+    top: 27.5% !important;
+    left: 50% !important;
+  }
+  #app nav .map .sub-marker-container .marker#lcf-cv-marker {
+    max-width: 130px !important;
+    top: 22% !important;
+  }
+  #app nav .map .sub-marker-container .marker#arcadia-marker {
+    top: 40% !important;
+    left: 45.5% !important;
+  }
+  #app nav .map .sub-marker-container .marker#san-gabriel-marker {
+    left: 42.75% !important;
+    top: 53% !important;
+  }
+  #app nav .map .sub-marker-container .marker#alhambra-marker {
+    top: 53.25% !important;
+  }
+  #app nav .map .sub-marker-container .marker#mpk-marker {
+    top: 62.25% !important;
+  }
+  nav .map #sgv-more-sub-markers .marker {
+    font-size: 11px !important;
+  }
+  nav .map #sgv-more-sub-markers .arrow {
+    width: 25px !important;
+    height: 25px !important;
+    max-width: 25px !important;
+  }
+  nav .map #sgv-more-sub-markers .arrow i {
+    font-size: 10px !important;
+  }
+  #app main .title div.sgv-more {
+    font-size: 22px !important;
+    padding: 0 !important;
+  }
+  #app main .title div .title-text .title-pin {
+    margin-top: 4px !important;
+  }
+  #app main .title div.south-la-gateway {
+    font-size: 24px !important;
+    padding: 0 !important;
+  }
+  #app nav .map .sub-marker-container .marker#hsc-marker {
+    left: 38% !important;
+  }
+  #app nav .map .sub-marker-container .marker#expo-marker {
+    left: 24% !important;
+    max-width: 90px !important;
+    width: 60px !important;
+  }
+  #app nav .map .sub-marker-container .marker#leimert-marker {
+    left: 10% !important;
+  }
+  #app nav .map .sub-marker-container .marker#usc-up-marker {
+    left: 26% !important;
+    padding: 5px !important;
+  }
+  #app nav .map .sub-marker-container .marker#jefferson-park-marker {
+    max-width: 120px !important;
+    left: 11% !important;
+  }
+  #app nav .map .sub-marker-container .marker#watts-marker {
+    padding: 6px !important;
+  }
+  #app main .title div.south-bay-harbor {
+    font-size: 23px !important;
+    padding: 0 !important;
+  }
+  #app nav .map .sub-marker-container .marker#mb-hb-marker {
+    top: 39.25% !important;
+    width: 60px !important;
+  }
+  #app nav .map .sub-marker-container .marker#redondo-marker {
+    top: 55% !important;
+  }
+  #app nav .map .sub-marker-container .marker#inglewood-marker {
+    left: 59.75% !important;
+  }
+  #app nav .map .sub-marker-container .marker#pv-marker {
+    left: 51% !important;
+  }
+  #app nav .map .sub-marker-container .marker#tokyo-marker {
+    padding: 6px 8px !important;
+    top: 62.5% !important;
+    left: 55% !important;
+    font-size: 13px !important;
+  }
+  #app nav .map .sub-marker-container .marker#kawasaki-marker {
+    top: 69% !important;
+  }
+  #app nav .map .sub-marker-container .marker#shonan-marker {
+    top: 80% !important;
+  }
+  #app nav .map .sub-marker-container .marker#hakone-marker {
+    top: 85% !important;
+  }
+  #app nav .map .sub-marker-container#south-bay-harbor-sub-markers .arrow {
+    width: 30px !important;
+    height: 30px !important;
+    max-width: 30px !important;
+    z-index: 1;
+  }
+  #app nav .map .sub-marker-container#kansai-sub-markers .arrow {
+    width: 32px !important;
+    height: 32px !important;
+    max-width: 32px !important;
+  }
+  #app nav .map .sub-marker-container .marker#nagahama-marker {
+    top: 20.25% !important;
+    left: 82% !important;
+  }
+  #app nav .map .sub-marker-container .marker#hikone-marker {
+    top: 25.5% !important;
+    left: 78.5% !important;
+    z-index: 1 !important;
+  }
+  #app nav .map .sub-marker-container .marker#otsu-marker {
+    top: 36.5% !important;
+    left: 65% !important;
+    z-index: 1 !important;
+  }
+  #app nav .map .sub-marker-container .marker#kyoto-marker {
+    top: 36.5% !important;
+    left: 55.25% !important;
+    padding: 5px 6px !important;
+    font-size: 12px !important;
+  }
+}
+@media only screen and (max-width: 398px) {
+  #header-wrapper {
+    -webkit-transform: scale(0.525) translate(-47%, -45%);
+            transform: scale(0.525) translate(-47%, -45%);
+    width: 183%;
+  }
+  #app {
+    height: calc(100% - 54px) !important;
+  }
+  header {
+    height: 54px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  nav .tab-nav .link-to-page, nav .tab-nav .summary-link, nav .tab-nav .disabled-link {
+    font-size: 13px !important;
+  }
+  nav .map .marker,
+  nav .map #sgv-more-sub-markers .marker,
+  nav .map #westside-more-sub-markers .marker {
+    font-size: 10px !important;
+  }
+}
+@media only screen and (max-width: 360px) {
+  nav .tab-nav .link-to-page, nav .tab-nav .summary-link, nav .tab-nav .disabled-link {
+    font-size: 11px !important;
+  }
+  nav .map .marker,
+  nav .map #westside-more-sub-markers .marker {
+    font-size: 11px !important;
+  }
+  nav .map #sgv-more-sub-markers .marker,
+  #app nav .map .sub-marker-container .marker#southpas-sanmarino-marker {
+    font-size: 10px !important;
+  }
+}
+@media only screen and (max-height: 500px) {
+  #header-wrapper {
+    -webkit-transform: scale(0.5) translate(-54.6%, -50%);
+            transform: scale(0.5) translate(-54.6%, -50%);
+    width: 200%;
+  }
+  #app {
+    display: block !important;
+    height: calc(100vh - 52.5px) !important;
+  }
+  #tab-selector {
+    border-top-width: 15px !important;
+  }
+  header {
+    height: 52.5px;
+  }
+  dialog.appear {
+    top: 0%;
+  }
+  html, body {
+    background-image: none !important;
+  }
+  main {
+    -webkit-transform: scale(0.9) translateY(-5%);
+            transform: scale(0.9) translateY(-5%);
+  }
+  body {
+    overflow-y: scroll !important;
+  }
+}/*# sourceMappingURL=style.css.map */

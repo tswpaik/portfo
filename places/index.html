@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places Explored</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="engine.min.js" defer type="module"></script>
+    <script src="https://kit.fontawesome.com/22e911efc6.js" crossorigin="anonymous"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link rel="icon" type="image/png" href="https://www.timpaik.co/places/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="https://www.timpaik.co/places/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="https://www.timpaik.co/places/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.timpaik.co/places/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Places Explored" />
+    <link rel="manifest" href="https://www.timpaik.co/places/favicon/site.webmanifest" />
+    <meta name="description" content="Places Explored | timpaik.co/places">
+    <meta property="og:title" content="Places Explored" />
+    <meta property="og:image" content="https://www.timpaik.co/places/favicon/thumbnail.png" />
+    <meta property="og:description" content="Places Explored | timpaik.co/places" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.timpaik.co/places" />
+    <meta name="robots" content="nosnippet">
+  </head>
+
+  <body>
+    <div class="preload visually-hidden" aria-hidden="true">
+      <img src="images/svg/los-angeles.svg" />
+      <img src="images/svg/los-angeles-zoomed.svg" />
+      <img src="images/svg/japan.svg" />
+      <img src="images/svg/japan-zoomed.svg" />
+    </div>
+    <header>
+      <div id="header-wrapper">
+        <h1 aria-label="Places Explored, a timpaik.co project"><span aria-hidden="true">Places</span>explored</h1>
+        <a class="los-angeles header-tab selected" href="#la">Los Angeles</a>
+        <a class="japan header-tab" href="#jp">Japan</a>
+        <button id="about" tabindex="0">About</button>
+        <div id="tab-selector" aria-hidden="true" class=""></div>
+        <a id="logo-link" href="https://www.timpaik.co/" target="_blank"><img id="logo" src="images/logo-white.png" alt="timpaik.co Logo"></a>
+      </div>
+    </header>
+
+    <div id="app">
+      <div class="nav-space"></div>
+      <nav class="" tabindex="-1"></nav>
+
+      <main onclick="document.querySelector('nav').classList.remove('open');" onscroll="document.querySelector('nav').classList.remove('open');" tabindex="-1" aria-label="Primary Content">
+        <button class="share top" tabindex="-1"><i class='fa-solid fa-link'></i> Copy URL</button>
+        <div class="title"></div>
+        <div class="content"></div>
+        <footer class="bottom-row">
+          <p id="copyright"></p>
+          <div class="parent-links"></div>
+          <button id="scroll-to-top" onclick="document.querySelector('main').scrollTo({top: 0, behavior: 'smooth'});"><span class="mobile-hide">Back to </span>Top <i class="fa-solid fa-arrow-up"></i></button>
+          <button class="share bottom"><i class='fa-solid fa-link'></i> Copy URL to Page</button>
+        </footer>
+        <div class="main-space"></div>
+      </main>
+    </div>
+
+    <dialog id="dialog" tabindex="-1">
+      <form method="dialog">
+        <h2>About This Project</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium voluptatibus fuga labore commodi quidem asperiores saepe autem perspiciatis quod dolores similique velit culpa sed ab vitae quam ea, maiores facilis!</p>
+        <button id="about-close" type="submit" title="Close"><i class="fa-solid fa-xmark"></i></button>
+      </form>
+    </dialog>
+
+  </body>
+
+</html>
