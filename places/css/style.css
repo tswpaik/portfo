@@ -1939,6 +1939,11 @@ header #header-wrapper #logo-link #logo {
 #app main .content {
   grid-area: content-area;
 }
+#app main .content .fade-in, #app main .content * .carousel-widget, #app main .content nav .map, #app nav main .content .map, #app main .content nav .tab-nav, #app nav main .content .tab-nav, #app main .content nav .map .zoom-map, #app nav .map main .content .zoom-map, #app main .content nav .map .sub-marker-container, #app nav .map main .content .sub-marker-container, #app main .content nav .tab-nav .link-container ul, #app nav .tab-nav .link-container main .content ul, #app main nav .content .map, #app main nav .content .tab-nav, #app main nav .map .content .zoom-map, #app main nav .map .content .sub-marker-container, #app main .content nav .tab-nav .link-container ul, #app main nav .tab-nav .link-container .content ul, #app nav .tab-nav .link-container main .content ul {
+  opacity: 0;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
 #app main #tag-div {
   display: none;
   gap: 7px;
