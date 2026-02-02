@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -188,7 +189,7 @@
   width: 1px;
 }
 
-.center-number span, #app nav .map .marker-container .marker#catalina span, #app nav .map .sub-marker-container .marker#catalina span, #app nav .map .marker-container .marker#sfv-more span, #app nav .map .sub-marker-container .marker#sfv-more span, #app nav .map .marker-container .marker#nela-eastside span, #app nav .map .sub-marker-container .marker#nela-eastside span, #app nav .map .marker-container .marker#central span, #app nav .map .sub-marker-container .marker#central span {
+.center-number span, #app nav .map .marker-container .marker#sfv-more span, #app nav .map .sub-marker-container .marker#sfv-more span, #app nav .map .marker-container .marker#eastside-nela span, #app nav .map .sub-marker-container .marker#eastside-nela span, #app nav .map .marker-container .marker#catalina span, #app nav .map .sub-marker-container .marker#catalina span, #app nav .map .marker-container .marker#central span, #app nav .map .sub-marker-container .marker#central span {
   top: 0;
   left: 50%;
   -webkit-transform: translate(-50%, calc(-50% - 11px));
@@ -428,6 +429,10 @@ header #header-wrapper #logo-link #logo {
   margin-bottom: 0px;
   position: relative;
   overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 #app nav .map .main-map {
   width: 100%;
@@ -498,7 +503,14 @@ header #header-wrapper #logo-link #logo {
   z-index: 1;
 }
 #app nav .map .marker-container .marker:disabled, #app nav .map .sub-marker-container .marker:disabled {
-  background-color: #ddd;
+  background-color: #d9d9d9;
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.075);
+          box-shadow: 0 3px 7px rgba(0, 0, 0, 0.075);
+  color: #888;
+  font-style: italic;
+}
+#app nav .map .marker-container .marker:disabled .pin, #app nav .map .sub-marker-container .marker:disabled .pin {
+  opacity: 0.75;
 }
 #app nav .map .marker-container .marker:disabled:hover, #app nav .map .sub-marker-container .marker:disabled:hover {
   -webkit-transform: scale(1) translate(-50%, -50%);
@@ -517,6 +529,7 @@ header #header-wrapper #logo-link #logo {
   text-transform: uppercase;
   font-size: 11px;
   font-weight: bold;
+  text-align: center;
   position: absolute;
   font-family: "Roboto Condensed";
   position: absolute;
@@ -575,37 +588,9 @@ header #header-wrapper #logo-link #logo {
 #app nav .map .marker-container .marker#central span, #app nav .map .sub-marker-container .marker#central span {
   width: 35px;
   height: 35px;
-  font-size: 17px;
+  font-size: 18px;
   -webkit-transform: translate(-50%, calc(-50% - 13px));
           transform: translate(-50%, calc(-50% - 13px));
-}
-#app nav .map .marker-container .marker#nela-eastside, #app nav .map .sub-marker-container .marker#nela-eastside {
-  top: 33.5%;
-  left: 60%;
-  padding: 2px 4px;
-  padding-top: 7px;
-  width: 56px;
-}
-#app nav .map .marker-container .marker#nela-eastside span, #app nav .map .sub-marker-container .marker#nela-eastside span {
-  width: 25px;
-  height: 25px;
-  -webkit-transform: translate(-50%, calc(-50% - 8px));
-          transform: translate(-50%, calc(-50% - 8px));
-}
-#app nav .map .marker-container .marker#sgv-more, #app nav .map .sub-marker-container .marker#sgv-more {
-  top: 30.5%;
-  left: 78.6%;
-  padding: 3px 10px 3px;
-  text-align: left;
-  width: 170px;
-  height: 10%;
-  font-size: 13.25px;
-}
-#app nav .map .marker-container .marker#sgv-more span, #app nav .map .sub-marker-container .marker#sgv-more span {
-  left: 0;
-  top: 0;
-  -webkit-transform: translate(-58%, -72%);
-          transform: translate(-58%, -72%);
 }
 #app nav .map .marker-container .marker#westside-more, #app nav .map .sub-marker-container .marker#westside-more {
   top: 32%;
@@ -615,8 +600,11 @@ header #header-wrapper #logo-link #logo {
   text-align: right;
 }
 #app nav .map .marker-container .marker#westside-more span, #app nav .map .sub-marker-container .marker#westside-more span {
+  width: 35px;
+  height: 35px;
   right: 0;
   top: 50%;
+  font-size: 18px;
   -webkit-transform: translate(80%, -50%);
           transform: translate(80%, -50%);
 }
@@ -632,6 +620,17 @@ header #header-wrapper #logo-link #logo {
   top: 0;
   -webkit-transform: translate(-58%, -72%);
           transform: translate(-58%, -72%);
+  font-size: 17px;
+}
+#app nav .map .marker-container .marker#catalina, #app nav .map .sub-marker-container .marker#catalina {
+  top: 91%;
+  left: 47.5%;
+  padding-top: 7px;
+}
+#app nav .map .marker-container .marker#catalina span, #app nav .map .sub-marker-container .marker#catalina span {
+  font-size: 18px;
+  -webkit-transform: translate(-50%, calc(-50% - 10px));
+          transform: translate(-50%, calc(-50% - 10px));
 }
 #app nav .map .marker-container .marker#south-la-gateway, #app nav .map .sub-marker-container .marker#south-la-gateway {
   top: 46.75%;
@@ -645,6 +644,35 @@ header #header-wrapper #logo-link #logo {
   top: 0;
   -webkit-transform: translate(-60%, -72%);
           transform: translate(-60%, -72%);
+  font-size: 19px;
+}
+#app nav .map .marker-container .marker#eastside-nela, #app nav .map .sub-marker-container .marker#eastside-nela {
+  top: 33.5%;
+  left: 60%;
+  padding: 2px 4px;
+  padding-top: 7px;
+  width: 56px;
+}
+#app nav .map .marker-container .marker#eastside-nela span, #app nav .map .sub-marker-container .marker#eastside-nela span {
+  font-size: 17px;
+  -webkit-transform: translate(-50%, calc(-50% - 10px));
+          transform: translate(-50%, calc(-50% - 10px));
+}
+#app nav .map .marker-container .marker#sgv-more, #app nav .map .sub-marker-container .marker#sgv-more {
+  top: 30.5%;
+  left: 78.6%;
+  padding: 3px 10px 3px;
+  text-align: left;
+  width: 170px;
+  height: 10%;
+  font-size: 13.25px;
+}
+#app nav .map .marker-container .marker#sgv-more span, #app nav .map .sub-marker-container .marker#sgv-more span {
+  left: 0;
+  top: 0;
+  font-size: 16px;
+  -webkit-transform: translate(-58%, -72%);
+          transform: translate(-58%, -72%);
 }
 #app nav .map .marker-container .marker#sfv-more, #app nav .map .sub-marker-container .marker#sfv-more {
   top: 18%;
@@ -653,17 +681,7 @@ header #header-wrapper #logo-link #logo {
   padding-top: 8px;
 }
 #app nav .map .marker-container .marker#sfv-more span, #app nav .map .sub-marker-container .marker#sfv-more span {
-  -webkit-transform: translate(-50%, calc(-50% - 8px));
-          transform: translate(-50%, calc(-50% - 8px));
-}
-#app nav .map .marker-container .marker#catalina, #app nav .map .sub-marker-container .marker#catalina {
-  top: 91%;
-  left: 47.5%;
-  padding-top: 7px;
-}
-#app nav .map .marker-container .marker#catalina span, #app nav .map .sub-marker-container .marker#catalina span {
-  width: 25px;
-  height: 25px;
+  font-size: 17px;
   -webkit-transform: translate(-50%, calc(-50% - 8px));
           transform: translate(-50%, calc(-50% - 8px));
 }
@@ -675,7 +693,7 @@ header #header-wrapper #logo-link #logo {
 #app nav .map .marker-container .marker#kanto span, #app nav .map .sub-marker-container .marker#kanto span {
   width: 35px;
   height: 35px;
-  font-size: 17px;
+  font-size: 18px;
   -webkit-transform: translate(-50%, calc(-50% - 13px));
           transform: translate(-50%, calc(-50% - 13px));
   top: 0;
@@ -687,11 +705,9 @@ header #header-wrapper #logo-link #logo {
   font-size: 15px;
 }
 #app nav .map .marker-container .marker#chubu span, #app nav .map .sub-marker-container .marker#chubu span {
-  width: 30px;
-  height: 30px;
-  font-size: 17px;
-  -webkit-transform: translate(-50%, calc(-50% - 13px));
-          transform: translate(-50%, calc(-50% - 13px));
+  font-size: 19px;
+  -webkit-transform: translate(-50%, calc(-50% - 10px));
+          transform: translate(-50%, calc(-50% - 10px));
   top: 0;
   left: 50%;
 }
@@ -703,26 +719,25 @@ header #header-wrapper #logo-link #logo {
 #app nav .map .marker-container .marker#kansai span, #app nav .map .sub-marker-container .marker#kansai span {
   width: 35px;
   height: 35px;
-  font-size: 17px;
+  font-size: 18px;
   -webkit-transform: translate(-50%, calc(-50% - 13px));
           transform: translate(-50%, calc(-50% - 13px));
   top: 0;
   left: 50%;
 }
-#app nav .map .marker-container .marker#chugoku, #app nav .map .sub-marker-container .marker#chugoku {
-  top: 72%;
-  left: 24%;
+#app nav .map .marker-container .marker#chugoku-shikoku, #app nav .map .sub-marker-container .marker#chugoku-shikoku {
+  top: 74%;
+  left: 26%;
   font-size: 15px;
-  padding-left: 10px;
+  line-height: 1.3;
+  height: 51px;
 }
-#app nav .map .marker-container .marker#chugoku span, #app nav .map .sub-marker-container .marker#chugoku span {
-  width: 26px;
-  height: 26px;
-  font-size: 17px;
-  -webkit-transform: translate(calc(-50% - 7px), -50%);
-          transform: translate(calc(-50% - 7px), -50%);
-  top: 50%;
-  left: 0;
+#app nav .map .marker-container .marker#chugoku-shikoku span, #app nav .map .sub-marker-container .marker#chugoku-shikoku span {
+  font-size: 18px;
+  -webkit-transform: translate(-50%, calc(-50% - 8px));
+          transform: translate(-50%, calc(-50% - 8px));
+  top: 0;
+  left: 50%;
 }
 #app nav .map .marker-container .arrow, #app nav .map .sub-marker-container .arrow {
   background-color: #e9e9e9;
@@ -894,7 +909,7 @@ header #header-wrapper #logo-link #logo {
 }
 #app nav .map .marker-container .non-marker#sp-channel, #app nav .map .sub-marker-container .non-marker#sp-channel {
   top: 77%;
-  left: 48.5%;
+  left: 50%;
 }
 #app nav .map .marker-container .non-marker#angeles-forest-sgm, #app nav .map .sub-marker-container .non-marker#angeles-forest-sgm {
   top: 13%;
@@ -928,10 +943,10 @@ header #header-wrapper #logo-link #logo {
 }
 #app nav .map .marker-container .non-marker#puente-hills, #app nav .map .sub-marker-container .non-marker#puente-hills {
   top: 44%;
-  left: 78%;
+  left: 79.5%;
 }
 #app nav .map .marker-container .non-marker#ie, #app nav .map .sub-marker-container .non-marker#ie {
-  top: 43.5%;
+  top: 47%;
   left: 95%;
   width: 50px;
   font-style: italic;
@@ -949,6 +964,7 @@ header #header-wrapper #logo-link #logo {
   font-style: italic;
   width: 190px;
   text-align: right;
+  display: none;
 }
 #app nav .map .marker-container .non-marker#la-map-source a, #app nav .map .marker-container .non-marker#jp-map-source a, #app nav .map .sub-marker-container .non-marker#la-map-source a, #app nav .map .sub-marker-container .non-marker#jp-map-source a {
   font-size: inherit;
@@ -1082,13 +1098,13 @@ header #header-wrapper #logo-link #logo {
   left: 7px;
   top: 8px;
 }
-#app nav .map .sub-marker-container .marker#dtla-marker, #app nav .map .sub-marker-container .marker#echo-park-marker, #app nav .map .sub-marker-container .marker#elysian-park-marker, #app nav .map .sub-marker-container .marker#silver-lake-marker, #app nav .map .sub-marker-container .marker#griffith-marker, #app nav .map .sub-marker-container .marker#east-hw-marker, #app nav .map .sub-marker-container .marker#ktown-marker, #app nav .map .sub-marker-container .marker#windsor-larchmont-marker, #app nav .map .sub-marker-container .marker#mid-wilshire-marker, #app nav .map .sub-marker-container .marker#fairfax-marker, #app nav .map .sub-marker-container .marker#hw-marker, #app nav .map .sub-marker-container .marker#atwater-marker, #app nav .map .sub-marker-container .marker#glassell-cypress-marker, #app nav .map .sub-marker-container .marker#mtwash-marker, #app nav .map .sub-marker-container .marker#bh-lh-marker, #app nav .map .sub-marker-container .marker#el-sereno-marker, #app nav .map .sub-marker-container .marker#culver-marker, #app nav .map .sub-marker-container .marker#bh-bc-marker, #app nav .map .sub-marker-container .marker#sawtelle-marker, #app nav .map .sub-marker-container .marker#malibu-marker, #app nav .map .sub-marker-container .marker#vc-coast-marker, #app nav .map .sub-marker-container .marker#westchester-marker, #app nav .map .sub-marker-container .marker#inglewood-marker, #app nav .map .sub-marker-container .marker#mb-hb-marker, #app nav .map .sub-marker-container .marker#gtl-marker, #app nav .map .sub-marker-container .marker#pv-marker, #app nav .map .sub-marker-container .marker#lb-sh-marker, #app nav .map .sub-marker-container .marker#arcadia-marker, #app nav .map .sub-marker-container .marker#monrovia-marker, #app nav .map .sub-marker-container .marker#whittier-narrows-marker, #app nav .map .sub-marker-container .marker#ie-marker, #app nav .map .sub-marker-container .marker#expo-marker, #app nav .map .sub-marker-container .marker#watts-marker, #app nav .map .sub-marker-container .marker#leimert-marker, #app nav .map .sub-marker-container .marker#montebello-marker, #app nav .map .sub-marker-container .marker#commerce-marker, #app nav .map .sub-marker-container .marker#burbank-marker, #app nav .map .sub-marker-container .marker#noho-marker, #app nav .map .sub-marker-container .marker#balboa-marker, #app nav .map .sub-marker-container .marker#chatsworth-marker, #app nav .map .sub-marker-container .marker#woodland-hills-marker, #app nav .map .sub-marker-container .marker#port-marker, #app nav .map .sub-marker-container .marker#east-sgv-marker, #app nav .map .sub-marker-container .marker#hsc-marker, #app nav .map .sub-marker-container .marker#van-nuys-marker, #app nav .map .sub-marker-container .marker#pasadena-marker, #app nav .map .sub-marker-container .marker#mt-takao-marker, #app nav .map .sub-marker-container .marker#otsu-marker, #app nav .map .sub-marker-container .marker#kyoto-marker, #app nav .map .sub-marker-container .marker#osaka-marker, #app nav .map .sub-marker-container .marker#narita-marker, #app nav .map .sub-marker-container .marker#atami-marker, #app nav .map .sub-marker-container .marker#hiroshima-marker, #app nav .map .sub-marker-container .marker#okayama-marker {
+#app nav .map .sub-marker-container .marker#dtla-marker, #app nav .map .sub-marker-container .marker#echo-park-marker, #app nav .map .sub-marker-container .marker#elysian-park-marker, #app nav .map .sub-marker-container .marker#silver-lake-marker, #app nav .map .sub-marker-container .marker#griffith-marker, #app nav .map .sub-marker-container .marker#east-hw-marker, #app nav .map .sub-marker-container .marker#ktown-marker, #app nav .map .sub-marker-container .marker#windsor-larchmont-marker, #app nav .map .sub-marker-container .marker#mid-wilshire-marker, #app nav .map .sub-marker-container .marker#fairfax-marker, #app nav .map .sub-marker-container .marker#hw-marker, #app nav .map .sub-marker-container .marker#atwater-marker, #app nav .map .sub-marker-container .marker#glassell-cypress-marker, #app nav .map .sub-marker-container .marker#mtwash-marker, #app nav .map .sub-marker-container .marker#bh-lh-marker, #app nav .map .sub-marker-container .marker#el-sereno-marker, #app nav .map .sub-marker-container .marker#culver-marker, #app nav .map .sub-marker-container .marker#palisades-marker, #app nav .map .sub-marker-container .marker#bev-crest-bev-hills-marker, #app nav .map .sub-marker-container .marker#west-la-marker, #app nav .map .sub-marker-container .marker#malibu-marker, #app nav .map .sub-marker-container .marker#vc-coast-marker, #app nav .map .sub-marker-container .marker#lax-marker, #app nav .map .sub-marker-container .marker#inglewood-marker, #app nav .map .sub-marker-container .marker#mb-hb-marker, #app nav .map .sub-marker-container .marker#gardena-torrance-marker, #app nav .map .sub-marker-container .marker#pv-marker, #app nav .map .sub-marker-container .marker#long-beach-marker, #app nav .map .sub-marker-container .marker#arcadia-marker, #app nav .map .sub-marker-container .marker#monrovia-marker, #app nav .map .sub-marker-container .marker#whittier-narrows-marker, #app nav .map .sub-marker-container .marker#ie-marker, #app nav .map .sub-marker-container .marker#expo-marker, #app nav .map .sub-marker-container .marker#watts-marker, #app nav .map .sub-marker-container .marker#leimert-marker, #app nav .map .sub-marker-container .marker#mpw-marker, #app nav .map .sub-marker-container .marker#commerce-marker, #app nav .map .sub-marker-container .marker#burbank-marker, #app nav .map .sub-marker-container .marker#shadow-hills-marker, #app nav .map .sub-marker-container .marker#noho-marker, #app nav .map .sub-marker-container .marker#balboa-marker, #app nav .map .sub-marker-container .marker#chatsworth-marker, #app nav .map .sub-marker-container .marker#woodland-hills-marker, #app nav .map .sub-marker-container .marker#port-marker, #app nav .map .sub-marker-container .marker#east-sgv-pomona-marker, #app nav .map .sub-marker-container .marker#hsc-marker, #app nav .map .sub-marker-container .marker#van-nuys-marker, #app nav .map .sub-marker-container .marker#glendale-marker, #app nav .map .sub-marker-container .marker#pasadena-marker, #app nav .map .sub-marker-container .marker#mpk-alhambra-marker, #app nav .map .sub-marker-container .marker#mt-takao-marker, #app nav .map .sub-marker-container .marker#otsu-marker, #app nav .map .sub-marker-container .marker#kyoto-marker, #app nav .map .sub-marker-container .marker#osaka-marker, #app nav .map .sub-marker-container .marker#narita-marker, #app nav .map .sub-marker-container .marker#atami-marker, #app nav .map .sub-marker-container .marker#hiroshima-marker, #app nav .map .sub-marker-container .marker#okayama-marker, #app nav .map .sub-marker-container .marker#takahashi-marker, #app nav .map .sub-marker-container .marker#fuji-marker, #app nav .map .sub-marker-container .marker#koyasan-marker, #app nav .map .sub-marker-container .marker#kinosaki-marker, #app nav .map .sub-marker-container .marker#ine-marker {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
-#app nav .map .sub-marker-container .marker#dtla-marker .pin, #app nav .map .sub-marker-container .marker#echo-park-marker .pin, #app nav .map .sub-marker-container .marker#elysian-park-marker .pin, #app nav .map .sub-marker-container .marker#silver-lake-marker .pin, #app nav .map .sub-marker-container .marker#griffith-marker .pin, #app nav .map .sub-marker-container .marker#east-hw-marker .pin, #app nav .map .sub-marker-container .marker#ktown-marker .pin, #app nav .map .sub-marker-container .marker#windsor-larchmont-marker .pin, #app nav .map .sub-marker-container .marker#mid-wilshire-marker .pin, #app nav .map .sub-marker-container .marker#fairfax-marker .pin, #app nav .map .sub-marker-container .marker#hw-marker .pin, #app nav .map .sub-marker-container .marker#atwater-marker .pin, #app nav .map .sub-marker-container .marker#glassell-cypress-marker .pin, #app nav .map .sub-marker-container .marker#mtwash-marker .pin, #app nav .map .sub-marker-container .marker#bh-lh-marker .pin, #app nav .map .sub-marker-container .marker#el-sereno-marker .pin, #app nav .map .sub-marker-container .marker#culver-marker .pin, #app nav .map .sub-marker-container .marker#bh-bc-marker .pin, #app nav .map .sub-marker-container .marker#sawtelle-marker .pin, #app nav .map .sub-marker-container .marker#malibu-marker .pin, #app nav .map .sub-marker-container .marker#vc-coast-marker .pin, #app nav .map .sub-marker-container .marker#westchester-marker .pin, #app nav .map .sub-marker-container .marker#inglewood-marker .pin, #app nav .map .sub-marker-container .marker#mb-hb-marker .pin, #app nav .map .sub-marker-container .marker#gtl-marker .pin, #app nav .map .sub-marker-container .marker#pv-marker .pin, #app nav .map .sub-marker-container .marker#lb-sh-marker .pin, #app nav .map .sub-marker-container .marker#arcadia-marker .pin, #app nav .map .sub-marker-container .marker#monrovia-marker .pin, #app nav .map .sub-marker-container .marker#whittier-narrows-marker .pin, #app nav .map .sub-marker-container .marker#ie-marker .pin, #app nav .map .sub-marker-container .marker#expo-marker .pin, #app nav .map .sub-marker-container .marker#watts-marker .pin, #app nav .map .sub-marker-container .marker#leimert-marker .pin, #app nav .map .sub-marker-container .marker#montebello-marker .pin, #app nav .map .sub-marker-container .marker#commerce-marker .pin, #app nav .map .sub-marker-container .marker#burbank-marker .pin, #app nav .map .sub-marker-container .marker#noho-marker .pin, #app nav .map .sub-marker-container .marker#balboa-marker .pin, #app nav .map .sub-marker-container .marker#chatsworth-marker .pin, #app nav .map .sub-marker-container .marker#woodland-hills-marker .pin, #app nav .map .sub-marker-container .marker#port-marker .pin, #app nav .map .sub-marker-container .marker#east-sgv-marker .pin, #app nav .map .sub-marker-container .marker#hsc-marker .pin, #app nav .map .sub-marker-container .marker#van-nuys-marker .pin, #app nav .map .sub-marker-container .marker#pasadena-marker .pin, #app nav .map .sub-marker-container .marker#mt-takao-marker .pin, #app nav .map .sub-marker-container .marker#otsu-marker .pin, #app nav .map .sub-marker-container .marker#kyoto-marker .pin, #app nav .map .sub-marker-container .marker#osaka-marker .pin, #app nav .map .sub-marker-container .marker#narita-marker .pin, #app nav .map .sub-marker-container .marker#atami-marker .pin, #app nav .map .sub-marker-container .marker#hiroshima-marker .pin, #app nav .map .sub-marker-container .marker#okayama-marker .pin {
+#app nav .map .sub-marker-container .marker#dtla-marker .pin, #app nav .map .sub-marker-container .marker#echo-park-marker .pin, #app nav .map .sub-marker-container .marker#elysian-park-marker .pin, #app nav .map .sub-marker-container .marker#silver-lake-marker .pin, #app nav .map .sub-marker-container .marker#griffith-marker .pin, #app nav .map .sub-marker-container .marker#east-hw-marker .pin, #app nav .map .sub-marker-container .marker#ktown-marker .pin, #app nav .map .sub-marker-container .marker#windsor-larchmont-marker .pin, #app nav .map .sub-marker-container .marker#mid-wilshire-marker .pin, #app nav .map .sub-marker-container .marker#fairfax-marker .pin, #app nav .map .sub-marker-container .marker#hw-marker .pin, #app nav .map .sub-marker-container .marker#atwater-marker .pin, #app nav .map .sub-marker-container .marker#glassell-cypress-marker .pin, #app nav .map .sub-marker-container .marker#mtwash-marker .pin, #app nav .map .sub-marker-container .marker#bh-lh-marker .pin, #app nav .map .sub-marker-container .marker#el-sereno-marker .pin, #app nav .map .sub-marker-container .marker#culver-marker .pin, #app nav .map .sub-marker-container .marker#palisades-marker .pin, #app nav .map .sub-marker-container .marker#bev-crest-bev-hills-marker .pin, #app nav .map .sub-marker-container .marker#west-la-marker .pin, #app nav .map .sub-marker-container .marker#malibu-marker .pin, #app nav .map .sub-marker-container .marker#vc-coast-marker .pin, #app nav .map .sub-marker-container .marker#lax-marker .pin, #app nav .map .sub-marker-container .marker#inglewood-marker .pin, #app nav .map .sub-marker-container .marker#mb-hb-marker .pin, #app nav .map .sub-marker-container .marker#gardena-torrance-marker .pin, #app nav .map .sub-marker-container .marker#pv-marker .pin, #app nav .map .sub-marker-container .marker#long-beach-marker .pin, #app nav .map .sub-marker-container .marker#arcadia-marker .pin, #app nav .map .sub-marker-container .marker#monrovia-marker .pin, #app nav .map .sub-marker-container .marker#whittier-narrows-marker .pin, #app nav .map .sub-marker-container .marker#ie-marker .pin, #app nav .map .sub-marker-container .marker#expo-marker .pin, #app nav .map .sub-marker-container .marker#watts-marker .pin, #app nav .map .sub-marker-container .marker#leimert-marker .pin, #app nav .map .sub-marker-container .marker#mpw-marker .pin, #app nav .map .sub-marker-container .marker#commerce-marker .pin, #app nav .map .sub-marker-container .marker#burbank-marker .pin, #app nav .map .sub-marker-container .marker#shadow-hills-marker .pin, #app nav .map .sub-marker-container .marker#noho-marker .pin, #app nav .map .sub-marker-container .marker#balboa-marker .pin, #app nav .map .sub-marker-container .marker#chatsworth-marker .pin, #app nav .map .sub-marker-container .marker#woodland-hills-marker .pin, #app nav .map .sub-marker-container .marker#port-marker .pin, #app nav .map .sub-marker-container .marker#east-sgv-pomona-marker .pin, #app nav .map .sub-marker-container .marker#hsc-marker .pin, #app nav .map .sub-marker-container .marker#van-nuys-marker .pin, #app nav .map .sub-marker-container .marker#glendale-marker .pin, #app nav .map .sub-marker-container .marker#pasadena-marker .pin, #app nav .map .sub-marker-container .marker#mpk-alhambra-marker .pin, #app nav .map .sub-marker-container .marker#mt-takao-marker .pin, #app nav .map .sub-marker-container .marker#otsu-marker .pin, #app nav .map .sub-marker-container .marker#kyoto-marker .pin, #app nav .map .sub-marker-container .marker#osaka-marker .pin, #app nav .map .sub-marker-container .marker#narita-marker .pin, #app nav .map .sub-marker-container .marker#atami-marker .pin, #app nav .map .sub-marker-container .marker#hiroshima-marker .pin, #app nav .map .sub-marker-container .marker#okayama-marker .pin, #app nav .map .sub-marker-container .marker#takahashi-marker .pin, #app nav .map .sub-marker-container .marker#fuji-marker .pin, #app nav .map .sub-marker-container .marker#koyasan-marker .pin, #app nav .map .sub-marker-container .marker#kinosaki-marker .pin, #app nav .map .sub-marker-container .marker#ine-marker .pin {
   margin-bottom: 3px;
   left: 8px;
 }
@@ -1113,16 +1129,13 @@ header #header-wrapper #logo-link #logo {
 #app nav .map .sub-marker-container .non-marker {
   font-size: 14px;
 }
-#app nav .map .sub-marker-container#central-sub-markers .marker, #app nav .map .sub-marker-container#nela-eastside-sub-markers .marker, #app nav .map .sub-marker-container#south-la-gateway-sub-markers .marker {
+#app nav .map .sub-marker-container#central-sub-markers .marker, #app nav .map .sub-marker-container#eastside-nela-sub-markers .marker, #app nav .map .sub-marker-container#south-la-gateway-sub-markers .marker {
   font-size: 14px;
-}
-#app nav .map .sub-marker-container#central-sub-markers .marker#windsor-larchmont-marker, #app nav .map .sub-marker-container#nela-eastside-sub-markers .marker#windsor-larchmont-marker, #app nav .map .sub-marker-container#south-la-gateway-sub-markers .marker#windsor-larchmont-marker {
-  font-size: 11.5px;
 }
 #app nav .map .sub-marker-container#westside-more-sub-markers .marker, #app nav .map .sub-marker-container#sgv-more-sub-markers .marker, #app nav .map .sub-marker-container#sfv-more-sub-markers .marker {
   font-size: 14px;
 }
-#app nav .map .sub-marker-container#westside-more-sub-markers .marker#sawtelle-marker .pin, #app nav .map .sub-marker-container#sgv-more-sub-markers .marker#sawtelle-marker .pin, #app nav .map .sub-marker-container#sfv-more-sub-markers .marker#sawtelle-marker .pin {
+#app nav .map .sub-marker-container#westside-more-sub-markers .marker#west-la-marker .pin, #app nav .map .sub-marker-container#sgv-more-sub-markers .marker#west-la-marker .pin, #app nav .map .sub-marker-container#sfv-more-sub-markers .marker#west-la-marker .pin {
   width: 15px;
   height: 15px;
 }
@@ -1133,12 +1146,12 @@ header #header-wrapper #logo-link #logo {
   width: 24px;
   height: 24px;
 }
-#app nav .map .sub-marker-container#kanto-sub-markers .arrow, #app nav .map .sub-marker-container#chubu-sub-markers .arrow, #app nav .map .sub-marker-container#kansai-sub-markers .arrow, #app nav .map .sub-marker-container#chugoku-sub-markers .arrow {
+#app nav .map .sub-marker-container#kanto-sub-markers .arrow, #app nav .map .sub-marker-container#chubu-sub-markers .arrow, #app nav .map .sub-marker-container#kansai-sub-markers .arrow, #app nav .map .sub-marker-container#chugoku-shikoku-sub-markers .arrow {
   width: 45px;
   height: 45px;
   max-width: 45px;
 }
-#app nav .map .sub-marker-container#kanto-sub-markers .arrow i, #app nav .map .sub-marker-container#kanto-sub-markers .arrow span, #app nav .map .sub-marker-container#chubu-sub-markers .arrow i, #app nav .map .sub-marker-container#chubu-sub-markers .arrow span, #app nav .map .sub-marker-container#kansai-sub-markers .arrow i, #app nav .map .sub-marker-container#kansai-sub-markers .arrow span, #app nav .map .sub-marker-container#chugoku-sub-markers .arrow i, #app nav .map .sub-marker-container#chugoku-sub-markers .arrow span {
+#app nav .map .sub-marker-container#kanto-sub-markers .arrow i, #app nav .map .sub-marker-container#kanto-sub-markers .arrow span, #app nav .map .sub-marker-container#chubu-sub-markers .arrow i, #app nav .map .sub-marker-container#chubu-sub-markers .arrow span, #app nav .map .sub-marker-container#kansai-sub-markers .arrow i, #app nav .map .sub-marker-container#kansai-sub-markers .arrow span, #app nav .map .sub-marker-container#chugoku-shikoku-sub-markers .arrow i, #app nav .map .sub-marker-container#chugoku-shikoku-sub-markers .arrow span {
   font-size: 16px;
 }
 #app nav .tab-nav {
@@ -1184,14 +1197,14 @@ header #header-wrapper #logo-link #logo {
   border-right: none;
   border-right-width: 1px;
   text-align: right;
-  cursor: pointer;
   padding: 10px 20px;
   padding-left: 0;
   position: relative;
-  min-height: 45px;
+  min-height: 48px;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   position: relative;
+  cursor: pointer;
 }
 #app nav .tab-nav .tab-container .tab span {
   font-family: inherit;
@@ -1251,11 +1264,11 @@ header #header-wrapper #logo-link #logo {
 #app nav .tab-nav .tab-container .tab#central-tab {
   font-size: 20.325px;
 }
-#app nav .tab-nav .tab-container .tab#nela-eastside-tab {
+#app nav .tab-nav .tab-container .tab#eastside-nela-tab {
   font-size: 16.45px;
 }
 #app nav .tab-nav .tab-container .tab#westside-more-tab {
-  font-size: 15.4px;
+  font-size: 14.6px;
 }
 #app nav .tab-nav .tab-container .tab#south-bay-harbor-tab {
   font-size: 14.6px;
@@ -1272,7 +1285,7 @@ header #header-wrapper #logo-link #logo {
   padding-left: 0;
 }
 #app nav .tab-nav .tab-container .tab#catalina-tab {
-  font-size: 19px;
+  font-size: 18.9px;
 }
 #app nav .tab-nav.japan .tab-container .tab {
   font-size: 16.5px;
@@ -1283,6 +1296,7 @@ header #header-wrapper #logo-link #logo {
   padding-bottom: 10px;
   padding-right: 23px;
   padding-top: 8px;
+  min-height: 90px;
 }
 #app nav .tab-nav.japan .tab-container .tab .big {
   font-family: "Bricolage Grotesque";
@@ -1290,10 +1304,10 @@ header #header-wrapper #logo-link #logo {
   font-size: 26.5px;
   font-weight: 700;
   display: block;
-  padding-bottom: 3px;
+  padding-bottom: 0px;
 }
 #app nav .tab-nav.japan .tab-container .tab#kanto-tab .small {
-  font-size: 17.1px;
+  font-size: 16.75px;
 }
 #app nav .tab-nav.japan .tab-container .tab#kanto-tab .big {
   font-size: 28.75px;
@@ -1305,16 +1319,19 @@ header #header-wrapper #logo-link #logo {
   font-size: 27.4px;
 }
 #app nav .tab-nav.japan .tab-container .tab#kansai-tab .small {
-  font-size: 15.2px;
+  font-size: 13.3px;
 }
 #app nav .tab-nav.japan .tab-container .tab#kansai-tab .big {
   font-size: 27px;
 }
-#app nav .tab-nav.japan .tab-container .tab#chugoku-tab .small {
-  font-size: 13.5px;
+#app nav .tab-nav.japan .tab-container .tab#chugoku-shikoku-tab .small {
+  font-size: 14.4px;
 }
-#app nav .tab-nav.japan .tab-container .tab#chugoku-tab .big {
+#app nav .tab-nav.japan .tab-container .tab#chugoku-shikoku-tab .big {
   font-size: 23.3px;
+  line-height: 1.2;
+  -webkit-transform: scaleY(0.925);
+          transform: scaleY(0.925);
 }
 #app nav .tab-nav.japan .link-container {
   max-height: 392px;
@@ -1346,6 +1363,11 @@ header #header-wrapper #logo-link #logo {
   -webkit-transition: all 0.5s var(--ease-out-quint);
   transition: all 0.5s var(--ease-out-quint);
 }
+#app nav .tab-nav .link-container .summary-link.top-rec i {
+  color: orange;
+  font-size: 13px;
+  padding-left: 5px;
+}
 #app nav .tab-nav .link-container a {
   cursor: pointer;
   position: relative;
@@ -1369,6 +1391,7 @@ header #header-wrapper #logo-link #logo {
 #app nav .tab-nav .link-container a.top-rec i {
   color: orange;
   font-size: 13px;
+  padding-left: 1px;
 }
 #app nav .tab-nav .link-container .disabled-link, #app nav .tab-nav .link-container .coming-soon {
   font-size: inherit;
@@ -1848,14 +1871,18 @@ header #header-wrapper #logo-link #logo {
   width: 30px;
   margin-top: 7px;
 }
-#app main .title div .title-text.disney-and-grand-la {
-  gap: 10px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  font-size: 32px;
+#app main .title div .title-text.sgv-more {
+  font-size: 34px;
+  padding-bottom: 0px;
 }
-#app main .title div .title-text.disney-and-grand-la .title-pin {
+#app main .title div .title-text.sgv-more .title-pin {
+  margin-top: 5px;
+}
+#app main .title div .title-text.sfv-more {
+  font-size: 36px;
+  padding-bottom: 0px;
+}
+#app main .title div .title-text.sfv-more .title-pin {
   margin-top: 5px;
 }
 #app main .title div .parent-regions {
@@ -1906,7 +1933,7 @@ header #header-wrapper #logo-link #logo {
 #app main .title div.sfv-more .title-text {
   font-size: 28.5px;
 }
-#app main .title div.kanto .small, #app main .title div.chubu .small, #app main .title div.kansai .small, #app main .title div.chugoku .small {
+#app main .title div.kanto .small, #app main .title div.chubu .small, #app main .title div.kansai .small, #app main .title div.chugoku-shikoku .small {
   display: none;
 }
 #app main .content {
@@ -1914,7 +1941,7 @@ header #header-wrapper #logo-link #logo {
 }
 #app main #tag-div {
   display: none;
-  gap: 10px;
+  gap: 7px;
   margin: 0 0 30px 8px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1927,7 +1954,7 @@ header #header-wrapper #logo-link #logo {
 }
 #app main #tag-div div {
   font-style: normal;
-  padding: 5px 13px;
+  padding: 5px 12px;
   border-radius: 50px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: #f9f9f9;
@@ -1956,9 +1983,32 @@ header #header-wrapper #logo-link #logo {
   height: 2px;
   margin: 20px 0 30px;
 }
+#app main .construction p {
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: center;
+}
+#app main .construction img {
+  margin: 50px auto 20px;
+  display: block;
+  width: 80%;
+  max-width: 400px;
+}
+#app main .construction hr {
+  max-width: 700px;
+  margin: 0 auto;
+}
+#app main .construction .item-links-container hr {
+  max-width: unset;
+}
+#app main .good-things {
+  font-family: "Bricolage Grotesque";
+  font-size: 30px;
+  font-weight: 900;
+}
 #app main .content * {
   font-size: 17px;
-  line-height: 1.35;
+  line-height: 1.4;
   color: #333;
 }
 #app main .content * strong {
@@ -1983,6 +2033,17 @@ header #header-wrapper #logo-link #logo {
 #app main .content * p {
   margin-top: 0;
 }
+#app main .content * .item-links-title {
+  font-family: "Bricolage Grotesque";
+  font-size: 22px;
+  font-weight: 900;
+  margin: 0;
+}
+#app main .content * .item-links-title i {
+  color: var(--light-red);
+  font-size: 15px;
+  margin-right: 3px;
+}
 #app main .content * .item-links-container {
   -webkit-box-shadow: var(--sm-smooth-box);
           box-shadow: var(--sm-smooth-box);
@@ -1994,17 +2055,6 @@ header #header-wrapper #logo-link #logo {
 }
 #app main .content * .item-links-container hr {
   margin: 10px 0;
-}
-#app main .content * .item-links-container .item-links-title {
-  font-family: "Bricolage Grotesque";
-  font-size: 22px;
-  font-weight: 900;
-  margin: 0;
-}
-#app main .content * .item-links-container .item-links-title i {
-  color: var(--light-red);
-  font-size: 15px;
-  margin-right: 3px;
 }
 #app main .content * .item-links-container .item-links {
   list-style: none;
@@ -2021,12 +2071,6 @@ header #header-wrapper #logo-link #logo {
   max-height: 300px;
   padding-left: 18px;
   margin: 0;
-}
-#app main .content * .item-links-container .item-links#central--links {
-  max-height: 260px;
-}
-#app main .content * .item-links-container .item-links#central-dtla-links {
-  max-height: 350px;
 }
 #app main .content * .item-links-container .item-links li {
   margin: 5px;
@@ -2067,7 +2111,23 @@ header #header-wrapper #logo-link #logo {
   color: #333;
   -webkit-transition: all 0.5s var(--ease-out-quint);
   transition: all 0.5s var(--ease-out-quint);
-  display: block;
+  display: inline-block;
+}
+#app main .content * .item-links-container .item-links li a .big, #app main .content * .item-links-container .item-links li a span .big {
+  font-weight: 500;
+}
+#app main .content * .item-links-container .item-links li a .small, #app main .content * .item-links-container .item-links li a span .small {
+  position: relative;
+  margin-left: 16px;
+}
+#app main .content * .item-links-container .item-links li a .small:before, #app main .content * .item-links-container .item-links li a span .small:before {
+  content: " – ";
+  padding: 0px;
+  position: absolute;
+  left: -13px;
+  width: 5px;
+  height: 18px;
+  top: 0px;
 }
 #app main .content * .item-links-container .item-links li a:hover, #app main .content * .item-links-container .item-links li a span:hover {
   color: var(--dark-red);
@@ -2080,6 +2140,9 @@ header #header-wrapper #logo-link #logo {
   position: relative;
   top: -1px;
 }
+#app main .content * .item-links-container .item-links li a span {
+  display: inline;
+}
 #app main .content * .item-links-container .item-links .disabled-link, #app main .content * .item-links-container .item-links .coming-soon {
   font-size: inherit;
   line-height: inherit;
@@ -2087,6 +2150,9 @@ header #header-wrapper #logo-link #logo {
 #app main .content * .item-links-container .item-links .disabled-link {
   font-style: italic;
   color: #999;
+}
+#app main .content * .item-links-container .item-links .disabled-link span:not(.coming-soon) {
+  color: inherit;
 }
 #app main .content * .item-links-container .item-links .disabled-link:hover {
   -webkit-transform: scale(1);
@@ -2110,6 +2176,51 @@ header #header-wrapper #logo-link #logo {
 #app main .content * .item-links-container .item-links .coming-soon:hover {
   color: var(--red);
 }
+#app main .content * .item-links-container .item-links#central--links {
+  max-height: 260px;
+}
+#app main .content * .item-links-container .item-links#westside-more--links {
+  max-height: 250px;
+}
+#app main .content * .item-links-container .item-links#south-bay-harbor--links {
+  max-height: 150px;
+}
+#app main .content * .item-links-container .item-links#catalina--links {
+  max-height: 130px;
+}
+#app main .content * .item-links-container .item-links#south-la-gateway--links {
+  max-height: 150px;
+}
+#app main .content * .item-links-container .item-links#eastside-nela--links {
+  max-height: 150px;
+}
+#app main .content * .item-links-container .item-links#sgv-more--links {
+  max-height: 220px;
+}
+#app main .content * .item-links-container .item-links#sfv-more--links {
+  max-height: 220px;
+}
+#app main .content * .item-links-container .item-links#central-dtla-links {
+  max-height: 350px;
+}
+#app main .content * .item-links-container .item-links#kanto--links {
+  max-height: 220px;
+}
+#app main .content * .item-links-container .item-links#chubu--links {
+  max-height: 150px;
+}
+#app main .content * .item-links-container .item-links#kansai--links {
+  max-height: 250px;
+}
+#app main .content * .item-links-container .item-links#chugoku-shikoku--links {
+  max-height: 120px;
+}
+#app main .content * .item-links-container .item-links#la-links {
+  max-height: 150px;
+}
+#app main .content * .item-links-container .item-links#jp-links li {
+  width: 100%;
+}
 #app main .content * figure {
   position: relative;
   margin: 25px auto;
@@ -2129,6 +2240,10 @@ header #header-wrapper #logo-link #logo {
       -ms-flex-align: center;
           align-items: center;
   gap: 5px;
+}
+#app main .content * figure figcaption.top {
+  bottom: unset !important;
+  top: 6px !important;
 }
 #app main .content * figure figcaption span {
   font-size: 13.5px;
@@ -2172,6 +2287,53 @@ header #header-wrapper #logo-link #logo {
 }
 #app main .content * figure figcaption span:last-of-type i {
   font-size: 10px;
+}
+#app main .content * figure figcaption.region-type {
+  bottom: unset;
+  top: 6px;
+  height: calc(100% - 18px);
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+#app main .content * figure figcaption.region-type span:first-of-type, #app main .content * figure figcaption.region-type span.title {
+  position: absolute;
+  right: -4px;
+  border-radius: 30px;
+  padding: 5px 13px 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#app main .content * figure figcaption.region-type span:first-of-type a, #app main .content * figure figcaption.region-type span.title a {
+  font-family: "Bricolage Grotesque";
+  font-weight: 600;
+  font-size: 17px;
+  color: #222;
+}
+#app main .content * figure figcaption.region-type span:first-of-type a:hover, #app main .content * figure figcaption.region-type span.title a:hover {
+  color: var(--red);
+}
+#app main .content * figure figcaption.region-type span:first-of-type .title-pin, #app main .content * figure figcaption.region-type span.title .title-pin {
+  height: auto;
+  display: block;
+  width: 17px;
+  margin-right: 5px;
+}
+#app main .content * figure figcaption.region-type span:first-of-type.title, #app main .content * figure figcaption.region-type span.title.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 5px;
+}
+#app main .content * figure figcaption.region-type span:last-of-type i {
+  top: 0;
 }
 #app main .content * figure .photo {
   width: 100%;
@@ -2335,6 +2497,13 @@ header #header-wrapper #logo-link #logo {
 #app main .bottom-row #copyright {
   margin-right: auto;
 }
+#app main .bottom-row #copyright a {
+  font-size: inherit;
+  color: inherit;
+}
+#app main .bottom-row #copyright a:hover {
+  color: var(--light-red);
+}
 #app main .bottom-row #scroll-to-top {
   border: none;
   cursor: pointer;
@@ -2391,15 +2560,15 @@ dialog {
   opacity: 0;
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
-  top: 0;
   border: none;
   border-radius: var(--border-radius);
   -webkit-box-shadow: var(--lg-smooth-box);
           box-shadow: var(--lg-smooth-box);
   position: relative;
   padding: 0;
+  width: 90vw;
   max-width: 800px;
-  top: -80%;
+  padding-bottom: 10px;
 }
 dialog:focus {
   outline: none;
@@ -2421,11 +2590,11 @@ dialog form #about-close {
   transition: all 0.5s var(--ease-out-quint);
   cursor: pointer;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 30px;
+  right: 35px;
 }
 dialog form #about-close i {
-  font-size: 20px;
+  font-size: 23px;
   color: white;
 }
 dialog form #about-close:hover {
@@ -2440,24 +2609,206 @@ dialog form #about-close:active i {
   color: var(--light-red);
 }
 dialog form p {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.35;
   color: #333;
 }
-dialog form h2, dialog form h3 {
+dialog form p:first-of-type {
+  margin-top: 0;
+}
+dialog form h2 {
   font-family: "Bricolage Grotesque";
   font-size: 30px;
   font-weight: 900;
-  margin-bottom: 10px;
-  padding: 0 30px 20px 0;
-  border-bottom: 2px solid #dfdfdf;
+  margin-bottom: 12px;
+  padding: 5px 30px 20px 5px;
   margin-top: 20px;
+}
+dialog form summary {
+  font-family: "Bricolage Grotesque";
+  font-size: 25px;
+  font-weight: 900;
+  padding-bottom: 0;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.25s var(--ease-out-quint);
+  transition: all 0.25s var(--ease-out-quint);
+  height: 60px;
+}
+dialog form summary:hover {
+  color: var(--red);
+}
+dialog form summary i {
+  margin-right: 10px;
+  color: var(--light-red);
+  -webkit-transition: all 0.25s var(--ease-out-quint);
+  transition: all 0.25s var(--ease-out-quint);
+}
+dialog form summary .fa-chevron-down {
+  -webkit-transition: all 1s var(--ease-out-quint);
+  transition: all 1s var(--ease-out-quint);
+  margin-left: auto;
+  font-size: 20px;
+  color: #aaa;
+  position: relative;
+  right: -10px;
+}
+dialog form details[open] summary {
+  margin-bottom: 5px;
+}
+dialog form details[open] summary .fa-chevron-down {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+dialog form details[open] summary:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  padding: 0;
+}
+dialog form details, dialog form div {
+  background-color: #f5f5f5;
+  padding: 5px 20px;
+  margin-bottom: 15px;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(0, 0, 0, 0.075);
+  display: block;
+}
+dialog form details.side-by-side, dialog form div.side-by-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: white;
+  margin: 15px 0;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+dialog form details.side-by-side i, dialog form div.side-by-side i {
+  color: #8EBE6F;
+  min-width: 25px;
+  text-align: center;
+  margin-top: 2px;
+}
+dialog form details.side-by-side p, dialog form div.side-by-side p {
+  margin: 0;
+  border-left: 1.5px solid rgba(0, 0, 0, 0.1);
+  padding-left: 15px;
+}
+dialog form figure {
+  position: relative;
+  margin: 25px auto;
+}
+dialog form figure figcaption {
+  position: absolute;
+  bottom: 12px;
+  left: 6px;
+  width: calc(100% - 11px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+dialog form figure figcaption span {
+  font-size: 13.5px;
+  padding: 5px 8px;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(7px) saturate(180%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left-color: rgba(255, 255, 255, 0.5);
+  border-top-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  margin-top: auto;
+  line-height: 1.3;
+  min-height: 30px;
+  text-align: left;
+}
+dialog form figure figcaption span strong {
+  font-size: inherit;
+  margin-right: 3px;
+}
+dialog form figure figcaption span:first-of-type {
+  margin-right: 5px;
+}
+dialog form figure figcaption span:last-of-type {
+  margin-top: auto;
+  min-width: 72px;
+  font-size: 12.5px;
+  text-align: center;
+  font-weight: 400;
+  padding: 3px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3px;
+}
+dialog form figure figcaption span:last-of-type i {
+  font-size: 10px;
+}
+dialog form figure .photo {
+  width: 100%;
+  border-radius: var(--border-radius);
+  -webkit-box-shadow: var(--sm-smooth-box);
+          box-shadow: var(--sm-smooth-box);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+dialog form figure .mobile {
+  display: none !important;
+}
+dialog form #profile {
+  float: right;
+  width: 50%;
+  border-radius: var(--);
+}
+dialog form strong {
+  font-size: inherit;
+  font-weight: 600;
+}
+dialog form span {
+  font-size: inherit;
+}
+dialog form a {
+  color: var(--dark-red);
+  -webkit-transition: all 0.5s var(--ease-out-quint);
+  transition: all 0.5s var(--ease-out-quint);
+  font-weight: 600;
+  font-size: inherit;
+}
+dialog form a i {
+  font-size: 11px;
+  position: relative;
+  top: -2px;
+  padding-right: 3px;
+  color: inherit;
+}
+dialog form a:hover {
+  color: var(--red);
 }
 dialog.appear {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
-  top: -60%;
 }
 dialog::-ms-backdrop {
   animation: backdrop-fade 0.5s var(--ease-out-quint) forwards;
@@ -2496,7 +2847,21 @@ dialog.close::backdrop {
   }
 }
 
+@media only screen and (max-width: 1600px) {
+  #la-links {
+    max-height: unset !important;
+  }
+  #la-links li {
+    width: 100% !important;
+  }
+}
 @media only screen and (max-width: 1500px) {
+  #la-links {
+    max-height: 150px !important;
+  }
+  #la-links li {
+    width: 50% !important;
+  }
   #app {
     grid-template-areas: "content";
     grid-template-columns: 1fr !important;
@@ -2786,6 +3151,20 @@ dialog.close::backdrop {
   .bottom.share {
     display: none !important;
   }
+  #la-links {
+    max-height: unset !important;
+  }
+  #la-links li {
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 890px) {
+  #app main .content * .item-links-container .item-links#sfv-more--links {
+    max-height: unset !important;
+  }
+  #app main .content * .item-links-container .item-links#sfv-more--links li {
+    width: 100% !important;
+  }
 }
 @media only screen and (max-width: 840px) {
   #header-wrapper {
@@ -2808,6 +3187,22 @@ dialog.close::backdrop {
   dialog.appear {
     -webkit-transform: scale(0.925);
             transform: scale(0.925);
+  }
+  #app main .content * .item-links-container .item-links#central--links,
+  #app main .content * .item-links-container .item-links#central-dtla-links,
+  #app main .content * .item-links-container .item-links#south-bay-harbor--links,
+  #app main .content * .item-links-container .item-links#catalina--links,
+  #app main .content * .item-links-container .item-links#sgv-more--links,
+  #app main .content * .item-links-container .item-links#south-la-gateway--links {
+    max-height: unset !important;
+  }
+  #app main .content * .item-links-container .item-links#central--links li,
+  #app main .content * .item-links-container .item-links#central-dtla-links li,
+  #app main .content * .item-links-container .item-links#south-bay-harbor--links li,
+  #app main .content * .item-links-container .item-links#catalina--links li,
+  #app main .content * .item-links-container .item-links#sgv-more--links li,
+  #app main .content * .item-links-container .item-links#south-la-gateway--links li {
+    width: 100% !important;
   }
 }
 @media only screen and (max-width: 780px) {
@@ -2834,6 +3229,7 @@ dialog.close::backdrop {
   .carousel-widget {
     overflow: visible !important;
     height: unset !important;
+    margin-top: 30px !important;
   }
   .carousel-widget::before, .carousel-widget::after {
     display: none !important;
@@ -2858,14 +3254,19 @@ dialog.close::backdrop {
     margin: 0 auto !important;
     margin-bottom: 10px !important;
   }
-  figure img {
+  figure img:not(.title-pin) {
     width: 100% !important;
   }
   figure .standard {
     display: none !important;
   }
-  #app main .content * figure .mobile {
+  #app main .content * figure .mobile:not(.title) {
     display: unset !important;
+  }
+  #app main .content * figure .mobile.title {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
 }
 @media only screen and (max-width: 610px) {
@@ -2891,11 +3292,11 @@ dialog.close::backdrop {
     height: 48.5px !important;
     padding-right: 15px !important;
   }
-  nav .tab-nav .tab#nela-eastside-tab {
+  nav .tab-nav .tab#eastside-nela-tab {
     font-size: 14px !important;
   }
   nav .tab-nav .tab#westside-more-tab {
-    font-size: 13px !important;
+    font-size: 12.75px !important;
   }
   nav .tab-nav .tab#south-bay-harbor-tab {
     font-size: 12.75px !important;
@@ -2907,7 +3308,7 @@ dialog.close::backdrop {
     font-size: 12px !important;
   }
   nav .tab-nav .tab#sfv-more-tab {
-    font-size: 12.75px !important;
+    font-size: 12.5px !important;
   }
   nav .tab-nav ul {
     padding-left: 32px !important;
@@ -2986,7 +3387,7 @@ dialog.close::backdrop {
     width: 52px !important;
     top: 32% !important;
   }
-  nav .map .marker#nela-eastside {
+  nav .map .marker#eastside-nela {
     width: 55px !important;
   }
   nav .map .marker#sfv-more {
@@ -3018,12 +3419,13 @@ dialog.close::backdrop {
   nav .map .marker#mtwash-marker {
     width: 65px !important;
   }
-  nav .map .marker#bh-bc-marker {
-    left: 87% !important;
+  nav .map .marker#bev-crest-bev-hills-marker {
+    top: 40.5% !important;
+    left: 86% !important;
     width: 50px !important;
   }
   nav .map .marker#westwood-marker {
-    top: 48.75% !important;
+    top: 45.5% !important;
   }
   nav .map .marker#venice-mdr-marker {
     top: 62.25% !important;
@@ -3046,14 +3448,15 @@ dialog.close::backdrop {
   }
   nav .map .marker#southpas-sanmarino-marker {
     font-size: 10px !important;
+    max-width: 110px !important;
   }
   nav .map .marker#mpk-marker, nav .map .marker#whittier-narrows-marker {
     width: 50px !important;
   }
   nav .map .marker#arcadia-marker {
-    width: 50px !important;
+    width: 70px !important;
   }
-  nav .map .marker#east-sgv-marker {
+  nav .map .marker#east-sgv-pomona-marker {
     max-width: 200px !important;
   }
   nav .map .marker#scv-castaic-av-marker {
@@ -3064,11 +3467,30 @@ dialog.close::backdrop {
     left: 41% !important;
   }
   nav .map .marker#hikone-marker {
-    top: 26.5% !important;
+    top: 25.5% !important;
     left: 77% !important;
   }
   nav .map .marker#nagahama-marker {
-    top: 22% !important;
+    top: 21% !important;
+  }
+  nav .map .marker#sherentar-marker {
+    max-width: 100px !important;
+    width: 100px !important;
+  }
+  nav .map .marker#balboa-marker {
+    left: 35% !important;
+  }
+  nav .map .marker#van-nuys-marker {
+    left: 48% !important;
+  }
+  nav .map .marker#noho-marker {
+    left: 74% !important;
+  }
+  nav .map .marker#noho-marker {
+    left: 74% !important;
+  }
+  nav .map .marker#burbank-marker {
+    left: 85.5% !important;
   }
   nav .map .sub-marker-container .marker {
     max-width: 80px !important;
@@ -3096,8 +3518,33 @@ dialog.close::backdrop {
   nav .tab-nav details[open] summary::after {
     content: "Hide" !important;
   }
+  #catalina-sub-markers .marker {
+    max-width: 200px !important;
+  }
+  #catalina-sub-markers #desconso-marker {
+    left: 80% !important;
+  }
+  #catalina-sub-markers #avalon-marker {
+    top: 75% !important;
+    left: 83% !important;
+  }
+  #catalina-sub-markers #avalon-canyon-marker {
+    top: 81.75% !important;
+    left: 78% !important;
+  }
+  #catalina-sub-markers #east-end-hikes-marker {
+    top: 90.5% !important;
+    left: 80.5% !important;
+  }
 }
 @media only screen and (max-width: 560px) {
+  #catalina-sub-markers .non-marker {
+    display: none !important;
+  }
+  #catalina-sub-markers .non-marker:last-of-type {
+    display: block !important;
+    top: 4% !important;
+  }
   #hsc-marker, #expo-marker {
     width: 50px !important;
   }
@@ -3191,8 +3638,8 @@ dialog.close::backdrop {
   #app nav .tab-nav .link-container ul li details summary.selected::before {
     left: -31px !important;
   }
-  #alhambra-marker {
-    top: 51.5% !important;
+  #mpk-alhambra-marker {
+    top: 56% !important;
   }
 }
 @media only screen and (max-width: 530px) {
@@ -3243,7 +3690,7 @@ dialog.close::backdrop {
     width: 120px !important;
     font-weight: 600 !important;
   }
-  nav .tab-nav .tab#nela-eastside-tab {
+  nav .tab-nav .tab#eastside-nela-tab {
     font-size: 13px !important;
   }
   nav .tab-nav .tab#westside-more-tab {
@@ -3265,7 +3712,7 @@ dialog.close::backdrop {
     padding-left: 10px !important;
   }
   nav .tab-nav .tab#sfv-more-tab {
-    font-size: 12.75px !important;
+    font-size: 12.5px !important;
     height: 63px !important;
   }
   nav .tab-nav .tab#catalina-tab {
@@ -3489,23 +3936,41 @@ dialog.close::backdrop {
   nav .map .marker, nav .map .non-marker {
     font-size: 10px !important;
   }
-  nav .map .marker#bh-bc-marker {
-    top: 37% !important;
-    left: 85% !important;
-    width: 40px !important;
-  }
   nav .map .marker#windsor-larchmont-marker {
     left: 43.75% !important;
   }
   #ojai-marker {
     left: 22% !important;
   }
-  #pbb-marker {
-    top: 37% !important;
-    left: 68.4% !important;
+  #palisades-marker {
+    top: 38.5% !important;
+    left: 56% !important;
+  }
+  #brentwood-belair-marker {
+    left: 70% !important;
+  }
+  nav .map .marker#lax-marker {
+    width: 90px !important;
+    max-width: 90px !important;
+    top: 21% !important;
+  }
+  #westwood-marker {
+    left: 69.8% !important;
+  }
+  nav .map .marker#van-nuys-marker {
+    left: 52% !important;
+  }
+  nav .map .marker#burbank-marker {
+    left: 88% !important;
+  }
+  nav .map .marker#bev-crest-bev-hills-marker {
+    left: 84% !important;
   }
   #pdr-marker {
     top: 74% !important;
+  }
+  #app nav .map .sub-marker-container .marker#malibu-marker {
+    left: 34% !important;
   }
   nav .map .marker#venice-mdr-marker {
     top: 64% !important;
@@ -3520,7 +3985,8 @@ dialog.close::backdrop {
     left: 22% !important;
   }
   #mb-hb-marker {
-    left: 42% !important;
+    top: 35% !important;
+    left: 41% !important;
   }
   #scv-castaic-av-marker {
     top: 13% !important;
@@ -3531,9 +3997,11 @@ dialog.close::backdrop {
   #lcf-cv-marker {
     left: 23% !important;
   }
-  #westchester-marker {
-    top: 18% !important;
+  #lax-marker {
+    top: 17% !important;
     left: 43% !important;
+    width: 65px !important;
+    max-width: 65px !important;
   }
   #mtwash-marker {
     left: 49% !important;
@@ -3544,8 +4012,8 @@ dialog.close::backdrop {
   #monrovia-marker {
     top: 30% !important;
   }
-  #alhambra-marker {
-    top: 53% !important;
+  #mpk-alhambra-marker {
+    top: 56% !important;
   }
   #mpk-marker {
     top: 61% !important;
@@ -3553,10 +4021,14 @@ dialog.close::backdrop {
   #otsu-marker {
     left: 65% !important;
   }
+  #app nav .map .sub-marker-container .marker#arcadia-marker {
+    top: 40% !important;
+    left: 48.5% !important;
+  }
   nav .map .marker#central {
     width: 40px !important;
   }
-  nav .map .marker#nela-eastside {
+  nav .map .marker#eastside-nela {
     width: 45px !important;
     left: 61% !important;
   }
@@ -3579,6 +4051,12 @@ dialog.close::backdrop {
     -webkit-transform: scale(0.575) translate(-39%, -37%);
             transform: scale(0.575) translate(-39%, -37%);
     width: 165%;
+  }
+  #chugoku-shikoku {
+    left: 24% !important;
+  }
+  #takahashi-marker {
+    left: 68% !important;
   }
   #app {
     height: calc(100% - 59px) !important;
@@ -3610,7 +4088,7 @@ dialog.close::backdrop {
     padding-top: 8px;
     z-index: -1;
   }
-  #app nav .map .marker-container .marker#nela-eastside {
+  #app nav .map .marker-container .marker#eastside-nela {
     top: 33.5%;
     left: 61.4% !important;
     padding: 2px 4px;
@@ -3627,19 +4105,6 @@ dialog.close::backdrop {
     height: 10%;
     font-size: 13.25px;
   }
-  #app nav .map .sub-marker-container .marker#bh-bc-marker {
-    top: 33% !important;
-    width: 46px !important;
-  }
-  #app nav .map .sub-marker-container .marker#pbb-marker {
-    top: 33% !important;
-    left: 68% !important;
-    z-index: -1;
-  }
-  #app nav .map .sub-marker-container .marker#westwood-marker {
-    top: 47% !important;
-    z-index: 1;
-  }
   #app nav .map .sub-marker-container .marker#santa-monica-marker {
     max-width: 75px !important;
     top: 55% !important;
@@ -3648,7 +4113,7 @@ dialog.close::backdrop {
   #app nav .map .sub-marker-container .marker#santa-monica-marker br {
     display: none;
   }
-  #app nav .map .sub-marker-container .marker#sawtelle-marker {
+  #app nav .map .sub-marker-container .marker#west-la-marker {
     top: 55%;
     left: 81% !important;
   }
@@ -3662,9 +4127,12 @@ dialog.close::backdrop {
   #app nav .map .sub-marker-container .marker#pdr-marker {
     top: 74.25% !important;
   }
+  #palisades-marker {
+    left: 55% !important;
+  }
   #app nav .map .sub-marker-container .marker#malibu-marker {
     top: 42.25% !important;
-    left: 39% !important;
+    left: 30% !important;
   }
   #app nav .map .sub-marker-container .marker#vc-coast-marker {
     top: 26.5% !important;
@@ -3744,16 +4212,16 @@ dialog.close::backdrop {
     max-width: 130px !important;
     top: 22% !important;
   }
-  #app nav .map .sub-marker-container .marker#arcadia-marker {
-    top: 40% !important;
-    left: 45.5% !important;
+  #app nav .map .sub-marker-container .marker#san-gabriel-rosemead-marker {
+    left: 45% !important;
+    top: 54% !important;
   }
-  #app nav .map .sub-marker-container .marker#san-gabriel-marker {
-    left: 42.75% !important;
-    top: 53% !important;
+  #app nav .map .sub-marker-container .marker#whittier-narrows-marker {
+    top: 65% !important;
+    left: 43% !important;
   }
-  #app nav .map .sub-marker-container .marker#alhambra-marker {
-    top: 53.25% !important;
+  #app nav .map .sub-marker-container .marker#mpk-alhambra-marker {
+    top: 58% !important;
   }
   #app nav .map .sub-marker-container .marker#mpk-marker {
     top: 62.25% !important;
@@ -3812,6 +4280,7 @@ dialog.close::backdrop {
   }
   #app nav .map .sub-marker-container .marker#redondo-marker {
     top: 55% !important;
+    left: 42% !important;
   }
   #app nav .map .sub-marker-container .marker#inglewood-marker {
     left: 59.75% !important;
@@ -3825,14 +4294,17 @@ dialog.close::backdrop {
     left: 55% !important;
     font-size: 13px !important;
   }
-  #app nav .map .sub-marker-container .marker#kawasaki-marker {
-    top: 69% !important;
+  #app nav .map .sub-marker-container .marker#yokohama-marker {
+    top: 70.7% !important;
   }
-  #app nav .map .sub-marker-container .marker#shonan-marker {
-    top: 80% !important;
+  #app nav .map .sub-marker-container .marker#kamakura-marker {
+    top: 76% !important;
+  }
+  #app nav .map .sub-marker-container .marker#enoshima-marker {
+    top: 81.25% !important;
   }
   #app nav .map .sub-marker-container .marker#hakone-marker {
-    top: 85% !important;
+    top: 86.75% !important;
   }
   #app nav .map .sub-marker-container#south-bay-harbor-sub-markers .arrow {
     width: 30px !important;
@@ -3914,6 +4386,9 @@ dialog.close::backdrop {
   }
   #tab-selector {
     border-top-width: 15px !important;
+  }
+  nav {
+    display: none !important;
   }
   header {
     height: 52.5px;
