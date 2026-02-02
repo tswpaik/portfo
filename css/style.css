@@ -1176,6 +1176,9 @@ main section#development .timeline-container .yr-marker::after {
   -webkit-transition: all 1s var(--ease-out-quint);
   transition: all 1s var(--ease-out-quint);
 }
+main section#development .timeline-container .yr-marker#yr-marker-2025::after {
+  display: none;
+}
 main section#development .timeline-container .yr-marker.no-line {
   color: #555;
 }
@@ -1294,6 +1297,9 @@ main section#development .timeline-container .yr-marker div.dev-link.right-align
           transform: translate(-10px, 213px);
   right: 0;
   text-align: right;
+}
+main section#development .timeline-container .timeline-section-container {
+  padding-left: calc(24px + 7.2%);
 }
 main section#personal .tagline, main section#personal .tagline ~ p {
   text-shadow: #000 0px 0px 15px, #000 0px 0px 15px, #000 0px 0px 15px, #000 0px 0px 15px, #000 0px 0px 15px;
@@ -1593,6 +1599,11 @@ footer p span {
   color: inherit;
 }
 
+#development .timeline-container #thinkful-p {
+  -webkit-transform: scale(0.9, 0.74) !important;
+          transform: scale(0.9, 0.74) !important;
+}
+
 @media only screen and (min-width: 1800px) {
   body {
     height: calc(100% - 150px);
@@ -1625,6 +1636,10 @@ footer p span {
   }
   #development .timeline-container {
     height: 420px !important;
+  }
+  #development .timeline-container #thinkful-p {
+    -webkit-transform: scale(0.7, 0.58) !important;
+            transform: scale(0.7, 0.58) !important;
   }
   #personal {
     margin-top: 200px !important;
@@ -1675,6 +1690,22 @@ footer p span {
   fieldset {
     margin-right: 0 !important;
   }
+  #development .dev-link a {
+    -webkit-transform: scale(0.825) translateY(-10px) !important;
+            transform: scale(0.825) translateY(-10px) !important;
+  }
+  .left-align {
+    left: -30px !important;
+  }
+  .right-align {
+    right: -35px !important;
+  }
+  #usc-link {
+    min-width: 370px !important;
+  }
+  #usc-link span {
+    font-size: 18px !important;
+  }
 }
 @media only screen and (max-width: 1300px) {
   #welcome .row {
@@ -1696,22 +1727,6 @@ footer p span {
   #welcome .row .location:last-of-type i {
     position: relative;
     left: -3px;
-  }
-  #development .dev-link a {
-    -webkit-transform: scale(0.825) translateY(-10px) !important;
-            transform: scale(0.825) translateY(-10px) !important;
-  }
-  .left-align {
-    left: -30px !important;
-  }
-  .right-align {
-    right: -35px !important;
-  }
-  #usc-link {
-    min-width: 370px !important;
-  }
-  #usc-link span {
-    font-size: 18px !important;
   }
 }
 @media only screen and (max-width: 1280px) {
@@ -1739,6 +1754,12 @@ footer p span {
   #personal {
     margin-top: 100px !important;
   }
+  #hci-link-container {
+    min-width: 220px !important;
+  }
+  #hci-link-container span {
+    font-size: 18px !important;
+  }
 }
 @media only screen and (max-width: 1133px) and (max-height: 744px) {
   main {
@@ -1754,6 +1775,10 @@ footer p span {
   #development .dev-link a {
     -webkit-transform: scale(0.75) translateY(-10px) !important;
             transform: scale(0.75) translateY(-10px) !important;
+  }
+  #development .timeline-container #thinkful-p {
+    -webkit-transform: scale(0.6, 0.5) !important;
+            transform: scale(0.6, 0.5) !important;
   }
   .right-align {
     right: -45px !important;
@@ -1778,6 +1803,9 @@ footer p span {
     display: block;
     -webkit-transform: scale(0.8) !important;
             transform: scale(0.8) !important;
+  }
+  #usc-link span {
+    font-size: 16px !important;
   }
 }
 @media only screen and (max-width: 1050px) {
@@ -1804,6 +1832,9 @@ footer p span {
   }
   #experience .row .button {
     font-size: 22px;
+  }
+  #development .timeline-container {
+    width: 100% !important;
   }
   #thinkful-button {
     -webkit-transform: scale(0.65, 0.54) !important;
@@ -2043,6 +2074,7 @@ footer p span {
   }
   #development .timeline-section-container {
     padding: 0 22px !important;
+    padding-left: calc(30px + 7.2%) !important;
   }
   #development .yr-marker-container {
     top: 2px !important;
@@ -2058,6 +2090,17 @@ footer p span {
   #personal .tagline ~ p {
     padding-right: 280px !important;
     font-size: 20px !important;
+  }
+}
+@media only screen and (max-width: 830px) {
+  #hci-link-container {
+    min-width: 200px !important;
+  }
+  #hci-link-container span {
+    font-size: 17px !important;
+  }
+  #usc-link span {
+    font-size: 16px !important;
   }
 }
 @media only screen and (max-width: 780px) {
@@ -2195,6 +2238,9 @@ footer p span {
   }
   #development .timeline-container .yr-marker-container .yr-marker .dev-link a .skill::before {
     top: 12px !important;
+  }
+  #development .timeline-container .yr-marker-container #yr-marker-2025 {
+    display: none;
   }
   #development .dev-link a {
     -webkit-transform: unset !important;
