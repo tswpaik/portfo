@@ -3687,9 +3687,6 @@ dialog.close::backdrop {
   #nagahama-marker {
     left: 79% !important;
   }
-  .non-marker#la-map-source, .non-marker#jp-map-source {
-    display: block !important;
-  }
   main {
     grid-template-columns: 1fr 0 !important;
   }
@@ -3962,6 +3959,15 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 430px) {
+  #app main .content *,
+  dialog form p {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  #app main .bottom-row .parent-links div a {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
   nav .map .marker {
     border-top-width: 3px !important;
     z-index: 1;
