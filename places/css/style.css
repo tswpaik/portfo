@@ -2047,7 +2047,10 @@ header #header-wrapper #logo-link #logo {
 #app main .content * .item-links-title i {
   color: var(--light-red);
   font-size: 15px;
-  margin-right: 3px;
+  margin-right: 4px;
+  position: relative;
+  top: -1.5px;
+  left: 2px;
 }
 #app main .content * .item-links-container {
   -webkit-box-shadow: var(--sm-smooth-box);
