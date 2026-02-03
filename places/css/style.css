@@ -594,9 +594,9 @@ header #header-wrapper #logo-link #logo {
 }
 #app nav .map .marker-container .marker#westside-more, #app nav .map .sub-marker-container .marker#westside-more {
   top: 32%;
-  left: 30.5%;
+  left: 30%;
   padding-right: 12px;
-  width: 114px;
+  width: 115px;
   text-align: right;
 }
 #app nav .map .marker-container .marker#westside-more span, #app nav .map .sub-marker-container .marker#westside-more span {
@@ -919,7 +919,7 @@ header #header-wrapper #logo-link #logo {
 }
 #app nav .map .marker-container .non-marker#sm-mountains, #app nav .map .sub-marker-container .non-marker#sm-mountains {
   top: 31%;
-  left: 14%;
+  left: 13.5%;
 }
 #app nav .map .marker-container .non-marker#sm-mountains i, #app nav .map .sub-marker-container .non-marker#sm-mountains i {
   display: block;
