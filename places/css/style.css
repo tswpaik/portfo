@@ -3815,10 +3815,10 @@ dialog.close::backdrop {
   }
   #app main .bottom-row #scroll-to-top,
   #app main .bottom-row #copyright {
-    font-size: 15px !important;
+    font-size: 16px !important;
   }
   #app main .bottom-row .parent-links div a {
-    font-size: 15px !important;
+    font-size: 16px !important;
   }
   nav {
     position: absolute !important;
@@ -3960,9 +3960,10 @@ dialog.close::backdrop {
 }
 @media only screen and (max-width: 430px) {
   #app main .content *,
-  dialog form p {
+  dialog form p,
+  #app main .content * .item-links-container .item-links li a, #app main .content * .item-links-container .item-links li a span {
     font-size: 18px;
-    line-height: 1.4;
+    line-height: 1.5;
   }
   #app main .bottom-row .parent-links div a {
     padding-bottom: 5px;
