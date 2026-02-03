@@ -225,7 +225,7 @@ header {
   top: 0;
   width: 100%;
   background-color: black;
-  background-image: url("/images/header-bg3.webp");
+  background-image: url("../images/header-bg3.webp");
   z-index: 1;
   border-bottom: 10px solid var(--red);
   -webkit-box-shadow: var(--sm-smooth-box);
