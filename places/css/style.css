@@ -3543,6 +3543,22 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 560px) {
+  dialog {
+    width: 100vw;
+  }
+  dialog form {
+    padding: 10px 15px;
+  }
+  dialog .side-by-side {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  dialog .side-by-side p {
+    border-left: none !important;
+    padding-left: 0 !important;
+  }
   #catalina-sub-markers .non-marker {
     display: none !important;
   }
@@ -3787,10 +3803,10 @@ dialog.close::backdrop {
   }
   #app main .bottom-row #scroll-to-top,
   #app main .bottom-row #copyright {
-    font-size: 13px !important;
+    font-size: 15px !important;
   }
   #app main .bottom-row .parent-links div a {
-    font-size: 13px !important;
+    font-size: 15px !important;
   }
   nav {
     position: absolute !important;
@@ -3923,7 +3939,7 @@ dialog.close::backdrop {
   }
   #app main .title div .parent-regions {
     padding-top: 10px !important;
-    font-size: 14px !important;
+    font-size: 16px !important;
   }
   #app main .title div .parent-regions i {
     font-size: 12px !important;
