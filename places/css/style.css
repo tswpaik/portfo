@@ -2597,9 +2597,18 @@ dialog form #about-close {
   position: absolute;
   top: 30px;
   right: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 dialog form #about-close i {
-  font-size: 20px;
+  font-size: 23px;
   color: white;
 }
 dialog form #about-close:hover {
