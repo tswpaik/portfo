@@ -2599,7 +2599,7 @@ dialog form #about-close {
   right: 35px;
 }
 dialog form #about-close i {
-  font-size: 23px;
+  font-size: 20px;
   color: white;
 }
 dialog form #about-close:hover {
@@ -2644,6 +2644,9 @@ dialog form summary {
   -webkit-transition: all 0.25s var(--ease-out-quint);
   transition: all 0.25s var(--ease-out-quint);
   height: 60px;
+}
+dialog form summary::-webkit-details-marker {
+  display: none;
 }
 dialog form summary:hover {
   color: var(--red);
