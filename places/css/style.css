@@ -556,6 +556,9 @@ header #header-wrapper #logo-link #logo {
   transition: all 0.5s var(--ease-out-quint);
   font-style: italic;
 }
+#app nav .map .marker-container .marker i, #app nav .map .sub-marker-container .marker i {
+  display: none;
+}
 #app nav .map .marker-container .marker.selected, #app nav .map .sub-marker-container .marker.selected {
   z-index: 1;
   background-color: #fff0d8;
@@ -2066,13 +2069,21 @@ header #header-wrapper #logo-link #logo {
   top: -1.5px;
   left: 2px;
 }
+#app main .content * .item-links-title i.fa-map-location-dot {
+  font-size: 20px;
+  top: 0px;
+}
 #app main .content * .item-links-title i.fa-utensils, #app main .content * .item-links-title i.fa-icons {
   font-size: 20px;
   top: 0px;
   margin-right: 7px;
 }
-#app main .content * .item-links-title i.fa-icons {
-  font-size: 22px;
+#app main .content * .item-links-title i.fa-list-check, #app main .content * .item-links-title i.fa-list {
+  font-size: 20px;
+  top: 0px;
+}
+#app main .content * .item-links-title i.fa-images {
+  top: 0px;
 }
 #app main .content * .item-links-container {
   -webkit-box-shadow: var(--sm-smooth-box);
@@ -3195,6 +3206,11 @@ dialog.close::backdrop {
     padding-left: 80px !important;
   }
 }
+@media only screen and (max-width: 1040px) {
+  .tokyo-dining-links, .tokyo-activity-links {
+    max-height: 1000px !important;
+  }
+}
 @media only screen and (max-width: 1000px) {
   .dtla-dining-links, .dtla-activity-links {
     max-height: 800px !important;
@@ -3267,10 +3283,12 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 840px) {
-  .dtla-dining-links, .dtla-activity-links {
+  .dtla-dining-links, .dtla-activity-links,
+  .tokyo-dining-links, .tokyo-activity-links {
     max-height: unset !important;
   }
-  .dtla-dining-links li, .dtla-activity-links li {
+  .dtla-dining-links li, .dtla-activity-links li,
+  .tokyo-dining-links li, .tokyo-activity-links li {
     width: 100% !important;
   }
   .side-by-side-lists {
