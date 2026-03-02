@@ -2953,12 +2953,24 @@ dialog.close::backdrop {
   .dtla-dining-links, .dtla-activity-links {
     max-height: 750px !important;
   }
+  #app main .content * .item-links-container .item-links#sfv-more--links {
+    max-height: unset !important;
+  }
+  #app main .content * .item-links-container .item-links#sfv-more--links li {
+    width: 100% !important;
+  }
 }
 @media only screen and (max-width: 1600px) {
   #la-links {
     max-height: unset !important;
   }
   #la-links li {
+    width: 100% !important;
+  }
+  #app main .content * .item-links-container .item-links#south-la-gateway--links {
+    max-height: unset !important;
+  }
+  #app main .content * .item-links-container .item-links#south-la-gateway--links li {
     width: 100% !important;
   }
 }
@@ -3327,7 +3339,8 @@ dialog.close::backdrop {
   #app main .content * .item-links-container .item-links#south-bay-harbor--links,
   #app main .content * .item-links-container .item-links#catalina--links,
   #app main .content * .item-links-container .item-links#sgv-more--links,
-  #app main .content * .item-links-container .item-links#south-la-gateway--links {
+  #app main .content * .item-links-container .item-links#south-la-gateway--links,
+  #app main .content * .item-links-container .item-links#eastside-nela--links {
     max-height: unset !important;
   }
   #app main .content * .item-links-container .item-links#central--links li,
@@ -3336,7 +3349,8 @@ dialog.close::backdrop {
   #app main .content * .item-links-container .item-links#south-bay-harbor--links li,
   #app main .content * .item-links-container .item-links#catalina--links li,
   #app main .content * .item-links-container .item-links#sgv-more--links li,
-  #app main .content * .item-links-container .item-links#south-la-gateway--links li {
+  #app main .content * .item-links-container .item-links#south-la-gateway--links li,
+  #app main .content * .item-links-container .item-links#eastside-nela--links li {
     width: 100% !important;
   }
 }
