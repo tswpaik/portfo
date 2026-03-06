@@ -2953,6 +2953,12 @@ dialog.close::backdrop {
   .dtla-dining-links, .dtla-activity-links {
     max-height: 750px !important;
   }
+  .kyoto-dining-links {
+    max-height: 400px !important;
+  }
+  .kyoto-activity-links {
+    max-height: 1000px !important;
+  }
   #app main .content * .item-links-container .item-links#sfv-more--links {
     max-height: unset !important;
   }
@@ -2977,6 +2983,12 @@ dialog.close::backdrop {
 @media only screen and (max-width: 1500px) {
   .dtla-dining-links, .dtla-activity-links {
     max-height: 600px !important;
+  }
+  .kyoto-dining-links {
+    max-height: 410px !important;
+  }
+  .kyoto-activity-links {
+    max-height: 750px !important;
   }
   #la-links {
     max-height: 150px !important;
@@ -3222,6 +3234,9 @@ dialog.close::backdrop {
   .tokyo-dining-links, .tokyo-activity-links {
     max-height: 1000px !important;
   }
+  .kyoto-activity-links {
+    max-height: 1100px !important;
+  }
 }
 @media only screen and (max-width: 1000px) {
   .dtla-dining-links, .dtla-activity-links {
@@ -3296,11 +3311,13 @@ dialog.close::backdrop {
 }
 @media only screen and (max-width: 840px) {
   .dtla-dining-links, .dtla-activity-links,
-  .tokyo-dining-links, .tokyo-activity-links {
+  .tokyo-dining-links, .tokyo-activity-links,
+  .kyoto-dining-links, .kyoto-activity-links {
     max-height: unset !important;
   }
   .dtla-dining-links li, .dtla-activity-links li,
-  .tokyo-dining-links li, .tokyo-activity-links li {
+  .tokyo-dining-links li, .tokyo-activity-links li,
+  .kyoto-dining-links li, .kyoto-activity-links li {
     width: 100% !important;
   }
   .side-by-side-lists {
