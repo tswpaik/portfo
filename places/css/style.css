@@ -2961,6 +2961,9 @@ dialog.close::backdrop {
   .dtla-dining-links, .dtla-activity-links {
     max-height: 750px !important;
   }
+  .tokyo-dining-links, .tokyo-activity-links {
+    max-height: 950px !important;
+  }
   .kyoto-dining-links {
     max-height: 400px !important;
   }
@@ -2989,6 +2992,9 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 1500px) {
+  .tokyo-dining-links, .tokyo-activity-links {
+    max-height: 750px !important;
+  }
   .dtla-dining-links, .dtla-activity-links {
     max-height: 600px !important;
   }
