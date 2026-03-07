@@ -3956,6 +3956,11 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 460px) {
+  #pdr-marker {
+    top: 71.5% !important;
+    max-width: 80px !important;
+    width: 80px !important;
+  }
   #header-wrapper {
     -webkit-transform: scale(0.6) translate(-35%, -33%);
             transform: scale(0.6) translate(-35%, -33%);
@@ -4174,9 +4179,6 @@ dialog.close::backdrop {
   nav .map .marker#bev-crest-bev-hills-marker {
     left: 84% !important;
   }
-  #pdr-marker {
-    top: 73% !important;
-  }
   #app nav .map .sub-marker-container .marker#topanga-malibu-marker {
     left: 34% !important;
   }
@@ -4331,9 +4333,6 @@ dialog.close::backdrop {
   }
   #app nav .map .sub-marker-container .marker#culver-marker {
     z-index: 1 !important;
-  }
-  #app nav .map .sub-marker-container .marker#pdr-marker {
-    top: 72% !important;
   }
   #palisades-marker {
     left: 55% !important;
