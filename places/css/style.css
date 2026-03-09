@@ -4313,6 +4313,9 @@ dialog.close::backdrop {
   #westwood-marker {
     left: 69.8% !important;
   }
+  #fairfax-marker {
+    top: 59% !important;
+  }
   nav .map .marker#van-nuys-marker {
     left: 60% !important;
   }
