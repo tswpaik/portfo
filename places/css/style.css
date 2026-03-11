@@ -3113,6 +3113,9 @@ dialog.close::backdrop {
   .kyoto-activity-links {
     max-height: 1000px !important;
   }
+  .kanazawa-activity-links {
+    max-height: 650px !important;
+  }
   #app main .content * .item-links-container .item-links#sfv-more--links {
     max-height: unset !important;
   }
@@ -3146,6 +3149,9 @@ dialog.close::backdrop {
   }
   .kyoto-activity-links {
     max-height: 750px !important;
+  }
+  .kanazawa-activity-links {
+    max-height: 500px !important;
   }
   #la-links {
     max-height: 150px !important;
@@ -3387,12 +3393,15 @@ dialog.close::backdrop {
     padding-left: 80px !important;
   }
 }
-@media only screen and (max-width: 1040px) {
+@media only screen and (max-width: 1050px) {
   .tokyo-dining-links, .tokyo-activity-links {
     max-height: 1000px !important;
   }
   .kyoto-activity-links {
     max-height: 1100px !important;
+  }
+  .kanazawa-activity-links {
+    max-height: 750px !important;
   }
 }
 @media only screen and (max-width: 1000px) {
