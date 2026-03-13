@@ -2169,10 +2169,85 @@ header #header-wrapper #logo-link #logo {
 #app main .construction .item-links-container hr {
   max-width: unset;
 }
+#app main .construction ul {
+  list-style: none;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 18px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px auto;
+  max-width: 700px;
+}
+#app main .construction ul li {
+  margin: 5px;
+  font-weight: bold;
+  padding: 5px 15px 5px 33px;
+  border-radius: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #f9f9f9;
+}
+#app main .construction ul li br {
+  display: none;
+}
+#app main .construction ul li:before {
+  content: "";
+  padding: 0px;
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  background-image: url("../images/svg/pin.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: transparent;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+#app main .construction ul li a, #app main .construction ul li a span {
+  font-weight: bold;
+  font-size: 17px !important;
+  color: #333;
+  -webkit-transition: all 0.5s var(--ease-out-quint);
+  transition: all 0.5s var(--ease-out-quint);
+  display: inline-block;
+}
+#app main .construction ul li a:hover, #app main .construction ul li a span:hover {
+  color: var(--dark-red);
+  -webkit-transform: scale(1.025) translate(1%, 0);
+          transform: scale(1.025) translate(1%, 0);
+}
+#app main .construction ul li a span {
+  display: inline;
+}
 #app main .good-things {
   font-family: "Bricolage Grotesque";
   font-size: 30px;
   font-weight: 900;
+  padding-top: 20px;
 }
 #app main .content * {
   font-size: 17px;
@@ -4114,6 +4189,15 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 460px) {
+  .construction ul {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .construction ul li {
+    padding-top: 3px !important;
+  }
   #pdr-playa-vista-marker {
     top: 71.5% !important;
     max-width: 80px !important;
