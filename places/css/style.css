@@ -2201,7 +2201,7 @@ header #header-wrapper #logo-link #logo {
 #app main .construction ul li {
   margin: 5px;
   font-weight: bold;
-  padding: 5px 15px 5px 33px;
+  padding: 5px 15px 5px 0;
   border-radius: 50px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: #f9f9f9;
@@ -2235,17 +2235,21 @@ header #header-wrapper #logo-link #logo {
   border-radius: 50%;
 }
 #app main .construction ul li a, #app main .construction ul li a span {
-  font-weight: bold;
+  font-weight: 400;
   font-size: 17px !important;
   color: #333;
   -webkit-transition: all 0.5s var(--ease-out-quint);
   transition: all 0.5s var(--ease-out-quint);
   display: inline-block;
+  padding-left: 33px;
 }
 #app main .construction ul li a:hover, #app main .construction ul li a span:hover {
   color: var(--dark-red);
   -webkit-transform: scale(1.025) translate(1%, 0);
           transform: scale(1.025) translate(1%, 0);
+}
+#app main .construction ul li a strong, #app main .construction ul li a span strong {
+  font-weight: 500;
 }
 #app main .construction ul li a span {
   display: inline;
@@ -4204,13 +4208,19 @@ dialog.close::backdrop {
     padding-left: 0 !important;
   }
   .construction ul {
-    -webkit-box-orient: vertical !important;
+    -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
   }
   .construction ul li {
     padding-top: 4px !important;
+  }
+  .construction ul li a {
+    font-weight: 500 !important;
   }
   #pdr-playa-vista-marker {
     top: 71.5% !important;
