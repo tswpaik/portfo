@@ -2235,7 +2235,7 @@ header #header-wrapper #logo-link #logo {
   border-radius: 50%;
 }
 #app main .construction ul li a, #app main .construction ul li a span {
-  font-weight: 400;
+  font-weight: 450;
   font-size: 17px !important;
   color: #333;
   -webkit-transition: all 0.5s var(--ease-out-quint);
