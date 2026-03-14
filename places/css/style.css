@@ -2151,6 +2151,13 @@ header #header-wrapper #logo-link #logo {
   height: 0;
   margin: 0;
 }
+#app main .construction h3 {
+  position: relative;
+  top: -5px !important;
+}
+#app main .construction.msg h3 {
+  top: 0 !important;
+}
 #app main .construction p {
   max-width: 700px;
   margin: 20px auto;
@@ -4189,6 +4196,10 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 460px) {
+  .construction h3 {
+    text-align: center !important;
+    padding-left: 0 !important;
+  }
   .construction ul {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
