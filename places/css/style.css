@@ -4196,6 +4196,9 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 460px) {
+  .construction img {
+    margin-top: 30px !important;
+  }
   .construction h3 {
     text-align: center !important;
     padding-left: 0 !important;
