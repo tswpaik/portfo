@@ -599,7 +599,7 @@ header #header-wrapper #logo-link #logo {
           transform: translate(-50%, calc(-50% - 13px));
 }
 #app nav .map .marker-container .marker#westside-more, #app nav .map .sub-marker-container .marker#westside-more {
-  top: 34%;
+  top: 32%;
   left: 30%;
   padding-right: 12px;
   width: 115px;
@@ -615,11 +615,12 @@ header #header-wrapper #logo-link #logo {
           transform: translate(80%, -50%);
 }
 #app nav .map .marker-container .marker#south-bay-harbor, #app nav .map .sub-marker-container .marker#south-bay-harbor {
-  top: 59.5%;
-  left: 54%;
+  top: 59%;
+  left: 53%;
   padding: 8px 3px 7px 8px;
   width: 85px;
   text-align: left;
+  z-index: 1;
 }
 #app nav .map .marker-container .marker#south-bay-harbor span, #app nav .map .sub-marker-container .marker#south-bay-harbor span {
   left: 0;
@@ -644,6 +645,7 @@ header #header-wrapper #logo-link #logo {
   padding: 8px 5px 7px 10px;
   width: 100px;
   text-align: left;
+  z-index: -1;
 }
 #app nav .map .marker-container .marker#south-la-gateway-cities span, #app nav .map .sub-marker-container .marker#south-la-gateway-cities span {
   left: 0;
@@ -665,7 +667,7 @@ header #header-wrapper #logo-link #logo {
           transform: translate(-50%, calc(-50% - 10px));
 }
 #app nav .map .marker-container .marker#sgv-more, #app nav .map .sub-marker-container .marker#sgv-more {
-  top: 30.5%;
+  top: 31%;
   left: 78.6%;
   padding: 3px 10px 3px;
   text-align: left;
