@@ -4117,6 +4117,7 @@ dialog.close::backdrop {
   }
   main {
     grid-template-columns: 1fr 0 !important;
+    overflow-x: hidden !important;
   }
 }
 @media only screen and (max-width: 510px) {
