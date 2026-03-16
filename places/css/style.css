@@ -3685,6 +3685,8 @@ dialog.close::backdrop {
     position: relative;
     left: -30px !important;
     border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
   }
   figure figcaption:not(.profile) {
     width: calc(100% + 50px) !important;
