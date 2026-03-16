@@ -3707,13 +3707,9 @@ dialog.close::backdrop {
   #app main .content * .item-links-container,
   #app main .content * .side-by-side-lists .item-links-container,
   #app main .content * .side-by-side-lists.full-width .item-links-container {
-    width: calc(100% + 60px) !important;
+    width: calc(100% + 40px) !important;
     position: relative;
-    left: -30px !important;
-    border-radius: 0 !important;
-    border-left: none !important;
-    border-right: none !important;
-    border-bottom: none !important;
+    left: -20px !important;
   }
 }
 @media only screen and (max-width: 610px) {
@@ -4118,6 +4114,9 @@ dialog.close::backdrop {
   main {
     grid-template-columns: 1fr 0 !important;
     overflow-x: hidden !important;
+  }
+  #app main .content * .carousel-widget .carousel-cell:last-of-type {
+    margin-bottom: 0 !important;
   }
 }
 @media only screen and (max-width: 510px) {
