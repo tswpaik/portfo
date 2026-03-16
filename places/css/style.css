@@ -3680,8 +3680,16 @@ dialog.close::backdrop {
     margin: 0 auto !important;
     margin-bottom: 10px !important;
   }
-  figure img:not(.title-pin) {
-    width: 100% !important;
+  figure img:not(.title-pin):not(.profile) {
+    width: calc(100% + 60px) !important;
+    position: relative;
+    left: -30px !important;
+    border-radius: 0 !important;
+  }
+  figure figcaption:not(.profile) {
+    width: calc(100% + 50px) !important;
+    position: relative;
+    left: -25px !important;
   }
   figure .standard {
     display: none !important;
@@ -3693,6 +3701,17 @@ dialog.close::backdrop {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
+  }
+  #app main .content * .item-links-container,
+  #app main .content * .side-by-side-lists .item-links-container,
+  #app main .content * .side-by-side-lists.full-width .item-links-container {
+    width: calc(100% + 60px) !important;
+    position: relative;
+    left: -30px !important;
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
   }
 }
 @media only screen and (max-width: 610px) {
