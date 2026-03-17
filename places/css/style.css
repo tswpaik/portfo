@@ -3992,6 +3992,12 @@ dialog.close::backdrop {
   dialog form {
     padding: 10px 15px;
   }
+  dialog form details {
+    width: calc(100% + 30px);
+    position: relative;
+    left: -15px;
+    border-radius: 0;
+  }
   dialog .side-by-side {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4275,6 +4281,10 @@ dialog.close::backdrop {
   #app main .bottom-row #scroll-to-top,
   #app main .bottom-row #copyright {
     font-size: 16px !important;
+  }
+  #app main .bottom-row #copyright {
+    text-wrap: balance;
+    width: 80px;
   }
   #app main .bottom-row .parent-links div a {
     font-size: 16px !important;
