@@ -3930,6 +3930,7 @@ dialog.close::backdrop {
   }
   nav .map .marker#van-nuys-marker {
     left: 60% !important;
+    z-index: -1;
   }
   nav .map .marker#noho-marker {
     left: 74% !important;
@@ -3939,6 +3940,9 @@ dialog.close::backdrop {
   }
   nav .map .marker#burbank-marker {
     left: 85.5% !important;
+  }
+  nav .map .marker#takayama-marker {
+    top: 45.25% !important;
   }
   nav .map .sub-marker-container .marker {
     max-width: 80px !important;
@@ -4824,7 +4828,9 @@ dialog.close::backdrop {
   #app nav .map .sub-marker-container .marker#hikone-marker {
     top: 25.5% !important;
     left: 78.5% !important;
-    z-index: 1 !important;
+  }
+  #app nav .map .sub-marker-container .marker#omihachiman-marker {
+    top: 31% !important;
   }
   #app nav .map .sub-marker-container .marker#otsu-marker {
     top: 36.5% !important;
