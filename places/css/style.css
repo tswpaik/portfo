@@ -3998,6 +3998,14 @@ dialog.close::backdrop {
     left: -15px;
     border-radius: 0;
   }
+  dialog form #about-close {
+    right: 15px !important;
+    top: 20px;
+  }
+  dialog form h2 {
+    padding: 5px 30px 20px 5px;
+    margin-top: 15px;
+  }
   dialog .side-by-side {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
