@@ -4290,6 +4290,11 @@ dialog.close::backdrop {
   #app main .bottom-row #copyright {
     font-size: 16px !important;
   }
+  #app main .bottom-row #scroll-to-top {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
   #app main .bottom-row #copyright {
     text-wrap: balance;
     width: 80px;
