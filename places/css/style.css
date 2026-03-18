@@ -3680,19 +3680,6 @@ dialog.close::backdrop {
     margin: 0 auto !important;
     margin-bottom: 10px !important;
   }
-  figure img:not(.title-pin):not(.profile) {
-    width: calc(100% + 60px) !important;
-    position: relative;
-    left: -30px !important;
-    border-radius: 0 !important;
-    border-left: none !important;
-    border-right: none !important;
-  }
-  figure figcaption:not(.profile) {
-    width: calc(100% + 50px) !important;
-    position: relative;
-    left: -25px !important;
-  }
   figure .standard {
     display: none !important;
   }
@@ -4241,6 +4228,19 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 460px) {
+  img:not(.title-pin):not(.profile):not(#logo) {
+    width: calc(100% + 60px) !important;
+    position: relative;
+    left: -30px !important;
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+  }
+  figcaption:not(.profile) {
+    width: calc(100% + 50px) !important;
+    position: relative;
+    left: -25px !important;
+  }
   .construction img {
     margin-top: 30px !important;
   }
