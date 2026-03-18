@@ -4228,7 +4228,7 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 460px) {
-  img:not(.title-pin):not(.profile):not(#logo) {
+  img:not(.title-pin):not(.profile):not(#logo):not(.construction-img) {
     width: calc(100% + 60px) !important;
     position: relative;
     left: -30px !important;
