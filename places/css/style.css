@@ -2197,8 +2197,13 @@ header #header-wrapper #logo-link #logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 10px auto;
+  margin: 10px auto 15px;
   max-width: 700px;
+}
+#app main .construction ul .br {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  width: 0; /* Ensures it collapses horizontally and takes up all vertical space */
 }
 #app main .construction ul li {
   margin: 5px;
@@ -3210,6 +3215,9 @@ dialog.close::backdrop {
   .kanazawa-activity-links {
     max-height: 650px !important;
   }
+  .kamakura-activity-links {
+    max-height: 1050px !important;
+  }
   #app main .content * .item-links-container .item-links#sfv-more--links {
     max-height: unset !important;
   }
@@ -3246,6 +3254,9 @@ dialog.close::backdrop {
   }
   .kanazawa-activity-links {
     max-height: 500px !important;
+  }
+  .kamakura-activity-links {
+    max-height: 700px !important;
   }
   #la-links {
     max-height: 150px !important;
@@ -3487,6 +3498,11 @@ dialog.close::backdrop {
     padding-left: 80px !important;
   }
 }
+@media only screen and (max-width: 1230px) {
+  .kamakura-activity-links {
+    max-height: 800px !important;
+  }
+}
 @media only screen and (max-width: 1050px) {
   .tokyo-dining-links, .tokyo-activity-links {
     max-height: 1000px !important;
@@ -3496,6 +3512,9 @@ dialog.close::backdrop {
   }
   .kanazawa-activity-links {
     max-height: 750px !important;
+  }
+  .kamakura-activity-links {
+    max-height: 1000px !important;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -3569,15 +3588,24 @@ dialog.close::backdrop {
     width: 100% !important;
   }
 }
+@media only screen and (max-width: 900px) {
+  .kamakura-activity-links {
+    max-height: 1200px !important;
+  }
+}
 @media only screen and (max-width: 840px) {
   .dtla-dining-links, .dtla-activity-links,
   .tokyo-dining-links, .tokyo-activity-links,
-  .kyoto-dining-links, .kyoto-activity-links {
+  .kyoto-dining-links, .kyoto-activity-links,
+  .kanazawa-activity-links,
+  .kamakura-activity-links {
     max-height: unset !important;
   }
   .dtla-dining-links li, .dtla-activity-links li,
   .tokyo-dining-links li, .tokyo-activity-links li,
-  .kyoto-dining-links li, .kyoto-activity-links li {
+  .kyoto-dining-links li, .kyoto-activity-links li,
+  .kanazawa-activity-links li,
+  .kamakura-activity-links li {
     width: 100% !important;
   }
   .side-by-side-lists {
