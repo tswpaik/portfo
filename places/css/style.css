@@ -2805,6 +2805,11 @@ header #header-wrapper #logo-link #logo {
 #app main .content * .carousel-widget .carousel-options .cells-range, #app main .content * .carousel-widget .carousel-options .orientation {
   display: none;
 }
+@supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+  #app main .content * {
+    line-height: 1.42;
+  }
+}
 #app main .main-space {
   grid-area: main-space;
 }
@@ -2964,6 +2969,11 @@ dialog form p {
 }
 dialog form p:first-of-type {
   margin-top: 0;
+}
+@supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+  dialog form p {
+    line-height: 1.4;
+  }
 }
 dialog form h2 {
   font-family: "Bricolage Grotesque";
