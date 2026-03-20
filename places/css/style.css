@@ -3200,11 +3200,17 @@ dialog.close::backdrop {
 }
 
 @media only screen and (max-width: 1670px) {
-  .dtla-dining-links, .dtla-activity-links {
+  .dtla-dining-links {
     max-height: 750px !important;
   }
-  .tokyo-dining-links, .tokyo-activity-links {
-    max-height: 950px !important;
+  .dtla-activity-links {
+    max-height: 650px !important;
+  }
+  .tokyo-activity-links {
+    max-height: 800px !important;
+  }
+  .tokyo-dining-links {
+    max-height: 800px !important;
   }
   .kyoto-dining-links {
     max-height: 400px !important;
@@ -3226,6 +3232,12 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 1600px) {
+  .tokyo-activity-links {
+    max-height: 920px !important;
+  }
+  .tokyo-dining-links {
+    max-height: 900px !important;
+  }
   #la-links {
     max-height: unset !important;
   }
@@ -3240,17 +3252,23 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 1500px) {
-  .tokyo-dining-links, .tokyo-activity-links {
-    max-height: 750px !important;
+  .tokyo-activity-links {
+    max-height: 650px !important;
   }
-  .dtla-dining-links, .dtla-activity-links {
-    max-height: 600px !important;
+  .tokyo-dining-links {
+    max-height: 550px !important;
   }
-  .kyoto-dining-links {
-    max-height: 410px !important;
+  .dtla-activity-links {
+    max-height: 500px !important;
+  }
+  .dtla-dining-links {
+    max-height: 550px !important;
   }
   .kyoto-activity-links {
-    max-height: 750px !important;
+    max-height: 630px !important;
+  }
+  .kyoto-dining-links {
+    max-height: 350px !important;
   }
   .kanazawa-activity-links {
     max-height: 500px !important;
@@ -3502,13 +3520,37 @@ dialog.close::backdrop {
   .kamakura-activity-links {
     max-height: 800px !important;
   }
-}
-@media only screen and (max-width: 1050px) {
-  .tokyo-dining-links, .tokyo-activity-links {
-    max-height: 1000px !important;
+  .tokyo-activity-links {
+    max-height: 700px !important;
+  }
+  .tokyo-dining-links {
+    max-height: 650px !important;
   }
   .kyoto-activity-links {
-    max-height: 1100px !important;
+    max-height: 750px !important;
+  }
+  .kyoto-dining-links {
+    max-height: 350px !important;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .dtla-activity-links {
+    max-height: 520px !important;
+  }
+  .dtla-dining-links {
+    max-height: 600px !important;
+  }
+  .tokyo-activity-links {
+    max-height: 800px !important;
+  }
+  .tokyo-dining-links {
+    max-height: 750px !important;
+  }
+  .kyoto-activity-links {
+    max-height: 950px !important;
+  }
+  .kyoto-dining-links {
+    max-height: 400px !important;
   }
   .kanazawa-activity-links {
     max-height: 750px !important;
@@ -3518,8 +3560,17 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 1000px) {
-  .dtla-dining-links, .dtla-activity-links {
-    max-height: 800px !important;
+  .tokyo-activity-links {
+    max-height: 950px !important;
+  }
+  .tokyo-dining-links {
+    max-height: 850px !important;
+  }
+  .dtla-activity-links {
+    max-height: 650px !important;
+  }
+  .dtla-dining-links {
+    max-height: 770px !important;
   }
   #copyright {
     margin-right: 0 !important;
@@ -3591,6 +3642,18 @@ dialog.close::backdrop {
 @media only screen and (max-width: 900px) {
   .kamakura-activity-links {
     max-height: 1200px !important;
+  }
+  .tokyo-activity-links {
+    max-height: 1000px !important;
+  }
+  .tokyo-dining-links {
+    max-height: 900px !important;
+  }
+  .kyoto-activity-links {
+    max-height: 1020px !important;
+  }
+  .kyoto-dining-links {
+    max-height: 400px !important;
   }
 }
 @media only screen and (max-width: 840px) {
