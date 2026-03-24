@@ -3952,7 +3952,7 @@ dialog.close::backdrop {
     width: 65px !important;
   }
   nav .map .marker#bev-crest-bev-hills-marker {
-    top: 40.5% !important;
+    top: 40% !important;
     left: 86% !important;
     width: 50px !important;
   }
@@ -4371,6 +4371,7 @@ dialog.close::backdrop {
     top: 72% !important;
     max-width: 80px !important;
     width: 80px !important;
+    z-index: 4 !important;
   }
   #header-wrapper {
     -webkit-transform: scale(0.6) translate(-35%, -33%);
@@ -4579,6 +4580,7 @@ dialog.close::backdrop {
     left: 56% !important;
   }
   #brentwood-belair-marker {
+    top: 35.75% !important;
     left: 70% !important;
   }
   nav .map .marker#lax-inglewood-marker {
@@ -4749,10 +4751,12 @@ dialog.close::backdrop {
   #app nav .map .sub-marker-container .marker#century-city-west-la-marker {
     top: 55%;
     left: 81% !important;
+    z-index: 2 !important;
   }
   #app nav .map .sub-marker-container .marker#venice-mdr-marker {
     top: 63.75% !important;
     left: 77.75% !important;
+    z-index: 3 !important;
   }
   #app nav .map .sub-marker-container .marker#culver-marker {
     z-index: 1 !important;
