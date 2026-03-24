@@ -4368,7 +4368,7 @@ dialog.close::backdrop {
     font-weight: 500 !important;
   }
   #pdr-playa-vista-marker {
-    top: 71.5% !important;
+    top: 72% !important;
     max-width: 80px !important;
     width: 80px !important;
   }
@@ -4751,7 +4751,7 @@ dialog.close::backdrop {
     left: 81% !important;
   }
   #app nav .map .sub-marker-container .marker#venice-mdr-marker {
-    top: 62.5% !important;
+    top: 63.75% !important;
     left: 77.75% !important;
   }
   #app nav .map .sub-marker-container .marker#culver-marker {
