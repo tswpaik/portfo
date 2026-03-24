@@ -1779,6 +1779,22 @@ header #header-wrapper #logo-link #logo {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 50px;
+}
+#app main .loading .loading-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1786,7 +1802,6 @@ header #header-wrapper #logo-link #logo {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 50px;
 }
 #app main .loading p {
   font-family: "Bricolage Grotesque";
@@ -3210,6 +3225,9 @@ dialog.close::backdrop {
 }
 
 @media only screen and (max-width: 1670px) {
+  .loading-container {
+    width: 100% !important;
+  }
   .dtla-dining-links {
     max-height: 750px !important;
   }
