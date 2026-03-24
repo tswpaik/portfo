@@ -560,7 +560,7 @@ header #header-wrapper #logo-link #logo {
   display: none;
 }
 #app nav .map .marker-container .marker.selected, #app nav .map .sub-marker-container .marker.selected {
-  z-index: 1;
+  z-index: 100;
   background-color: #fff0d8;
   color: #b30e0e;
 }
@@ -4842,7 +4842,7 @@ dialog.close::backdrop {
     max-width: 130px !important;
     top: 22% !important;
   }
-  #app nav .map .sub-marker-container .marker#san-gabriel-rosemead-marker {
+  #app nav .map .sub-marker-container .marker#san-gabriel-marker {
     left: 45% !important;
     top: 54% !important;
   }
