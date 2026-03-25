@@ -4350,6 +4350,9 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 460px) {
+  #app nav .tab-nav.japan .link-container ul {
+    padding-right: 5px !important;
+  }
   figure img:not(.title-pin):not(.profile):not(#logo):not(.construction-img) {
     width: calc(100% + 60px) !important;
     position: relative;
@@ -4700,6 +4703,13 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 405px) {
+  .filter {
+    margin: 3.25px 5px !important;
+  }
+  #app nav .tab-nav .link-container ul {
+    padding-left: 28px !important;
+    padding-right: 47px !important;
+  }
   #header-wrapper {
     -webkit-transform: scale(0.575) translate(-39%, -37%);
             transform: scale(0.575) translate(-39%, -37%);
