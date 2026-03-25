@@ -2016,6 +2016,7 @@ header #header-wrapper #logo-link #logo {
   font-family: inherit;
   font-weight: inherit;
   display: inline;
+  line-height: inherit !important;
 }
 #app main .title div .title-text {
   display: -webkit-box;
