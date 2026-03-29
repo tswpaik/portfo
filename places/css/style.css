@@ -113,7 +113,7 @@
   }
 }
 
-.pop-in, .pinned::before, #app nav .tab-nav .link-container ul li details summary.selected::before, #app nav .tab-nav .link-container a.selected::before, #app nav .map .marker-container .marker.selected::before, #app nav .map .sub-marker-container .marker.selected::before {
+.pop-in, #app nav .map .marker-container .marker.selected::before, #app nav .map .sub-marker-container .marker.selected::before, .pinned::before, #app nav .tab-nav .link-container ul li details summary.selected::before, #app nav .tab-nav .link-container a.selected::before {
   -webkit-animation: pop-in 0.5s var(--ease-out-quint);
           animation: pop-in 0.5s var(--ease-out-quint);
   -webkit-animation-fill-mode: forwards;
@@ -144,7 +144,7 @@
   }
 }
 
-.pinned::before, #app nav .tab-nav .link-container ul li details summary.selected::before, #app nav .tab-nav .link-container a.selected::before, #app nav .map .marker-container .marker.selected::before, #app nav .map .sub-marker-container .marker.selected::before {
+.pinned::before, #app nav .tab-nav .link-container ul li details summary.selected::before, #app nav .tab-nav .link-container a.selected::before {
   content: "";
   position: absolute;
   width: 15px;
@@ -174,7 +174,7 @@
   -webkit-transition: all 0.25s var(--ease-out-quint);
   transition: all 0.25s var(--ease-out-quint);
 }
-.pinned.no-animation::before, #app nav .tab-nav .link-container ul li details summary.no-animation.selected::before, #app nav .tab-nav .link-container a.no-animation.selected::before, #app nav .map .marker-container .no-animation.marker.selected::before, #app nav .map .sub-marker-container .no-animation.marker.selected::before {
+.pinned.no-animation::before, #app nav .tab-nav .link-container ul li details summary.no-animation.selected::before, #app nav .tab-nav .link-container a.no-animation.selected::before {
   -webkit-animation: none;
           animation: none;
 }
@@ -497,6 +497,9 @@ header #header-wrapper #logo-link #logo {
   -webkit-transition: all 0.25s var(--ease-out-quint);
   transition: all 0.25s var(--ease-out-quint);
 }
+#app nav .map .marker-container .marker::before, #app nav .map .sub-marker-container .marker::before {
+  display: none;
+}
 #app nav .map .marker-container .marker:hover, #app nav .map .sub-marker-container .marker:hover {
   -webkit-transform: scale(1.05) translate(-50%, -50%);
           transform: scale(1.05) translate(-50%, -50%);
@@ -563,6 +566,36 @@ header #header-wrapper #logo-link #logo {
   z-index: 100;
   background-color: #fff0d8;
   color: #b30e0e;
+}
+#app nav .map .marker-container .marker.selected::before, #app nav .map .sub-marker-container .marker.selected::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  background-image: url("../images/svg/current-loc.svg");
+  background-size: 75%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid var(--light-red);
+  padding: 3px;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(40%, -40%);
+          transform: translate(40%, -40%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 17px;
+  -webkit-transition: all 0.25s var(--ease-out-quint);
+  transition: all 0.25s var(--ease-out-quint);
 }
 #app nav .map .marker-container .marker span, #app nav .map .sub-marker-container .marker span {
   position: absolute;
