@@ -312,7 +312,6 @@ header #header-wrapper #tab-selector {
   border-top: 8px solid var(--light-red);
   -webkit-transition: all 0.5s var(--ease-out-quint);
   transition: all 0.5s var(--ease-out-quint);
-  left: 260px;
 }
 header #header-wrapper #tab-selector.scrolled {
   -webkit-transition: none;
