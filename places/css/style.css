@@ -3733,6 +3733,11 @@ dialog.close::backdrop {
     max-height: 400px !important;
   }
 }
+@media only screen and (max-width: 960px) {
+  .dtla-activity-links {
+    max-height: 700px !important;
+  }
+}
 @media only screen and (max-width: 840px) {
   .dtla-dining-links, .dtla-activity-links,
   .tokyo-dining-links, .tokyo-activity-links,
