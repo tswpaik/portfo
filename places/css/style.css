@@ -685,7 +685,7 @@ header #header-wrapper #logo-link #logo {
   top: 0;
   -webkit-transform: translate(-60%, -72%);
           transform: translate(-60%, -72%);
-  font-size: 19px;
+  font-size: 17px;
 }
 #app nav .map .marker-container .marker#eastside-nela, #app nav .map .sub-marker-container .marker#eastside-nela {
   top: 33.5%;
