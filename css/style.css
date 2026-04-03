@@ -435,6 +435,11 @@ nav summary:focus, nav ul li ul li:focus, nav #contact-link:focus {
   -webkit-transition: none;
   transition: none;
 }
+nav ul li ul li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 nav summary a {
   pointer-events: none;
 }
