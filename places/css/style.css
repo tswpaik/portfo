@@ -2951,6 +2951,9 @@ header #header-wrapper #logo-link #logo {
 #app main .bottom-row .parent-links div a:hover {
   color: var(--light-red);
 }
+#app main .bottom-row .parent-links div a .complete, #app main .bottom-row .parent-links div a .sr-only {
+  display: none;
+}
 #app main .bottom-row .parent-links div .big {
   font-size: inherit;
 }
@@ -4636,7 +4639,7 @@ dialog.close::backdrop {
   }
   #app main .title div .parent-regions {
     padding-top: 10px !important;
-    font-size: 16px !important;
+    font-size: 14.5px !important;
   }
   #app main .title div .parent-regions i {
     font-size: 12px !important;
