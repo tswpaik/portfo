@@ -1686,6 +1686,7 @@ header #header-wrapper #logo-link #logo {
   position: relative;
   -webkit-animation: none;
           animation: none;
+  padding-right: 0px !important;
 }
 #app nav .tab-nav .link-container ul li:last-of-type {
   padding-bottom: 0;
