@@ -1409,6 +1409,12 @@ header #header-wrapper #logo-link #logo {
   font-size: 13px;
   padding-left: 5px;
 }
+#app nav .tab-nav .link-container .summary-link i.complete {
+  font-size: 17px;
+  color: #8EBE6F;
+  padding: 0 2px 0 3px;
+  padding-left: 5px;
+}
 #app nav .tab-nav .link-container a {
   cursor: pointer;
   position: relative;
@@ -2118,6 +2124,9 @@ header #header-wrapper #logo-link #logo {
 }
 #app main .title div .parent-regions a:hover {
   color: var(--light-red);
+}
+#app main .title div .parent-regions a .complete, #app main .title div .parent-regions a .sr-only {
+  display: none;
 }
 #app main .title div .parent-regions .small {
   display: none;
