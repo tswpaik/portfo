@@ -4815,6 +4815,9 @@ dialog.close::backdrop {
     padding-left: 35px !important;
     padding-right: 0px !important;
   }
+  #app nav .tab-nav .link-container ul br {
+    display: none !important;
+  }
   #header-wrapper {
     -webkit-transform: scale(0.575) translate(-39%, -37%);
             transform: scale(0.575) translate(-39%, -37%);
