@@ -4913,6 +4913,7 @@ dialog.close::backdrop {
   #app nav .map .sub-marker-container .marker#echo-park-hifi-marker {
     left: 69.25% !important;
     top: 57.2% !important;
+    width: 46px !important;
   }
   #app nav .map .sub-marker-container .marker#elysian-park-marker {
     top: 57.2% !important;
