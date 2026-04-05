@@ -1687,6 +1687,11 @@ header #header-wrapper #logo-link #logo {
   -webkit-animation: none;
           animation: none;
   padding-right: 0px !important;
+  border-left: 1px dashed rgb(255, 200, 0);
+  padding-left: 34px;
+  position: relative;
+  left: -15.5px;
+  width: calc(100% + 20px);
 }
 #app nav .tab-nav .link-container ul li:last-of-type {
   padding-bottom: 0;
@@ -3948,7 +3953,7 @@ dialog.close::backdrop {
   }
   nav .tab-nav details ul {
     position: relative !important;
-    left: -10px !important;
+    left: -12px !important;
     width: calc(100% + 10px) !important;
   }
   nav .tab-nav summary::before, nav .tab-nav a::before {
@@ -4812,8 +4817,10 @@ dialog.close::backdrop {
     padding-right: 47px !important;
   }
   #app nav .tab-nav .link-container ul ul {
-    padding-left: 35px !important;
     padding-right: 0px !important;
+    left: -12.5px !important;
+    width: calc(100% + 11px) !important;
+    padding-left: 27px !important;
   }
   #app nav .tab-nav .link-container ul br {
     display: none !important;
@@ -4837,11 +4844,6 @@ dialog.close::backdrop {
   }
   #tab-selector {
     border-top-width: 16px !important;
-  }
-  nav .tab-nav details ul {
-    position: relative !important;
-    left: -20px !important;
-    width: calc(100% + 20px) !important;
   }
   nav .map .marker,
   nav .map #westside-more-sub-markers .marker {
