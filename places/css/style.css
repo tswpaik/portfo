@@ -4140,13 +4140,14 @@ dialog.close::backdrop {
     width: 171px !important;
   }
   nav .tab-nav summary::after {
-    content: "Show" !important;
+    content: "Expand" !important;
     position: relative !important;
+    padding: 0 7px !important;
     top: -1px !important;
     right: -1px !important;
   }
   nav .tab-nav details[open] summary::after {
-    content: "Hide" !important;
+    content: "Minimize" !important;
   }
   #catalina-sub-markers .marker {
     max-width: 200px !important;
