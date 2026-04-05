@@ -1682,11 +1682,10 @@ header #header-wrapper #logo-link #logo {
   transition: all 0.25s var(--ease-out-quint);
 }
 #app nav .tab-nav .link-container ul li details ul {
-  padding: 0;
+  padding: 0 0 0 21px;
   position: relative;
   -webkit-animation: none;
           animation: none;
-  padding-left: 35px !important;
   padding-right: 0px !important;
 }
 #app nav .tab-nav .link-container ul li:last-of-type {
@@ -4791,6 +4790,10 @@ dialog.close::backdrop {
   #app nav .tab-nav .link-container ul {
     padding-left: 28px !important;
     padding-right: 47px !important;
+  }
+  #app nav .tab-nav .link-container ul ul {
+    padding-left: 35px !important;
+    padding-right: 0px !important;
   }
   #header-wrapper {
     -webkit-transform: scale(0.575) translate(-39%, -37%);
