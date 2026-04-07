@@ -3854,6 +3854,9 @@ dialog.close::backdrop {
   h1 {
     display: none;
   }
+  #app nav .map .sub-marker-container .marker#culver-marker {
+    left: 95% !important;
+  }
   #logo-link {
     margin-left: auto;
   }
