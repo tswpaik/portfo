@@ -3325,7 +3325,7 @@ dialog.close::backdrop {
 }
 @media only screen and (max-width: 1600px) {
   .tokyo-activity-links {
-    max-height: 920px !important;
+    max-height: 950px !important;
   }
   .tokyo-dining-links {
     max-height: 900px !important;
