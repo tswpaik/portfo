@@ -4132,10 +4132,7 @@ dialog.close::backdrop {
     z-index: -1;
   }
   nav .map .marker#noho-marker {
-    left: 74% !important;
-  }
-  nav .map .marker#noho-marker {
-    left: 74% !important;
+    left: 73.5% !important;
   }
   nav .map .marker#burbank-marker {
     left: 85.5% !important;
@@ -4452,6 +4449,9 @@ dialog.close::backdrop {
     left: 5.5% !important;
     max-width: 45px !important;
   }
+  nav .map .marker#noho-marker {
+    left: 75% !important;
+  }
   #gardena-torrance-more-marker {
     top: 49% !important;
     left: 55.5% !important;
@@ -4742,11 +4742,11 @@ dialog.close::backdrop {
     top: 59% !important;
   }
   nav .map .marker#van-nuys-marker {
-    left: 59% !important;
+    left: 59.9% !important;
     max-width: 58px !important;
   }
   nav .map .marker#burbank-marker {
-    left: 88% !important;
+    left: 89.25% !important;
   }
   nav .map .marker#bev-crest-bev-hills-marker {
     left: 84% !important;
@@ -4774,7 +4774,7 @@ dialog.close::backdrop {
     top: 13% !important;
   }
   #app nav .map .sub-marker-container .marker#lake-balboa-marker {
-    left: 44.25% !important;
+    left: 44.5% !important;
     max-width: 65px !important;
   }
   #la-canada-crescenta-valley-marker {
