@@ -4449,9 +4449,6 @@ dialog.close::backdrop {
     left: 5.5% !important;
     max-width: 45px !important;
   }
-  nav .map .marker#noho-marker {
-    left: 75% !important;
-  }
   #gardena-torrance-more-marker {
     top: 49% !important;
     left: 55.5% !important;
@@ -4691,6 +4688,9 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 430px) {
+  nav .map .marker#noho-marker {
+    left: 75% !important;
+  }
   #app main .content *,
   dialog form p,
   #app main .content * .item-links-container .item-links li a, #app main .content * .item-links-container .item-links li a span {
