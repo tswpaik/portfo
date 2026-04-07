@@ -5050,9 +5050,10 @@ dialog.close::backdrop {
     left: 26% !important;
     padding: 5px !important;
   }
-  #app nav .map .sub-marker-container .marker#jefferson-park-marker {
+  #app nav .map .sub-marker-container .marker#west-adams-jefferson-park-marker {
     max-width: 120px !important;
     left: 11% !important;
+    top: 34% !important;
   }
   #app nav .map .sub-marker-container .marker#watts-marker {
     padding: 6px !important;
