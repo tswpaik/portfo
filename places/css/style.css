@@ -4448,6 +4448,10 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 460px) {
+  #baldwin-hills-marker {
+    left: 5.5% !important;
+    max-width: 45px !important;
+  }
   #gardena-torrance-more-marker {
     top: 49% !important;
     left: 55.5% !important;
@@ -5044,7 +5048,7 @@ dialog.close::backdrop {
     font-size: 11px !important;
   }
   #app nav .map .sub-marker-container .marker#leimert-marker {
-    left: 16% !important;
+    left: 16.25% !important;
   }
   #app nav .map .sub-marker-container .marker#usc-university-park-marker {
     left: 26% !important;
