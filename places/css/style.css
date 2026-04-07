@@ -4467,7 +4467,7 @@ dialog.close::backdrop {
   }
   #app nav .map .sub-marker-container .marker#culver-marker {
     z-index: 1 !important;
-    left: 95% !important;
+    left: 94.25% !important;
   }
   #app nav .tab-nav.japan .link-container ul {
     padding-right: 5px !important;
@@ -4767,7 +4767,7 @@ dialog.close::backdrop {
     left: 78% !important;
   }
   #weho-marker {
-    left: 22% !important;
+    left: 22.5% !important;
   }
   #manhattan-hermosa-marker {
     top: 35% !important;
