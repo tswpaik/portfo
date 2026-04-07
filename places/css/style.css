@@ -503,7 +503,7 @@ header #header-wrapper #logo-link #logo {
 #app nav .map .marker-container .marker:hover, #app nav .map .sub-marker-container .marker:hover {
   -webkit-transform: scale(1.05) translate(-50%, -50%);
           transform: scale(1.05) translate(-50%, -50%);
-  z-index: 1;
+  z-index: 100;
 }
 #app nav .map .marker-container .marker:focus, #app nav .map .sub-marker-container .marker:focus {
   z-index: 1;
@@ -4685,7 +4685,7 @@ dialog.close::backdrop {
     top: 0 !important;
   }
   #wlv-agoura-marker {
-    top: 28% !important;
+    top: 27.5% !important;
     width: 95px !important;
     max-width: 95px !important;
   }
