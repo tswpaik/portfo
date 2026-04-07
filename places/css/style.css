@@ -4930,8 +4930,9 @@ dialog.close::backdrop {
   }
   #app nav .map .sub-marker-container .marker#vc-coast-marker {
     top: 26.5% !important;
-    left: 10.25% !important;
+    left: 7% !important;
     z-index: 1 !important;
+    max-width: 50px !important;
   }
   #app nav .map .sub-marker-container .marker#santa-barbara-marker {
     top: 13.75% !important;
@@ -4939,8 +4940,8 @@ dialog.close::backdrop {
     z-index: -1;
   }
   #app nav .map .sub-marker-container .marker#ojai-marker {
-    top: 17% !important;
-    left: 24.75% !important;
+    top: 22.5% !important;
+    left: 18% !important;
   }
   #app nav .map .sub-marker-container .marker#windsor-larchmont-hancock-marker {
     max-width: 90px !important;
