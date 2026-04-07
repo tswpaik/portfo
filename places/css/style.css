@@ -503,7 +503,7 @@ header #header-wrapper #logo-link #logo {
 #app nav .map .marker-container .marker:hover, #app nav .map .sub-marker-container .marker:hover {
   -webkit-transform: scale(1.05) translate(-50%, -50%);
           transform: scale(1.05) translate(-50%, -50%);
-  z-index: 100;
+  z-index: 100 !important;
 }
 #app nav .map .marker-container .marker:focus, #app nav .map .sub-marker-container .marker:focus {
   z-index: 1;
