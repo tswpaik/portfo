@@ -4445,6 +4445,9 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 460px) {
+  #boyle-heights-lincoln-heights-marker {
+    top: 69% !important;
+  }
   #baldwin-hills-marker {
     left: 5.5% !important;
     max-width: 45px !important;
