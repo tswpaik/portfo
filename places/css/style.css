@@ -4742,7 +4742,8 @@ dialog.close::backdrop {
     top: 59% !important;
   }
   nav .map .marker#van-nuys-marker {
-    left: 60% !important;
+    left: 59% !important;
+    max-width: 58px !important;
   }
   nav .map .marker#burbank-marker {
     left: 88% !important;
@@ -4773,7 +4774,8 @@ dialog.close::backdrop {
     top: 13% !important;
   }
   #app nav .map .sub-marker-container .marker#lake-balboa-marker {
-    left: 45% !important;
+    left: 44.25% !important;
+    max-width: 65px !important;
   }
   #la-canada-crescenta-valley-marker {
     left: 23% !important;
