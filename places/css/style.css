@@ -4443,8 +4443,9 @@ dialog.close::backdrop {
 }
 @media only screen and (max-width: 460px) {
   #gardena-torrance-more-marker {
-    top: 42% !important;
-    max-width: 70px !important;
+    top: 45% !important;
+    left: 56% !important;
+    max-width: 55px !important;
   }
   #app nav .map .sub-marker-container .marker#santa-monica-marker {
     max-width: 75px !important;
