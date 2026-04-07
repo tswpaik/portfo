@@ -4443,8 +4443,8 @@ dialog.close::backdrop {
 }
 @media only screen and (max-width: 460px) {
   #gardena-torrance-more-marker {
-    top: 45% !important;
-    left: 56% !important;
+    top: 49% !important;
+    left: 55.5% !important;
     max-width: 55px !important;
   }
   #app nav .map .sub-marker-container .marker#santa-monica-marker {
@@ -4755,7 +4755,7 @@ dialog.close::backdrop {
   }
   #manhattan-hermosa-marker {
     top: 35% !important;
-    left: 41% !important;
+    left: 41.25% !important;
   }
   #scv-castaic-av-marker {
     top: 13% !important;
