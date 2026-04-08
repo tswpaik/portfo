@@ -3968,7 +3968,7 @@ dialog.close::backdrop {
 }
 @media only screen and (max-width: 610px) {
   .complete {
-    left: -26px !important;
+    left: -25.5px !important;
     top: -2px !important;
   }
   #carson-marker {
