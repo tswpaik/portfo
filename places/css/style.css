@@ -1492,6 +1492,7 @@ header #header-wrapper #logo-link #logo {
 }
 #app nav .tab-nav .link-container.filtered a, #app nav .tab-nav .link-container.filtered summary {
   opacity: 0.25;
+  pointer-events: none;
 }
 #app nav .tab-nav .link-container.filtered a:hover, #app nav .tab-nav .link-container.filtered summary:hover {
   opacity: 1;
@@ -1501,6 +1502,7 @@ header #header-wrapper #logo-link #logo {
 }
 #app nav .tab-nav .link-container.filtered .matched {
   opacity: 1;
+  pointer-events: all;
 }
 #app nav .tab-nav .link-container.filtered .matched::before {
   opacity: 1 !important;
