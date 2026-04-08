@@ -3967,6 +3967,10 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 610px) {
+  .complete {
+    left: -26px !important;
+    top: -2px !important;
+  }
   #carson-marker {
     top: 56% !important;
   }
@@ -4023,8 +4027,8 @@ dialog.close::backdrop {
   }
   nav .tab-nav details ul {
     position: relative !important;
-    left: -12px !important;
-    width: calc(100% + 10px) !important;
+    left: -14px !important;
+    width: calc(100% + 12px) !important;
   }
   nav .tab-nav summary::before, nav .tab-nav a::before {
     top: 10px !important;
@@ -4908,8 +4912,8 @@ dialog.close::backdrop {
   }
   #app nav .tab-nav .link-container ul ul {
     padding-right: 0px !important;
-    left: -12.5px !important;
-    width: calc(100% + 11px) !important;
+    left: -14.5px !important;
+    width: calc(100% + 13px) !important;
     padding-left: 27px !important;
   }
   #app nav .tab-nav .link-container ul br {
