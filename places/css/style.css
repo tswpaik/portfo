@@ -1429,7 +1429,7 @@ header #header-wrapper #logo-link #logo {
   color: orange;
   position: absolute;
   padding: 0;
-  left: -27px;
+  left: -27.5px;
   top: 1px;
   background-color: white;
   width: 25px;
@@ -1480,7 +1480,7 @@ header #header-wrapper #logo-link #logo {
   color: orange;
   position: absolute;
   padding: 0;
-  left: -27px;
+  left: -27.5px;
   top: 1px;
   background-color: white;
   width: 25px;
@@ -4912,8 +4912,8 @@ dialog.close::backdrop {
   }
   #app nav .tab-nav .link-container ul ul {
     padding-right: 0px !important;
-    left: -14.5px !important;
-    width: calc(100% + 13px) !important;
+    left: -13.5px !important;
+    width: calc(100% + 12px) !important;
     padding-left: 27px !important;
   }
   #app nav .tab-nav .link-container ul br {
