@@ -3347,14 +3347,14 @@ dialog.close::backdrop {
   .loading-container {
     width: 100% !important;
   }
+  .dtla-activity-links {
+    max-height: 640px !important;
+  }
   .dtla-dining-links {
     max-height: 750px !important;
   }
-  .dtla-activity-links {
-    max-height: 670px !important;
-  }
   .tokyo-activity-links {
-    max-height: 800px !important;
+    max-height: 820px !important;
   }
   .tokyo-dining-links {
     max-height: 800px !important;
@@ -3379,6 +3379,9 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 1600px) {
+  .dtla-activity-links {
+    max-height: 670px !important;
+  }
   .tokyo-activity-links {
     max-height: 950px !important;
   }
@@ -3402,6 +3405,9 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 1500px) {
+  .content {
+    max-width: unset !important;
+  }
   .tokyo-activity-links {
     max-height: 650px !important;
   }
@@ -3669,21 +3675,29 @@ dialog.close::backdrop {
     padding-left: 80px !important;
   }
 }
+@media only screen and (max-width: 1250px) {
+  .tokyo-activity-links {
+    max-height: 680px !important;
+  }
+  .kyoto-activity-links {
+    max-height: 800px !important;
+  }
+}
 @media only screen and (max-width: 1230px) {
   .kamakura-activity-links {
     max-height: 800px !important;
   }
   .tokyo-activity-links {
-    max-height: 700px !important;
+    max-height: 780px !important;
+  }
+  .tokyo-dining-links {
+    max-height: 670px !important;
   }
   .otsu-activity-links {
     max-height: 600px !important;
   }
-  .tokyo-dining-links {
-    max-height: 650px !important;
-  }
   .kyoto-activity-links {
-    max-height: 750px !important;
+    max-height: 820px !important;
   }
   .kyoto-dining-links {
     max-height: 350px !important;
@@ -3691,10 +3705,10 @@ dialog.close::backdrop {
 }
 @media only screen and (max-width: 1050px) {
   .dtla-activity-links {
-    max-height: 520px !important;
+    max-height: 620px !important;
   }
   .dtla-dining-links {
-    max-height: 600px !important;
+    max-height: 680px !important;
   }
   .otsu-activity-links {
     max-height: 700px !important;
@@ -3706,13 +3720,13 @@ dialog.close::backdrop {
     max-height: 750px !important;
   }
   .kyoto-activity-links {
-    max-height: 950px !important;
+    max-height: 1000px !important;
   }
   .kyoto-dining-links {
     max-height: 400px !important;
   }
   .kanazawa-activity-links {
-    max-height: 750px !important;
+    max-height: 700px !important;
   }
   .kamakura-activity-links {
     max-height: 1000px !important;
@@ -3801,6 +3815,17 @@ dialog.close::backdrop {
     width: 100% !important;
   }
 }
+@media only screen and (max-width: 960px) {
+  .tokyo-activity-links {
+    max-height: 1020px !important;
+  }
+  .tokyo-dining-links {
+    max-height: 950px !important;
+  }
+  .dtla-activity-links {
+    max-height: 700px !important;
+  }
+}
 @media only screen and (max-width: 900px) {
   .kamakura-activity-links {
     max-height: 1200px !important;
@@ -3812,15 +3837,10 @@ dialog.close::backdrop {
     max-height: 900px !important;
   }
   .kyoto-activity-links {
-    max-height: 1020px !important;
+    max-height: 1100px !important;
   }
   .kyoto-dining-links {
     max-height: 400px !important;
-  }
-}
-@media only screen and (max-width: 960px) {
-  .dtla-activity-links {
-    max-height: 700px !important;
   }
 }
 @media only screen and (max-width: 840px) {
