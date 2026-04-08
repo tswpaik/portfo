@@ -1814,6 +1814,7 @@ header #header-wrapper #logo-link #logo {
   grid-area: content;
   padding: 30px 30px 20px 30px;
   overflow-y: auto;
+  overflow-x: hidden;
   background-color: white;
   position: relative;
   left: -40px;
