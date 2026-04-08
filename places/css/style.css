@@ -1416,6 +1416,9 @@ header #header-wrapper #logo-link #logo {
   -webkit-transition: all 0.5s var(--ease-out-quint);
   transition: all 0.5s var(--ease-out-quint);
 }
+#app nav .tab-nav .link-container .summary-link {
+  position: relative;
+}
 #app nav .tab-nav .link-container .summary-link.top-rec i {
   color: orange;
   font-size: 13px;
@@ -1423,9 +1426,23 @@ header #header-wrapper #logo-link #logo {
 }
 #app nav .tab-nav .link-container .summary-link i.complete {
   font-size: 17px;
-  color: #8EBE6F;
-  padding: 0 2px 0 3px;
-  padding-left: 5px;
+  color: orange;
+  position: absolute;
+  padding: 0;
+  left: -27px;
+  top: 1px;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #app nav .tab-nav .link-container a {
   cursor: pointer;
@@ -1450,6 +1467,9 @@ header #header-wrapper #logo-link #logo {
   border: none;
   background-color: none;
 }
+#app nav .tab-nav .link-container a.selected i.complete {
+  z-index: -1;
+}
 #app nav .tab-nav .link-container a.top-rec i {
   color: orange;
   font-size: 13px;
@@ -1457,8 +1477,23 @@ header #header-wrapper #logo-link #logo {
 }
 #app nav .tab-nav .link-container a i.complete {
   font-size: 17px;
-  color: #8EBE6F;
-  padding: 0 2px 0 3px;
+  color: orange;
+  position: absolute;
+  padding: 0;
+  left: -27px;
+  top: 1px;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #app nav .tab-nav .link-container .disabled-link, #app nav .tab-nav .link-container .coming-soon {
   font-size: inherit;
@@ -1497,6 +1532,9 @@ header #header-wrapper #logo-link #logo {
   opacity: 0.25;
   pointer-events: none;
 }
+#app nav .tab-nav .link-container.filtered a .complete, #app nav .tab-nav .link-container.filtered summary .complete {
+  opacity: 0;
+}
 #app nav .tab-nav .link-container.filtered a:hover, #app nav .tab-nav .link-container.filtered summary:hover {
   opacity: 1;
 }
@@ -1506,6 +1544,9 @@ header #header-wrapper #logo-link #logo {
 #app nav .tab-nav .link-container.filtered .matched {
   opacity: 1;
   pointer-events: all;
+}
+#app nav .tab-nav .link-container.filtered .matched .complete {
+  opacity: 1;
 }
 #app nav .tab-nav .link-container.filtered .matched::before {
   opacity: 1 !important;
@@ -1683,6 +1724,9 @@ header #header-wrapper #logo-link #logo {
 }
 #app nav .tab-nav .link-container ul li details summary.selected {
   font-weight: 500;
+}
+#app nav .tab-nav .link-container ul li details summary.selected i.complete {
+  z-index: -1;
 }
 #app nav .tab-nav .link-container ul li details summary.selected::before {
   top: 12px;
