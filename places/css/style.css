@@ -1435,6 +1435,9 @@ header #header-wrapper #logo-link #logo {
   width: -moz-fit-content;
   width: fit-content;
 }
+#app nav .tab-nav .link-container a::before {
+  background-image: none;
+}
 #app nav .tab-nav .link-container a.selected {
   font-weight: 500;
 }
@@ -1674,6 +1677,9 @@ header #header-wrapper #logo-link #logo {
 }
 #app nav .tab-nav .link-container ul li details summary:hover::after {
   background-color: var(--dark-red);
+}
+#app nav .tab-nav .link-container ul li details summary::before {
+  background-image: none;
 }
 #app nav .tab-nav .link-container ul li details summary.selected {
   font-weight: 500;
