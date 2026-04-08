@@ -2099,6 +2099,7 @@ header #header-wrapper #logo-link #logo {
 #app main .title {
   grid-area: title-area;
   margin-bottom: 15px;
+  max-width: 903px;
 }
 #app main .title div {
   font-family: "Bricolage Grotesque";
@@ -2958,6 +2959,7 @@ header #header-wrapper #logo-link #logo {
   border-top: 2px solid #dfdfdf;
   padding: 15px 0 0;
   margin-top: 10px;
+  max-width: 903px;
 }
 #app main .bottom-row #scroll-to-top, #app main .bottom-row #copyright {
   font-size: 16px !important;
@@ -3405,7 +3407,7 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 1500px) {
-  .content {
+  .content, .title, .bottom-row {
     max-width: unset !important;
   }
   .tokyo-activity-links {
