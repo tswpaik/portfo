@@ -4532,6 +4532,9 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 460px) {
+  #east-sgv-pomona-marker {
+    left: 72% !important;
+  }
   #boyle-heights-lincoln-heights-marker {
     top: 69% !important;
   }
