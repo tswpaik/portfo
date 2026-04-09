@@ -4308,8 +4308,8 @@ dialog.close::backdrop {
     width: 50px !important;
   }
   #southern-gateway-cities-marker {
-    left: 92% !important;
-    min-width: 60px !important;
+    left: 89.5% !important;
+    min-width: 80px !important;
   }
   #exposition-park-marker {
     left: 26% !important;
@@ -4374,6 +4374,9 @@ dialog.close::backdrop {
   }
   .link-container ul li {
     padding-right: 0 !important;
+  }
+  .link-container ul li br {
+    display: none !important;
   }
   .tab-nav .link-container ul li:before {
     width: 14px !important;
