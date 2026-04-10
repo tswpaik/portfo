@@ -3380,6 +3380,54 @@ dialog.close::backdrop {
     width: 100% !important;
   }
 }
+@media only screen and (max-width: 1640px) {
+  .column {
+    width: 370px;
+    margin-bottom: 10px !important;
+  }
+  .content .central-la .column {
+    width: 380px;
+  }
+  .content .dtla .column {
+    width: 410px;
+  }
+  .content .dtla .column:last-of-type {
+    width: 420px;
+  }
+  .content .westside-more .column {
+    width: 380px;
+  }
+  .content .south-bay-harbor .column {
+    width: 370px;
+  }
+  .content .catalina .column {
+    width: 380px;
+  }
+  .content .south-la-gateway-cities .column {
+    width: 400px;
+  }
+  .content .south-la-gateway-cities .column:last-of-type {
+    width: 390px;
+  }
+  .content .eastside-nela .column {
+    width: 390px;
+  }
+  .content .sgv-more .column {
+    width: 400px;
+  }
+  .content .sfv-more .column {
+    width: 390px;
+  }
+  .content .kanto .column {
+    width: 430px;
+  }
+  .content .matsumoto .column {
+    width: 400px;
+  }
+  .content .hiroshima .column {
+    width: 420px;
+  }
+}
 @media only screen and (max-width: 1600px) {
   .dtla-activity-links {
     max-height: 670px !important;
@@ -3407,6 +3455,18 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 1500px) {
+  .column {
+    width: unset !important;
+  }
+  .column::after {
+    content: "";
+    display: block;
+    height: 10px;
+    width: 100%;
+  }
+  #app main .content * figure.column figcaption {
+    bottom: 22px;
+  }
   .content, .title, .bottom-row {
     max-width: unset !important;
   }
