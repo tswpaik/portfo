@@ -3907,6 +3907,18 @@ dialog.close::backdrop {
   .kyoto-dining-links {
     max-height: 400px !important;
   }
+  #app main .content * .item-links {
+    max-height: unset !important;
+  }
+  #app main .content * .item-links li {
+    width: 100% !important;
+    padding-right: 0 !important;
+    margin: 7px !important;
+  }
+  figure {
+    float: unset !important;
+    margin: 0 auto 20px !important;
+  }
 }
 @media only screen and (max-width: 840px) {
   .dtla-dining-links, .dtla-activity-links,
@@ -3974,20 +3986,6 @@ dialog.close::backdrop {
   #app main .content * .item-links-container .item-links#south-la-gateway-cities--links li,
   #app main .content * .item-links-container .item-links#eastside-nela--links li {
     width: 100% !important;
-  }
-}
-@media only screen and (max-width: 780px) {
-  #app main .content * .item-links {
-    max-height: unset !important;
-  }
-  #app main .content * .item-links li {
-    width: 100% !important;
-    padding-right: 0 !important;
-    margin: 7px !important;
-  }
-  figure {
-    float: unset !important;
-    margin: 0 auto 20px !important;
   }
 }
 @media only screen and (max-width: 660px) {
