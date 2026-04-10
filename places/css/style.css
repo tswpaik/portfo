@@ -3421,6 +3421,9 @@ dialog.close::backdrop {
   .content .kanto .column {
     width: 430px;
   }
+  .content .chubu .column {
+    width: 400px;
+  }
   .content .matsumoto .column {
     width: 400px;
   }
