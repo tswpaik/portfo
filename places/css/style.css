@@ -3458,6 +3458,13 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 1500px) {
+  html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0 auto;
+    background-image: none;
+  }
   .column {
     width: unset !important;
   }
@@ -5330,6 +5337,11 @@ dialog.close::backdrop {
   nav .map #sgv-more-sub-markers .marker,
   #app nav .map .sub-marker-container .marker#south-pas-san-marino-marker {
     font-size: 10px !important;
+  }
+}
+@media only screen and (max-height: 710px) {
+  nav {
+    max-height: 100%;
   }
 }
 @media only screen and (max-height: 500px) {
