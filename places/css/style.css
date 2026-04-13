@@ -4256,7 +4256,7 @@ dialog.close::backdrop {
     max-width: 200px !important;
   }
   nav .map .marker#scv-castaic-av-marker {
-    max-width: 120px !important;
+    max-width: 140px !important;
   }
   nav .map .marker#lake-balboa-marker {
     width: 70px !important;
@@ -4940,7 +4940,7 @@ dialog.close::backdrop {
     left: 41.25% !important;
   }
   #scv-castaic-av-marker {
-    top: 13% !important;
+    top: 7% !important;
   }
   #app nav .map .sub-marker-container .marker#lake-balboa-marker {
     left: 44.5% !important;
