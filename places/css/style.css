@@ -653,7 +653,7 @@ header #header-wrapper #logo-link #logo {
   padding: 8px 3px 7px 8px;
   width: 85px;
   text-align: left;
-  z-index: 1;
+  z-index: 11;
 }
 #app nav .map .marker-container .marker#south-bay-harbor span, #app nav .map .sub-marker-container .marker#south-bay-harbor span {
   left: 0;
@@ -678,7 +678,7 @@ header #header-wrapper #logo-link #logo {
   padding: 8px 5px 7px 10px;
   width: 100px;
   text-align: left;
-  z-index: -1;
+  z-index: 10;
 }
 #app nav .map .marker-container .marker#south-la-gateway-cities span, #app nav .map .sub-marker-container .marker#south-la-gateway-cities span {
   left: 0;
@@ -707,6 +707,7 @@ header #header-wrapper #logo-link #logo {
   width: 170px;
   height: 10%;
   font-size: 13.25px;
+  z-index: -1;
 }
 #app nav .map .marker-container .marker#sgv-more span, #app nav .map .sub-marker-container .marker#sgv-more span {
   left: 0;
