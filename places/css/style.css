@@ -2828,6 +2828,89 @@ header #header-wrapper #logo-link #logo {
   -webkit-animation-delay: 0.75s;
           animation-delay: 0.75s;
 }
+#app main .content * .carousel-widget .gauge {
+  position: relative;
+  top: 20px;
+  left: 50%;
+  width: 200px;
+  height: 6px;
+  background-color: #eee;
+  border-radius: 15px;
+  z-index: 1;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  margin-bottom: 5px;
+}
+#app main .content * .carousel-widget .gauge .gauge-fill {
+  width: 0;
+  height: inherit;
+  background-color: #d9d9d9;
+  border-radius: inherit;
+  -webkit-animation: fillGauge 6s;
+          animation: fillGauge 6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes fillGauge {
+  to {
+    width: 100%;
+  }
+}
+@keyframes fillGauge {
+  to {
+    width: 100%;
+  }
+}
+#app main .content * .carousel-widget .gauge #play, #app main .content * .carousel-widget .gauge #pause {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: none;
+  border: none;
+  -webkit-transform: translate(-30px, -11px);
+          transform: translate(-30px, -11px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  cursor: pointer;
+  -webkit-transition: all 0.25s var(--ease-out-quint);
+  transition: all 0.25s var(--ease-out-quint);
+  padding: 0;
+  color: var(--lighter-red);
+}
+#app main .content * .carousel-widget .gauge #play i, #app main .content * .carousel-widget .gauge #pause i {
+  font-size: 18px;
+  position: relative;
+  top: 0px;
+  color: inherit;
+}
+#app main .content * .carousel-widget .gauge #play:hover, #app main .content * .carousel-widget .gauge #pause:hover {
+  color: var(--dark-red);
+}
+#app main .content * .carousel-widget .gauge #play {
+  display: none;
+}
+#app main .content * .carousel-widget .gauge.pause .gauge-fill {
+  -webkit-animation: none;
+          animation: none;
+}
+#app main .content * .carousel-widget .gauge.pause #pause {
+  display: none;
+}
+#app main .content * .carousel-widget .gauge.pause #play {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 #app main .content * .carousel-widget::before, #app main .content * .carousel-widget::after {
   content: "";
   display: block;
@@ -3433,6 +3516,9 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 1600px) {
+  .gauge {
+    top: 7% !important;
+  }
   .dtla-activity-links {
     max-height: 670px !important;
   }
@@ -3459,6 +3545,9 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 1500px) {
+  .gauge {
+    top: 20px !important;
+  }
   html, body {
     width: 100%;
     height: 100%;
@@ -3806,6 +3895,9 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 1000px) {
+  .gauge {
+    top: 7% !important;
+  }
   .tokyo-activity-links {
     max-height: 950px !important;
   }
@@ -3929,6 +4021,9 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 840px) {
+  .gauge {
+    top: 11% !important;
+  }
   .dtla-dining-links, .dtla-activity-links,
   .tokyo-dining-links, .tokyo-activity-links,
   .kyoto-dining-links, .kyoto-activity-links,
@@ -4005,6 +4100,9 @@ dialog.close::backdrop {
   }
   #logo-link {
     margin-left: auto;
+  }
+  .gauge {
+    display: none;
   }
   .carousel-widget::before, .carousel-widget::after {
     display: none !important;
