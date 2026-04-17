@@ -426,7 +426,7 @@ nav summary, nav ul li ul li, nav #contact-link {
   transition: all 0.5s var(--ease-out-quint);
   border: 2px solid transparent;
   border-radius: 3px;
-  padding: 0 3px;
+  padding: 0;
 }
 nav summary:hover, nav summary:focus, nav ul li ul li:hover, nav ul li ul li:focus, nav #contact-link:hover, nav #contact-link:focus {
   color: var(--orange);
@@ -434,11 +434,6 @@ nav summary:hover, nav summary:focus, nav ul li ul li:hover, nav ul li ul li:foc
 nav summary:focus, nav ul li ul li:focus, nav #contact-link:focus {
   -webkit-transition: none;
   transition: none;
-}
-nav ul li ul li {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 nav summary a {
   pointer-events: none;
@@ -1914,6 +1909,11 @@ footer p span {
   }
   nav {
     display: none;
+  }
+  nav.open, header nav#open-nav:hover, header nav#open-nav:focus {
+    display: block;
+  }
+  nav {
     position: fixed;
     top: 100px;
     left: 0;
@@ -1931,9 +1931,6 @@ footer p span {
     -webkit-box-shadow: var(--smooth-box);
             box-shadow: var(--smooth-box);
     margin-left: 0;
-  }
-  nav.open, header nav#open-nav:hover, header nav#open-nav:focus {
-    display: block;
   }
   nav a {
     font-size: 25px !important;
