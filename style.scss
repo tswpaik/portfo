@@ -401,6 +401,7 @@ nav {
     border: 2px solid transparent;
     border-radius: 3px;
     padding: 0;
+    width: fit-content;
 
     &:hover, &:focus {
       color: var(--orange);

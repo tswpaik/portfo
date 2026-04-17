@@ -427,6 +427,9 @@ nav summary, nav ul li ul li, nav #contact-link {
   border: 2px solid transparent;
   border-radius: 3px;
   padding: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 nav summary:hover, nav summary:focus, nav ul li ul li:hover, nav ul li ul li:focus, nav #contact-link:hover, nav #contact-link:focus {
   color: var(--orange);
