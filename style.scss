@@ -398,9 +398,8 @@ nav {
 
   summary, ul li ul li, #contact-link {
     transition: all 0.5s var(--ease-out-quint);
-    border: 2px solid transparent;
     border-radius: 3px;
-    padding: 0 3px;
+    margin: 3px;
 
     &:hover, &:focus {
       color: var(--orange);
@@ -411,6 +410,15 @@ nav {
       // outline: none;
       // border-color: skyblue;
     }
+  }
+
+  a {
+    // border: 1px solid green;
+    padding-left: 6px;
+  }
+
+  ul li ul li {
+    width: fit-content;
   }
 
   summary a {

@@ -424,9 +424,8 @@ nav summary::-webkit-details-marker {
 nav summary, nav ul li ul li, nav #contact-link {
   -webkit-transition: all 0.5s var(--ease-out-quint);
   transition: all 0.5s var(--ease-out-quint);
-  border: 2px solid transparent;
   border-radius: 3px;
-  padding: 0 3px;
+  margin: 3px;
 }
 nav summary:hover, nav summary:focus, nav ul li ul li:hover, nav ul li ul li:focus, nav #contact-link:hover, nav #contact-link:focus {
   color: var(--orange);
@@ -434,6 +433,9 @@ nav summary:hover, nav summary:focus, nav ul li ul li:hover, nav ul li ul li:foc
 nav summary:focus, nav ul li ul li:focus, nav #contact-link:focus {
   -webkit-transition: none;
   transition: none;
+}
+nav a {
+  padding-left: 6px;
 }
 nav ul li ul li {
   width: -webkit-fit-content;
