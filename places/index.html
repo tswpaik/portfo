@@ -61,10 +61,14 @@
           <button class="share bottom"><i class='fa-solid fa-link'></i> Copy URL to Page</button>
         </footer>
         <div class="main-space"></div>
-        <div class="loading" aria-hidden="true" style="opacity: 0; z-indeX: -1;">
+        <div class="loading" aria-hidden="true" style="opacity: 0; z-index: -1;">
           <div class="loading-container">
             <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-            <p>Loading<p>
+            <p style="margin-bottom: 10px;">Loading</p>
+            <p id="reload-msg" style="opacity: 0;">
+              Taking longer than usual?<br />
+              <a href="#" onclick="location.reload()">Click here to reload.</a>
+            </p>
           </div>
         </div>
       </main>

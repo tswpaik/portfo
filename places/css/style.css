@@ -1920,6 +1920,29 @@ header #header-wrapper #logo-link #logo {
   -webkit-transform: translate(3px, -20px);
           transform: translate(3px, -20px);
 }
+#app main .loading #reload-msg {
+  font-family: "Roboto Condensed";
+  font-weight: normal;
+  font-size: 19px;
+  color: #555;
+  margin-top: 10px;
+  text-align: center;
+  line-height: 1.5;
+  -webkit-transition: all 0.25s var(--ease-out-quint);
+  transition: all 0.25s var(--ease-out-quint);
+  opacity: 0;
+}
+#app main .loading #reload-msg a {
+  color: var(--dark-red);
+  font-size: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  -webkit-transition: all 0.25s var(--ease-out-quint);
+  transition: all 0.25s var(--ease-out-quint);
+}
+#app main .loading #reload-msg a:hover {
+  color: var(--red);
+}
 #app main .loading .lds-roller,
 #app main .loading .lds-roller div,
 #app main .loading .lds-roller div:after {
