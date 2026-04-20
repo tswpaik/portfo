@@ -1922,7 +1922,7 @@ header #header-wrapper #logo-link #logo {
 }
 #app main .loading #reload-msg {
   font-family: "Roboto Condensed";
-  font-weight: normal;
+  font-weight: 400;
   font-size: 19px;
   color: #555;
   margin-top: 10px;
@@ -1930,7 +1930,10 @@ header #header-wrapper #logo-link #logo {
   line-height: 1.5;
   -webkit-transition: all 0.25s var(--ease-out-quint);
   transition: all 0.25s var(--ease-out-quint);
-  opacity: 0;
+}
+#app main .loading #reload-msg i {
+  font-size: 16px;
+  font-weight: 900;
 }
 #app main .loading #reload-msg a {
   color: var(--dark-red);
