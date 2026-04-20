@@ -1930,6 +1930,7 @@ header #header-wrapper #logo-link #logo {
   line-height: 1.5;
   -webkit-transition: all 0.25s var(--ease-out-quint);
   transition: all 0.25s var(--ease-out-quint);
+  cursor: pointer;
 }
 #app main .loading #reload-msg i {
   font-size: 16px;
