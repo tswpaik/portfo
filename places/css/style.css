@@ -3138,9 +3138,6 @@ header #header-wrapper #logo-link #logo {
 #app main .bottom-row #scroll-to-top span, #app main .bottom-row #copyright span {
   font-size: inherit;
 }
-#app main .bottom-row #copyright {
-  margin-right: auto;
-}
 #app main .bottom-row #copyright a {
   font-size: inherit;
   color: inherit;
@@ -3153,7 +3150,7 @@ header #header-wrapper #logo-link #logo {
   cursor: pointer;
   -webkit-transition: all 0.5s var(--ease-out-quint);
   transition: all 0.5s var(--ease-out-quint);
-  margin: 0 auto;
+  margin: 0;
 }
 #app main .bottom-row #scroll-to-top i {
   font-size: 13px;
@@ -3164,6 +3161,9 @@ header #header-wrapper #logo-link #logo {
 }
 #app main .bottom-row #scroll-to-top:hover {
   color: var(--light-red);
+}
+#app main .bottom-row .parent-links {
+  margin-left: 0;
 }
 #app main .bottom-row .parent-links div {
   font-size: 16px !important;
@@ -4400,6 +4400,14 @@ dialog.close::backdrop {
     float: unset !important;
     margin: 0 auto 20px !important;
   }
+  #header-wrapper {
+    -webkit-transform: scale(0.8) translate(-11.75%, -13%);
+            transform: scale(0.8) translate(-11.75%, -13%);
+    width: 120%;
+  }
+  header {
+    height: 77px;
+  }
 }
 @media only screen and (max-width: 840px) {
   .gauge {
@@ -4430,19 +4438,11 @@ dialog.close::backdrop {
   #app main .content * .side-by-side-lists .item-links-container {
     width: 100% !important;
   }
-  #header-wrapper {
-    -webkit-transform: scale(0.8) translate(-11.75%, -13%);
-            transform: scale(0.8) translate(-11.75%, -13%);
-    width: 120%;
-  }
   #app {
     height: calc(100% - 77px) !important;
   }
   #tab-selector {
     border-top-width: 10px !important;
-  }
-  header {
-    height: 77px;
   }
   nav {
     height: 100%;
