@@ -5209,10 +5209,10 @@ dialog.close::backdrop {
     width: 158%;
   }
   #app {
-    height: calc(100% - 61px) !important;
+    height: calc(100% - 62px) !important;
   }
   header {
-    height: 61px;
+    height: 62px;
   }
   main {
     padding-left: 30px !important;
@@ -5841,10 +5841,10 @@ dialog.close::backdrop {
     width: 183%;
   }
   #app {
-    height: calc(100% - 54px) !important;
+    height: calc(100% - 55px) !important;
   }
   header {
-    height: 54px;
+    height: 55px;
   }
 }
 @media only screen and (max-width: 380px) {
