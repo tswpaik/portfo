@@ -4203,7 +4203,7 @@ dialog.close::backdrop {
   color: var(--red) !important;
 }
 .dark dialog summary:hover {
-  color: orange !important;
+  color: var(--light-red) !important;
 }
 .dark dialog details {
   background-color: #222 !important;
