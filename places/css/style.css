@@ -4110,8 +4110,8 @@ dialog.close::backdrop {
 .dark .tab-nav .filter.checked {
   border-color: #D7612A !important;
 }
-.dark ul li details[open] summary::after, .dark .nav-label {
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+.dark ul li details summary::after, .dark .nav-label {
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3) !important;
 }
 .dark .map {
   background-color: #3f3f3f !important;
