@@ -3646,7 +3646,7 @@ dialog.close::backdrop {
     margin: 0 0 0 20px !important;
   }
   #tab-selector {
-    height: 83px !important;
+    height: 85px !important;
   }
   #app nav .nav-label#filter-label, #filter-clear {
     border-radius: 0 0 0 15px !important;
