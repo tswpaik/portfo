@@ -4290,8 +4290,9 @@ dialog.close::backdrop {
   .dtla-dining-links {
     max-height: 770px !important;
   }
-  #copyright {
-    margin-right: 0 !important;
+  #scroll-to-top {
+    margin: 0 !important;
+    margin-left: auto !important;
   }
   #app main .bottom-row .parent-links div {
     display: -webkit-box;
