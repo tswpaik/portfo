@@ -5244,7 +5244,7 @@ dialog.close::backdrop {
             flex-direction: row;
     height: 45px !important;
     width: calc(100% + 1px) !important;
-    border-bottom: 1px solid #3F3F3F !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: none;
             box-shadow: none;
     z-index: 1;
@@ -5365,6 +5365,9 @@ dialog.close::backdrop {
     top: 27.5% !important;
     width: 95px !important;
     max-width: 95px !important;
+  }
+  .dark #mobile-toggle {
+    border-bottom: 1px solid #3F3F3F !important;
   }
 }
 @media only screen and (max-width: 430px) {
