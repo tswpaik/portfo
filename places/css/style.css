@@ -332,7 +332,7 @@ header #header-wrapper #tab-selector.scrolled {
 }
 header #header-wrapper #tab-selector.los-angeles {
   width: 230px;
-  left: 30px;
+  left: 27px;
 }
 header #header-wrapper #tab-selector.japan {
   width: 143px;
@@ -3695,7 +3695,7 @@ dialog.close::backdrop {
     margin: 0 0 0 20px !important;
   }
   #tab-selector {
-    height: 84px !important;
+    height: 85px !important;
   }
   #app nav .nav-label#filter-label, #filter-clear {
     border-radius: 0 0 0 15px !important;
@@ -5244,7 +5244,7 @@ dialog.close::backdrop {
             flex-direction: row;
     height: 45px !important;
     width: calc(100% + 1px) !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #3F3F3F !important;
     -webkit-box-shadow: none;
             box-shadow: none;
     z-index: 1;
