@@ -5022,6 +5022,9 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 460px) {
+  .dark .map, .dark .tab-nav {
+    border: none !important;
+  }
   .dark .map .marker {
     border-top: 4px solid #8fba70 !important;
   }
