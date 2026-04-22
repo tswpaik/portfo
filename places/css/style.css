@@ -248,13 +248,13 @@ header #header-wrapper h1 {
   margin: 0;
   margin-right: 13px;
   padding: 0 20px 2px;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  margin-left: auto;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
   text-align: right;
   font-size: 21px;
   border-right: 1.5px solid #555;
+  border-left: 1.5px solid #555;
   font-weight: 300;
   line-height: 1;
   font-family: "Bricolage Grotesque";
@@ -299,6 +299,16 @@ header #header-wrapper .header-tab.selected, header #header-wrapper #about.selec
   text-decoration-style: solid;
   z-index: 1;
 }
+header #header-wrapper .header-tab.los-angeles span, header #header-wrapper #about.los-angeles span {
+  font-family: "Bricolage Grotesque";
+  font-weight: 700;
+  font-size: inherit;
+  text-decoration-thickness: inherit;
+  text-underline-offset: inherit;
+}
+header #header-wrapper .header-tab.los-angeles span.mobile, header #header-wrapper #about.los-angeles span.mobile {
+  display: none;
+}
 header #header-wrapper #about {
   border: none;
   background: none;
@@ -328,13 +338,48 @@ header #header-wrapper #tab-selector.japan {
   width: 143px;
   left: 260px;
 }
+header #header-wrapper #toggle-theme {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  margin-left: auto;
+  border: none;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+header #header-wrapper #toggle-theme i {
+  font-size: 28px;
+  position: relative;
+  -webkit-transition: all 0.5s var(--ease-out-quint);
+  transition: all 0.5s var(--ease-out-quint);
+  color: white;
+  background-color: none;
+}
+header #header-wrapper #toggle-theme:hover i {
+  color: var(--light-red);
+}
+header #header-wrapper #toggle-theme.dark-btn i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
 header #header-wrapper #logo-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
 }
 header #header-wrapper #logo-link #logo {
   width: 75px;
@@ -456,6 +501,8 @@ header #header-wrapper #logo-link #logo {
   background-position: 50% 50%;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+  -webkit-transition-property: background-size, background-position, opacity;
+  transition-property: background-size, background-position, opacity;
 }
 #app nav .map .zoom-map-overlay {
   opacity: 0;
@@ -1083,7 +1130,7 @@ header #header-wrapper #logo-link #logo {
 #app nav .map .marker-container .non-marker#okinawa-box::after, #app nav .map .sub-marker-container .non-marker#okinawa-box::after {
   content: "";
   position: absolute;
-  display: box;
+  display: block;
   width: 45px;
   height: 1000px;
   border: 1.5px solid rgba(0, 0, 0, 0.1);
@@ -1226,6 +1273,8 @@ header #header-wrapper #logo-link #logo {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-bottom: none;
   z-index: 1;
+  -webkit-transition-property: bottom;
+  transition-property: bottom;
 }
 #app nav .tab-nav.japan {
   max-width: 600px;
@@ -3646,7 +3695,7 @@ dialog.close::backdrop {
     margin: 0 0 0 20px !important;
   }
   #tab-selector {
-    height: 85px !important;
+    height: 84px !important;
   }
   #app nav .nav-label#filter-label, #filter-clear {
     border-radius: 0 0 0 15px !important;
@@ -4122,6 +4171,8 @@ dialog.close::backdrop {
 .dark .map #okinawa-box {
   background-color: #3f3f3f !important;
   border: 1px solid rgba(200, 200, 200, 0.2) !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 .dark .map #okinawa-box::after {
   border: 1px solid rgba(200, 200, 200, 0.2) !important;
@@ -4420,15 +4471,14 @@ dialog.close::backdrop {
     width: 100% !important;
   }
 }
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 720px) {
   h1 {
     display: none;
   }
+}
+@media only screen and (max-width: 660px) {
   #app nav .map .sub-marker-container .marker#culver-marker {
     left: 95% !important;
-  }
-  #logo-link {
-    margin-left: auto;
   }
   .gauge {
     display: none;
@@ -4485,6 +4535,35 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 610px) {
+  #tab-selector {
+    border-top-width: 13px !important;
+  }
+  #tab-selector.los-angeles {
+    width: 100px !important;
+  }
+  #tab-selector.japan {
+    left: 125px !important;
+  }
+  .header-tab {
+    height: 75px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header-tab .standard {
+    display: none !important;
+  }
+  .header-tab .mobile {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
   .complete {
     left: -25.5px !important;
     top: -2px !important;
@@ -4763,6 +4842,13 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 560px) {
+  header {
+    height: 65px;
+  }
+  #toggle-theme i {
+    font-size: 35px !important;
+    margin-right: 15px !important;
+  }
   dialog {
     width: 100vw;
   }
@@ -4820,24 +4906,6 @@ dialog.close::backdrop {
   }
   #app {
     height: calc(100% - 65px) !important;
-  }
-  header {
-    height: 65px;
-  }
-  #tab-selector {
-    border-top-width: 13px !important;
-  }
-  .header-tab {
-    height: 75px !important;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   nav .map .marker, nav .map .non-marker {
     font-size: 11px !important;

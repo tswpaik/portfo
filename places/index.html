@@ -38,10 +38,17 @@
     <header>
       <div id="header-wrapper">
         <h1 aria-label="Places Explored, a Tim Paik project"><span aria-hidden="true">Places</span>explored</h1>
-        <a class="los-angeles header-tab selected" href="#la">Los Angeles</a>
+        <a class="los-angeles header-tab selected" href="#la">
+          <span class="standard">Los Angeles</span>
+          <span class="mobile">LA</span>
+        </a>
         <a class="japan header-tab" href="#jp">Japan</a>
         <button id="about" tabindex="0">About</button>
         <div id="tab-selector" aria-hidden="true" class=""></div>
+
+        <button id="toggle-theme" title="Toggle Theme to Light Mode">
+          <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
         <a id="logo-link" href="https://www.tim-paik.com/" target="_blank"><img id="logo" src="images/logo-white.png" alt="tim-paik.com Logo"></a>
       </div>
     </header>
