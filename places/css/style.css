@@ -332,7 +332,7 @@ header #header-wrapper #tab-selector.scrolled {
 }
 header #header-wrapper #tab-selector.los-angeles {
   width: 230px;
-  left: 27px;
+  left: 30px;
 }
 header #header-wrapper #tab-selector.japan {
   width: 143px;
@@ -3924,6 +3924,12 @@ dialog.close::backdrop {
   background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, #303030), color-stop(40%, #222)) !important;
   background-image: linear-gradient(to right, #303030 40%, #222 40%) !important;
 }
+.dark main .title div .parent-regions a {
+  color: #909090 !important;
+}
+.dark main .title div .parent-regions a:hover {
+  color: var(--red) !important;
+}
 .dark nav, .dark #tab-selector {
   background-color: #303030 !important;
 }
@@ -4408,7 +4414,7 @@ dialog.close::backdrop {
     width: 120%;
   }
   header {
-    height: 77px;
+    height: 78px;
   }
 }
 @media only screen and (max-width: 840px) {
@@ -4850,7 +4856,7 @@ dialog.close::backdrop {
 }
 @media only screen and (max-width: 560px) {
   header {
-    height: 65px;
+    height: 66px;
   }
   #toggle-theme i {
     font-size: 35px !important;
@@ -5070,7 +5076,7 @@ dialog.close::backdrop {
     height: calc(100% - 57px) !important;
   }
   header {
-    height: 56px;
+    height: 57px;
   }
   #tab-selector {
     border-top-width: 14px !important;
