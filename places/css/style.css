@@ -4180,6 +4180,7 @@ dialog.close::backdrop {
 }
 .dark dialog {
   background-color: #333 !important;
+  border: 1px solid rgba(200, 200, 200, 0.2) !important;
 }
 .dark dialog h2, .dark dialog p, .dark dialog strong, .dark dialog .title-text, .dark dialog h3, .dark dialog em, .dark dialog li, .dark dialog summary {
   color: white !important;
