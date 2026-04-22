@@ -5155,7 +5155,6 @@ dialog.close::backdrop {
             transform: translate(0, calc(100% - 44px)) !important;
     padding-right: 0 !important;
     padding-top: 45px !important;
-    border-top: 1px solid rgba(0, 0, 0, 0.4);
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) !important;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
