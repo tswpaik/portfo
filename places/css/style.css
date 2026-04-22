@@ -3924,6 +3924,9 @@ dialog.close::backdrop {
   background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, #303030), color-stop(40%, #222)) !important;
   background-image: linear-gradient(to right, #303030 40%, #222 40%) !important;
 }
+.dark #app nav .tab-nav.japan {
+  max-width: 602px !important;
+}
 .dark main .title div .parent-regions a {
   color: #909090 !important;
 }
