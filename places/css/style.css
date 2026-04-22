@@ -312,6 +312,8 @@ header #header-wrapper #tab-selector {
   border-top: 8px solid var(--light-red);
   -webkit-transition: all 0.5s var(--ease-out-quint);
   transition: all 0.5s var(--ease-out-quint);
+  -webkit-transition-property: width, left;
+  transition-property: width, left;
 }
 header #header-wrapper #tab-selector.scrolled {
   -webkit-transition: none;
@@ -436,6 +438,7 @@ header #header-wrapper #logo-link #logo {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  background-color: white;
 }
 #app nav .map .main-map {
   width: 100%;
@@ -1603,6 +1606,8 @@ header #header-wrapper #logo-link #logo {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-transform: scaleX(0.95);
+          transform: scaleX(0.95);
 }
 #app nav .tab-nav .link-container .filter-container .filter.checked {
   border-color: #fec252;
@@ -1633,6 +1638,8 @@ header #header-wrapper #logo-link #logo {
 }
 #app nav .tab-nav .link-container .filter-container .filter label span.emoji {
   font-size: inherit;
+  -webkit-transform: scaleX(1.05);
+          transform: scaleX(1.05);
 }
 #app nav .tab-nav .link-container .filter-container .filter label span.text-label {
   font-size: 14px;
@@ -2424,7 +2431,6 @@ header #header-wrapper #logo-link #logo {
   font-family: "Bricolage Grotesque";
   font-size: 30px;
   font-weight: 900;
-  padding-top: 20px;
 }
 #app main .content * {
   font-size: 17px;
@@ -2494,6 +2500,7 @@ header #header-wrapper #logo-link #logo {
   padding: 15px 20px;
   margin: 20px 0;
   clear: both;
+  background-color: white;
 }
 #app main .content * .item-links-container hr {
   margin: 10px 0;
@@ -2712,7 +2719,6 @@ header #header-wrapper #logo-link #logo {
 }
 #app main .content * .side-by-side-lists.full-width .item-links-container {
   width: 100% !important;
-  max-width: 92;
 }
 #app main .content * .side-by-side-lists.full-width .item-links-container:last-of-type {
   margin-bottom: 20px !important;
@@ -3161,6 +3167,7 @@ dialog {
   width: 90vw;
   max-width: 815px;
   padding-bottom: 10px;
+  background-color: white;
 }
 dialog:focus {
   outline: none;
@@ -3639,7 +3646,7 @@ dialog.close::backdrop {
     margin: 0 0 0 20px !important;
   }
   #tab-selector {
-    height: 85px !important;
+    height: 83px !important;
   }
   #app nav .nav-label#filter-label, #filter-clear {
     border-radius: 0 0 0 15px !important;
@@ -3864,6 +3871,295 @@ dialog.close::backdrop {
     padding-left: 80px !important;
   }
 }
+.dark, .dark body {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, #303030), color-stop(40%, #222)) !important;
+  background-image: linear-gradient(to right, #303030 40%, #222 40%) !important;
+}
+.dark nav, .dark #tab-selector {
+  background-color: #303030 !important;
+}
+.dark #tab-selector {
+  border-left: 1px solid #3d3d3d !important;
+  border-right: 1px solid #3d3d3d !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.dark .header-tab.selected {
+  color: white !important;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.3) !important;
+}
+.dark main {
+  background-color: #222222 !important;
+  scrollbar-color: #6B6B6B #2C2C2C !important;
+}
+.dark main p, .dark main strong, .dark main .title-text, .dark main h3, .dark main em, .dark main li {
+  color: white !important;
+}
+.dark main p {
+  font-weight: 400 !important;
+}
+.dark main .content a {
+  color: #ff9543 !important;
+  font-weight: 400 !important;
+}
+.dark main .content a:hover {
+  color: var(--red) !important;
+}
+.dark main .title div {
+  border-bottom-color: #3a3a3a !important;
+}
+.dark main hr {
+  background-color: #3a3a3a !important;
+}
+.dark main .carousel-cell {
+  background-color: rgba(34, 34, 34, 0.7) !important;
+}
+.dark main .carousel-widget::before {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgb(34, 34, 34)), to(rgba(34, 34, 34, 0))) !important;
+  background-image: linear-gradient(to right, rgb(34, 34, 34) 50%, rgba(34, 34, 34, 0)) !important;
+}
+.dark main .carousel-widget::after {
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, rgb(34, 34, 34)), to(rgba(34, 34, 34, 0))) !important;
+  background-image: linear-gradient(to left, rgb(34, 34, 34) 50%, rgba(34, 34, 34, 0)) !important;
+}
+.dark main .region-type span a {
+  color: white !important;
+  font-weight: 600 !important;
+}
+.dark main .region-type span a:hover {
+  color: #ff9543 !important;
+}
+.dark footer {
+  border-top: 2px solid #3a3a3a !important;
+}
+.dark footer .parent-links div a, .dark footer #scroll-to-top {
+  color: white !important;
+}
+.dark footer .parent-links div a:hover, .dark footer #scroll-to-top:hover {
+  color: var(--red) !important;
+}
+.dark .share {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+}
+.dark .share:disabled, .dark #tag-div div, .dark .construction ul li {
+  background-color: #303030 !important;
+  color: var(--lighter-red) !important;
+}
+.dark .item-links-container {
+  background-color: #303030 !important;
+}
+.dark .item-links-container li {
+  color: white !important;
+}
+.dark .item-links-container li i {
+  background-color: #303030 !important;
+}
+.dark .construction ul li a {
+  color: white !important;
+}
+.dark #tag-div div {
+  color: white !important;
+}
+.dark .photo {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  -webkit-filter: brightness(1) contrast(0.9) !important;
+          filter: brightness(1) contrast(0.9) !important;
+}
+.dark figcaption span {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  color: white !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+.dark figcaption span i {
+  color: white !important;
+}
+.dark .gauge {
+  background-color: #303030 !important;
+}
+.dark .gauge .gauge-fill {
+  background-color: #555 !important;
+}
+.dark .loading {
+  background-color: #222 !important;
+}
+.dark .loading p {
+  font-weight: 600 !important;
+}
+.dark .loading #reload-msg {
+  font-weight: 400 !important;
+}
+.dark .loading #reload-msg a {
+  color: var(--light-red) !important;
+  font-weight: 400 !important;
+}
+.dark .loading #reload-msg a:hover {
+  color: var(--red) !important;
+}
+.dark .good-things {
+  font-weight: 900 !important;
+}
+.dark .construction-img {
+  -webkit-filter: drop-shadow(2px 4px 6px black) !important;
+          filter: drop-shadow(2px 4px 6px black) !important;
+}
+.dark .tab-nav {
+  background-color: #444 !important;
+  scrollbar-color: #6B6B6B #2C2C2C !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.dark .tab-nav ul li details ul {
+  border-color: #5f5f5f !important;
+}
+.dark .tab-nav .link-container .disabled-link {
+  color: #777 !important;
+}
+.dark .tab-nav .tab-container {
+  border: none !important;
+  background: #333 !important;
+}
+.dark .tab-nav .tab {
+  background: -webkit-gradient(linear, left top, right bottom, from(#444), to(#222)) !important;
+  background: linear-gradient(to bottom right, #444, #222) !important;
+}
+.dark .tab-nav .tab:hover {
+  background: #D7612A !important;
+  color: white !important;
+}
+.dark .tab-nav .tab.selected, .dark .tab-nav .tab.selected::before {
+  background: #444 !important;
+  color: white !important;
+}
+.dark .tab-nav li {
+  border-color: #5f5f5f !important;
+}
+.dark .tab-nav li i, .dark .tab-nav li .selected::before {
+  background-color: #444 !important;
+}
+.dark .tab-nav a, .dark .tab-nav summary {
+  color: white !important;
+}
+.dark .tab-nav .filter-container .nav-label {
+  margin-bottom: 5px !important;
+}
+.dark .tab-nav .filter {
+  color: white !important;
+  background-color: #2a2a2a !important;
+}
+.dark .tab-nav .filter .emoji {
+  -webkit-transform: scale(0.9) translateY(1px) !important;
+          transform: scale(0.9) translateY(1px) !important;
+}
+.dark .tab-nav .filter.checked {
+  border-color: #D7612A !important;
+}
+.dark .map {
+  background-color: #3f3f3f !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.dark .map .main-map-overlay, .dark .map .zoom-map-overlay, .dark .map #okinawa img {
+  -webkit-filter: brightness(0.4) !important;
+          filter: brightness(0.4) !important;
+}
+.dark .map #biwa-non-marker img {
+  -webkit-filter: brightness(0.7) !important;
+          filter: brightness(0.7) !important;
+}
+.dark .map .non-marker {
+  color: #aaa !important;
+}
+.dark .map .marker {
+  background: -webkit-gradient(linear, left top, right bottom, from(#444), to(#333)) !important;
+  background: linear-gradient(to bottom right, #444, #333) !important;
+  color: white !important;
+  border-color: rgba(200, 200, 200, 0.2) !important;
+  border-radius: 8px !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+.dark .map .marker .count {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--red)), to(rgb(192, 0, 0))) !important;
+  background-image: linear-gradient(to bottom, var(--red), rgb(192, 0, 0)) !important;
+}
+.dark .map .marker.selected {
+  background: -webkit-gradient(linear, left top, right bottom, from(#2a2a2a), to(#2a2a2a)) !important;
+  background: linear-gradient(to bottom right, #2a2a2a, #2a2a2a) !important;
+}
+.dark .map .marker.selected::before {
+  background-color: #2a2a2a !important;
+}
+.dark .map .marker:disabled {
+  background: #5f5f5f !important;
+  color: #aaa !important;
+  border-color: #505050 !important;
+}
+.dark .map .marker:disabled .coming-soon {
+  background-color: #444 !important;
+  color: orange !important;
+  font-weight: 500 !important;
+}
+.dark .map button.arrow {
+  background-color: #444 !important;
+  border-color: #6a6a6a !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+.dark .map button.arrow i {
+  color: #ccc !important;
+}
+.dark .map button.arrow:hover i {
+  color: var(--lighter-red) !important;
+}
+.dark .map #south-la-block {
+  background-color: #545456 !important;
+}
+.dark .map #la-river-central, .dark .map #la-river-nela, .dark .map #tohoku, .dark .map #kyushu, .dark .map #okinawa span, .dark .map #fuji-kanto {
+  background-color: #555 !important;
+  border: 1px solid rgba(200, 200, 200, 0.2) !important;
+}
+.dark .map #okinawa-box {
+  background-color: #3f3f3f !important;
+  border: 1px solid rgba(200, 200, 200, 0.2) !important;
+}
+.dark .map #okinawa-box::after {
+  border: 1px solid rgba(200, 200, 200, 0.2) !important;
+  border-right: none !important;
+}
+.dark dialog {
+  background-color: #333 !important;
+}
+.dark dialog h2, .dark dialog p, .dark dialog strong, .dark dialog .title-text, .dark dialog h3, .dark dialog em, .dark dialog li, .dark dialog summary {
+  color: white !important;
+}
+.dark dialog a {
+  color: #ff9543 !important;
+  font-weight: 400 !important;
+}
+.dark dialog a:hover {
+  color: var(--red) !important;
+}
+.dark dialog summary:hover {
+  color: orange !important;
+}
+.dark dialog details {
+  background-color: #222 !important;
+}
+.dark dialog .side-by-side {
+  background-color: #333 !important;
+}
+.dark dialog .side-by-side p {
+  border-color: #444 !important;
+}
+.dark #mobile-toggle {
+  background-color: #444 !important;
+}
+.dark #mobile-toggle #button-body #stripes {
+  border-color: #555 !important;
+}
+.dark #mobile-toggle #button-body span:first-of-type, .dark #mobile-toggle #button-body i {
+  color: #aaa !important;
+  background-color: #444 !important;
+}
+
 @media only screen and (max-width: 1250px) {
   .tokyo-activity-links {
     max-height: 680px !important;
@@ -4726,6 +5022,16 @@ dialog.close::backdrop {
   }
 }
 @media only screen and (max-width: 460px) {
+  .dark .map .marker {
+    border-top: 4px solid #8fba70 !important;
+  }
+  .dark .map .marker.selected {
+    border-top-color: var(--light-red) !important;
+  }
+  .dark #mobile-toggle #button-body i {
+    color: white !important;
+    background-color: transparent !important;
+  }
   #seal-beach-marker {
     left: 94.5% !important;
   }
@@ -4872,6 +5178,10 @@ dialog.close::backdrop {
     -webkit-transition: 0.25s all var(--ease-out-quint);
     transition: 0.25s all var(--ease-out-quint);
     padding: 2px !important;
+  }
+  nav #mobile-toggle #button-body i, nav #mobile-toggle #button-head i {
+    color: white !important;
+    background-color: transparent !important;
   }
   nav #mobile-toggle:hover #button-body, nav #mobile-toggle:hover #button-head {
     background-color: var(--dark-red);
