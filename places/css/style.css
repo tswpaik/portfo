@@ -5116,7 +5116,7 @@ dialog.close::backdrop {
     border: none !important;
   }
   .dark .map .marker {
-    border-top: 4px solid #8fba70 !important;
+    border-top: 3px solid #8fba70 !important;
   }
   .dark .map .marker.selected {
     border-top-color: var(--light-red) !important;
