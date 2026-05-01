@@ -189,7 +189,7 @@
   width: 1px;
 }
 
-.center-number span, #app nav .map .marker-container .marker#sfv-more span, #app nav .map .sub-marker-container .marker#sfv-more span, #app nav .map .marker-container .marker#eastside-nela span, #app nav .map .sub-marker-container .marker#eastside-nela span, #app nav .map .marker-container .marker#catalina span, #app nav .map .sub-marker-container .marker#catalina span, #app nav .map .marker-container .marker#central-la span, #app nav .map .sub-marker-container .marker#central-la span {
+.center-number span, #app nav .map .marker-container .marker#sfv-more span, #app nav .map .sub-marker-container .marker#sfv-more span, #app nav .map .marker-container .marker#nela-eastside span, #app nav .map .sub-marker-container .marker#nela-eastside span, #app nav .map .marker-container .marker#catalina span, #app nav .map .sub-marker-container .marker#catalina span, #app nav .map .marker-container .marker#central-la span, #app nav .map .sub-marker-container .marker#central-la span {
   top: 0;
   left: 50%;
   -webkit-transform: translate(-50%, calc(-50% - 11px));
@@ -613,7 +613,7 @@ header #header-wrapper #logo-link #logo {
   display: none;
 }
 #app nav .map .marker-container .marker.selected, #app nav .map .sub-marker-container .marker.selected {
-  z-index: 100;
+  z-index: 100 !important;
   background-color: #fff0d8;
   color: #b30e0e;
 }
@@ -737,14 +737,14 @@ header #header-wrapper #logo-link #logo {
           transform: translate(-60%, -72%);
   font-size: 17px;
 }
-#app nav .map .marker-container .marker#eastside-nela, #app nav .map .sub-marker-container .marker#eastside-nela {
+#app nav .map .marker-container .marker#nela-eastside, #app nav .map .sub-marker-container .marker#nela-eastside {
   top: 33.5%;
   left: 60%;
   padding: 2px 4px;
   padding-top: 7px;
   width: 56px;
 }
-#app nav .map .marker-container .marker#eastside-nela span, #app nav .map .sub-marker-container .marker#eastside-nela span {
+#app nav .map .marker-container .marker#nela-eastside span, #app nav .map .sub-marker-container .marker#nela-eastside span {
   font-size: 17px;
   -webkit-transform: translate(-50%, calc(-50% - 10px));
           transform: translate(-50%, calc(-50% - 10px));
@@ -1190,13 +1190,13 @@ header #header-wrapper #logo-link #logo {
   left: 7px;
   top: 8px;
 }
-#app nav .map .sub-marker-container .marker#dtla-marker, #app nav .map .sub-marker-container .marker#echo-park-hifi-marker, #app nav .map .sub-marker-container .marker#elysian-park-marker, #app nav .map .sub-marker-container .marker#silver-lake-marker, #app nav .map .sub-marker-container .marker#griffith-marker, #app nav .map .sub-marker-container .marker#east-hollywood-marker, #app nav .map .sub-marker-container .marker#ktown-marker, #app nav .map .sub-marker-container .marker#windsor-larchmont-hancock-marker, #app nav .map .sub-marker-container .marker#mid-wilshire-mid-city-marker, #app nav .map .sub-marker-container .marker#fairfax-beverly-grove-marker, #app nav .map .sub-marker-container .marker#hw-marker, #app nav .map .sub-marker-container .marker#atwater-marker, #app nav .map .sub-marker-container .marker#glassell-cypress-marker, #app nav .map .sub-marker-container .marker#mt-washington-marker, #app nav .map .sub-marker-container .marker#boyle-heights-lincoln-heights-marker, #app nav .map .sub-marker-container .marker#el-sereno-marker, #app nav .map .sub-marker-container .marker#culver-marker, #app nav .map .sub-marker-container .marker#palisades-marker, #app nav .map .sub-marker-container .marker#bev-crest-bev-hills-marker, #app nav .map .sub-marker-container .marker#sawtelle-century-city-marker, #app nav .map .sub-marker-container .marker#malibu-topanga-marker, #app nav .map .sub-marker-container .marker#thousand-oaks-marker, #app nav .map .sub-marker-container .marker#vc-coast-marker, #app nav .map .sub-marker-container .marker#lax-inglewood-marker, #app nav .map .sub-marker-container .marker#inglewood-marker, #app nav .map .sub-marker-container .marker#manhattan-hermosa-marker, #app nav .map .sub-marker-container .marker#gardena-torrance-more-marker, #app nav .map .sub-marker-container .marker#carson-marker, #app nav .map .sub-marker-container .marker#pv-marker, #app nav .map .sub-marker-container .marker#long-beach-marker, #app nav .map .sub-marker-container .marker#seal-beach-marker, #app nav .map .sub-marker-container .marker#arcadia-marker, #app nav .map .sub-marker-container .marker#monrovia-marker, #app nav .map .sub-marker-container .marker#whittier-narrows-marker, #app nav .map .sub-marker-container .marker#inland-empire-marker, #app nav .map .sub-marker-container .marker#exposition-park-marker, #app nav .map .sub-marker-container .marker#watts-marker, #app nav .map .sub-marker-container .marker#leimert-marker, #app nav .map .sub-marker-container .marker#northern-gateway-cities-marker, #app nav .map .sub-marker-container .marker#downey-norwalk-marker, #app nav .map .sub-marker-container .marker#commerce-marker, #app nav .map .sub-marker-container .marker#burbank-marker, #app nav .map .sub-marker-container .marker#shadow-hills-marker, #app nav .map .sub-marker-container .marker#noho-marker, #app nav .map .sub-marker-container .marker#lake-balboa-marker, #app nav .map .sub-marker-container .marker#chatsworth-marker, #app nav .map .sub-marker-container .marker#warner-center-marker, #app nav .map .sub-marker-container .marker#port-of-la-marker, #app nav .map .sub-marker-container .marker#east-sgv-pomona-marker, #app nav .map .sub-marker-container .marker#historic-south-central-marker, #app nav .map .sub-marker-container .marker#van-nuys-marker, #app nav .map .sub-marker-container .marker#north-sfv-marker, #app nav .map .sub-marker-container .marker#baldwin-hills-marker, #app nav .map .sub-marker-container .marker#glendale-marker, #app nav .map .sub-marker-container .marker#pasadena-altadena-marker, #app nav .map .sub-marker-container .marker#mpk-alhambra-marker, #app nav .map .sub-marker-container .marker#mt-takao-marker, #app nav .map .sub-marker-container .marker#otsu-marker, #app nav .map .sub-marker-container .marker#kyoto-marker, #app nav .map .sub-marker-container .marker#osaka-marker, #app nav .map .sub-marker-container .marker#narita-marker, #app nav .map .sub-marker-container .marker#atami-marker, #app nav .map .sub-marker-container .marker#hiroshima-marker, #app nav .map .sub-marker-container .marker#okayama-marker, #app nav .map .sub-marker-container .marker#takahashi-marker, #app nav .map .sub-marker-container .marker#fuji-marker, #app nav .map .sub-marker-container .marker#koyasan-marker, #app nav .map .sub-marker-container .marker#kinosaki-marker, #app nav .map .sub-marker-container .marker#ine-marker {
+#app nav .map .sub-marker-container .marker#dtla-marker, #app nav .map .sub-marker-container .marker#echo-park-hifi-marker, #app nav .map .sub-marker-container .marker#elysian-park-marker, #app nav .map .sub-marker-container .marker#silver-lake-marker, #app nav .map .sub-marker-container .marker#griffith-marker, #app nav .map .sub-marker-container .marker#east-hollywood-marker, #app nav .map .sub-marker-container .marker#ktown-marker, #app nav .map .sub-marker-container .marker#windsor-larchmont-hancock-marker, #app nav .map .sub-marker-container .marker#mid-wilshire-mid-city-marker, #app nav .map .sub-marker-container .marker#fairfax-beverly-grove-marker, #app nav .map .sub-marker-container .marker#hw-marker, #app nav .map .sub-marker-container .marker#atwater-marker, #app nav .map .sub-marker-container .marker#glassell-cypress-marker, #app nav .map .sub-marker-container .marker#mt-washington-marker, #app nav .map .sub-marker-container .marker#monterey-hills-hermon-marker, #app nav .map .sub-marker-container .marker#boyle-heights-lincoln-heights-marker, #app nav .map .sub-marker-container .marker#el-sereno-marker, #app nav .map .sub-marker-container .marker#culver-marker, #app nav .map .sub-marker-container .marker#palisades-marker, #app nav .map .sub-marker-container .marker#bev-crest-bev-hills-marker, #app nav .map .sub-marker-container .marker#sawtelle-century-city-marker, #app nav .map .sub-marker-container .marker#malibu-topanga-marker, #app nav .map .sub-marker-container .marker#thousand-oaks-marker, #app nav .map .sub-marker-container .marker#vc-coast-marker, #app nav .map .sub-marker-container .marker#lax-inglewood-marker, #app nav .map .sub-marker-container .marker#inglewood-marker, #app nav .map .sub-marker-container .marker#manhattan-hermosa-marker, #app nav .map .sub-marker-container .marker#gardena-torrance-more-marker, #app nav .map .sub-marker-container .marker#carson-marker, #app nav .map .sub-marker-container .marker#pv-marker, #app nav .map .sub-marker-container .marker#long-beach-marker, #app nav .map .sub-marker-container .marker#seal-beach-marker, #app nav .map .sub-marker-container .marker#arcadia-marker, #app nav .map .sub-marker-container .marker#monrovia-marker, #app nav .map .sub-marker-container .marker#whittier-narrows-marker, #app nav .map .sub-marker-container .marker#inland-empire-marker, #app nav .map .sub-marker-container .marker#exposition-park-marker, #app nav .map .sub-marker-container .marker#watts-marker, #app nav .map .sub-marker-container .marker#leimert-marker, #app nav .map .sub-marker-container .marker#northern-gateway-cities-marker, #app nav .map .sub-marker-container .marker#downey-norwalk-marker, #app nav .map .sub-marker-container .marker#commerce-marker, #app nav .map .sub-marker-container .marker#burbank-marker, #app nav .map .sub-marker-container .marker#shadow-hills-marker, #app nav .map .sub-marker-container .marker#noho-marker, #app nav .map .sub-marker-container .marker#lake-balboa-marker, #app nav .map .sub-marker-container .marker#chatsworth-marker, #app nav .map .sub-marker-container .marker#warner-center-marker, #app nav .map .sub-marker-container .marker#port-of-la-marker, #app nav .map .sub-marker-container .marker#east-sgv-pomona-marker, #app nav .map .sub-marker-container .marker#historic-south-central-marker, #app nav .map .sub-marker-container .marker#van-nuys-marker, #app nav .map .sub-marker-container .marker#north-sfv-marker, #app nav .map .sub-marker-container .marker#baldwin-hills-marker, #app nav .map .sub-marker-container .marker#glendale-marker, #app nav .map .sub-marker-container .marker#pasadena-altadena-marker, #app nav .map .sub-marker-container .marker#mpk-alhambra-marker, #app nav .map .sub-marker-container .marker#mt-takao-marker, #app nav .map .sub-marker-container .marker#otsu-marker, #app nav .map .sub-marker-container .marker#kyoto-marker, #app nav .map .sub-marker-container .marker#osaka-marker, #app nav .map .sub-marker-container .marker#narita-marker, #app nav .map .sub-marker-container .marker#atami-marker, #app nav .map .sub-marker-container .marker#hiroshima-marker, #app nav .map .sub-marker-container .marker#okayama-marker, #app nav .map .sub-marker-container .marker#takahashi-marker, #app nav .map .sub-marker-container .marker#fuji-marker, #app nav .map .sub-marker-container .marker#koyasan-marker, #app nav .map .sub-marker-container .marker#kinosaki-marker, #app nav .map .sub-marker-container .marker#ine-marker {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
-#app nav .map .sub-marker-container .marker#dtla-marker .pin, #app nav .map .sub-marker-container .marker#echo-park-hifi-marker .pin, #app nav .map .sub-marker-container .marker#elysian-park-marker .pin, #app nav .map .sub-marker-container .marker#silver-lake-marker .pin, #app nav .map .sub-marker-container .marker#griffith-marker .pin, #app nav .map .sub-marker-container .marker#east-hollywood-marker .pin, #app nav .map .sub-marker-container .marker#ktown-marker .pin, #app nav .map .sub-marker-container .marker#windsor-larchmont-hancock-marker .pin, #app nav .map .sub-marker-container .marker#mid-wilshire-mid-city-marker .pin, #app nav .map .sub-marker-container .marker#fairfax-beverly-grove-marker .pin, #app nav .map .sub-marker-container .marker#hw-marker .pin, #app nav .map .sub-marker-container .marker#atwater-marker .pin, #app nav .map .sub-marker-container .marker#glassell-cypress-marker .pin, #app nav .map .sub-marker-container .marker#mt-washington-marker .pin, #app nav .map .sub-marker-container .marker#boyle-heights-lincoln-heights-marker .pin, #app nav .map .sub-marker-container .marker#el-sereno-marker .pin, #app nav .map .sub-marker-container .marker#culver-marker .pin, #app nav .map .sub-marker-container .marker#palisades-marker .pin, #app nav .map .sub-marker-container .marker#bev-crest-bev-hills-marker .pin, #app nav .map .sub-marker-container .marker#sawtelle-century-city-marker .pin, #app nav .map .sub-marker-container .marker#malibu-topanga-marker .pin, #app nav .map .sub-marker-container .marker#thousand-oaks-marker .pin, #app nav .map .sub-marker-container .marker#vc-coast-marker .pin, #app nav .map .sub-marker-container .marker#lax-inglewood-marker .pin, #app nav .map .sub-marker-container .marker#inglewood-marker .pin, #app nav .map .sub-marker-container .marker#manhattan-hermosa-marker .pin, #app nav .map .sub-marker-container .marker#gardena-torrance-more-marker .pin, #app nav .map .sub-marker-container .marker#carson-marker .pin, #app nav .map .sub-marker-container .marker#pv-marker .pin, #app nav .map .sub-marker-container .marker#long-beach-marker .pin, #app nav .map .sub-marker-container .marker#seal-beach-marker .pin, #app nav .map .sub-marker-container .marker#arcadia-marker .pin, #app nav .map .sub-marker-container .marker#monrovia-marker .pin, #app nav .map .sub-marker-container .marker#whittier-narrows-marker .pin, #app nav .map .sub-marker-container .marker#inland-empire-marker .pin, #app nav .map .sub-marker-container .marker#exposition-park-marker .pin, #app nav .map .sub-marker-container .marker#watts-marker .pin, #app nav .map .sub-marker-container .marker#leimert-marker .pin, #app nav .map .sub-marker-container .marker#northern-gateway-cities-marker .pin, #app nav .map .sub-marker-container .marker#downey-norwalk-marker .pin, #app nav .map .sub-marker-container .marker#commerce-marker .pin, #app nav .map .sub-marker-container .marker#burbank-marker .pin, #app nav .map .sub-marker-container .marker#shadow-hills-marker .pin, #app nav .map .sub-marker-container .marker#noho-marker .pin, #app nav .map .sub-marker-container .marker#lake-balboa-marker .pin, #app nav .map .sub-marker-container .marker#chatsworth-marker .pin, #app nav .map .sub-marker-container .marker#warner-center-marker .pin, #app nav .map .sub-marker-container .marker#port-of-la-marker .pin, #app nav .map .sub-marker-container .marker#east-sgv-pomona-marker .pin, #app nav .map .sub-marker-container .marker#historic-south-central-marker .pin, #app nav .map .sub-marker-container .marker#van-nuys-marker .pin, #app nav .map .sub-marker-container .marker#north-sfv-marker .pin, #app nav .map .sub-marker-container .marker#baldwin-hills-marker .pin, #app nav .map .sub-marker-container .marker#glendale-marker .pin, #app nav .map .sub-marker-container .marker#pasadena-altadena-marker .pin, #app nav .map .sub-marker-container .marker#mpk-alhambra-marker .pin, #app nav .map .sub-marker-container .marker#mt-takao-marker .pin, #app nav .map .sub-marker-container .marker#otsu-marker .pin, #app nav .map .sub-marker-container .marker#kyoto-marker .pin, #app nav .map .sub-marker-container .marker#osaka-marker .pin, #app nav .map .sub-marker-container .marker#narita-marker .pin, #app nav .map .sub-marker-container .marker#atami-marker .pin, #app nav .map .sub-marker-container .marker#hiroshima-marker .pin, #app nav .map .sub-marker-container .marker#okayama-marker .pin, #app nav .map .sub-marker-container .marker#takahashi-marker .pin, #app nav .map .sub-marker-container .marker#fuji-marker .pin, #app nav .map .sub-marker-container .marker#koyasan-marker .pin, #app nav .map .sub-marker-container .marker#kinosaki-marker .pin, #app nav .map .sub-marker-container .marker#ine-marker .pin {
+#app nav .map .sub-marker-container .marker#dtla-marker .pin, #app nav .map .sub-marker-container .marker#echo-park-hifi-marker .pin, #app nav .map .sub-marker-container .marker#elysian-park-marker .pin, #app nav .map .sub-marker-container .marker#silver-lake-marker .pin, #app nav .map .sub-marker-container .marker#griffith-marker .pin, #app nav .map .sub-marker-container .marker#east-hollywood-marker .pin, #app nav .map .sub-marker-container .marker#ktown-marker .pin, #app nav .map .sub-marker-container .marker#windsor-larchmont-hancock-marker .pin, #app nav .map .sub-marker-container .marker#mid-wilshire-mid-city-marker .pin, #app nav .map .sub-marker-container .marker#fairfax-beverly-grove-marker .pin, #app nav .map .sub-marker-container .marker#hw-marker .pin, #app nav .map .sub-marker-container .marker#atwater-marker .pin, #app nav .map .sub-marker-container .marker#glassell-cypress-marker .pin, #app nav .map .sub-marker-container .marker#mt-washington-marker .pin, #app nav .map .sub-marker-container .marker#monterey-hills-hermon-marker .pin, #app nav .map .sub-marker-container .marker#boyle-heights-lincoln-heights-marker .pin, #app nav .map .sub-marker-container .marker#el-sereno-marker .pin, #app nav .map .sub-marker-container .marker#culver-marker .pin, #app nav .map .sub-marker-container .marker#palisades-marker .pin, #app nav .map .sub-marker-container .marker#bev-crest-bev-hills-marker .pin, #app nav .map .sub-marker-container .marker#sawtelle-century-city-marker .pin, #app nav .map .sub-marker-container .marker#malibu-topanga-marker .pin, #app nav .map .sub-marker-container .marker#thousand-oaks-marker .pin, #app nav .map .sub-marker-container .marker#vc-coast-marker .pin, #app nav .map .sub-marker-container .marker#lax-inglewood-marker .pin, #app nav .map .sub-marker-container .marker#inglewood-marker .pin, #app nav .map .sub-marker-container .marker#manhattan-hermosa-marker .pin, #app nav .map .sub-marker-container .marker#gardena-torrance-more-marker .pin, #app nav .map .sub-marker-container .marker#carson-marker .pin, #app nav .map .sub-marker-container .marker#pv-marker .pin, #app nav .map .sub-marker-container .marker#long-beach-marker .pin, #app nav .map .sub-marker-container .marker#seal-beach-marker .pin, #app nav .map .sub-marker-container .marker#arcadia-marker .pin, #app nav .map .sub-marker-container .marker#monrovia-marker .pin, #app nav .map .sub-marker-container .marker#whittier-narrows-marker .pin, #app nav .map .sub-marker-container .marker#inland-empire-marker .pin, #app nav .map .sub-marker-container .marker#exposition-park-marker .pin, #app nav .map .sub-marker-container .marker#watts-marker .pin, #app nav .map .sub-marker-container .marker#leimert-marker .pin, #app nav .map .sub-marker-container .marker#northern-gateway-cities-marker .pin, #app nav .map .sub-marker-container .marker#downey-norwalk-marker .pin, #app nav .map .sub-marker-container .marker#commerce-marker .pin, #app nav .map .sub-marker-container .marker#burbank-marker .pin, #app nav .map .sub-marker-container .marker#shadow-hills-marker .pin, #app nav .map .sub-marker-container .marker#noho-marker .pin, #app nav .map .sub-marker-container .marker#lake-balboa-marker .pin, #app nav .map .sub-marker-container .marker#chatsworth-marker .pin, #app nav .map .sub-marker-container .marker#warner-center-marker .pin, #app nav .map .sub-marker-container .marker#port-of-la-marker .pin, #app nav .map .sub-marker-container .marker#east-sgv-pomona-marker .pin, #app nav .map .sub-marker-container .marker#historic-south-central-marker .pin, #app nav .map .sub-marker-container .marker#van-nuys-marker .pin, #app nav .map .sub-marker-container .marker#north-sfv-marker .pin, #app nav .map .sub-marker-container .marker#baldwin-hills-marker .pin, #app nav .map .sub-marker-container .marker#glendale-marker .pin, #app nav .map .sub-marker-container .marker#pasadena-altadena-marker .pin, #app nav .map .sub-marker-container .marker#mpk-alhambra-marker .pin, #app nav .map .sub-marker-container .marker#mt-takao-marker .pin, #app nav .map .sub-marker-container .marker#otsu-marker .pin, #app nav .map .sub-marker-container .marker#kyoto-marker .pin, #app nav .map .sub-marker-container .marker#osaka-marker .pin, #app nav .map .sub-marker-container .marker#narita-marker .pin, #app nav .map .sub-marker-container .marker#atami-marker .pin, #app nav .map .sub-marker-container .marker#hiroshima-marker .pin, #app nav .map .sub-marker-container .marker#okayama-marker .pin, #app nav .map .sub-marker-container .marker#takahashi-marker .pin, #app nav .map .sub-marker-container .marker#fuji-marker .pin, #app nav .map .sub-marker-container .marker#koyasan-marker .pin, #app nav .map .sub-marker-container .marker#kinosaki-marker .pin, #app nav .map .sub-marker-container .marker#ine-marker .pin {
   margin-bottom: 3px;
   left: 8px;
 }
@@ -1233,7 +1233,7 @@ header #header-wrapper #logo-link #logo {
 #app nav .map .sub-marker-container .non-marker {
   font-size: 14px;
 }
-#app nav .map .sub-marker-container#central-la-sub-markers .marker, #app nav .map .sub-marker-container#eastside-nela-sub-markers .marker, #app nav .map .sub-marker-container#south-la-gateway-cities-sub-markers .marker {
+#app nav .map .sub-marker-container#central-la-sub-markers .marker, #app nav .map .sub-marker-container#nela-eastside-sub-markers .marker, #app nav .map .sub-marker-container#south-la-gateway-cities-sub-markers .marker {
   font-size: 14px;
 }
 #app nav .map .sub-marker-container#westside-more-sub-markers .marker, #app nav .map .sub-marker-container#sgv-more-sub-markers .marker, #app nav .map .sub-marker-container#sfv-more-sub-markers .marker {
@@ -1370,8 +1370,8 @@ header #header-wrapper #logo-link #logo {
 #app nav .tab-nav .tab-container .tab#central-la-tab {
   font-size: 20.325px;
 }
-#app nav .tab-nav .tab-container .tab#eastside-nela-tab {
-  font-size: 16.45px;
+#app nav .tab-nav .tab-container .tab#nela-eastside-tab {
+  font-size: 16.3px;
 }
 #app nav .tab-nav .tab-container .tab#westside-more-tab {
   font-size: 14.6px;
@@ -2694,7 +2694,7 @@ header #header-wrapper #logo-link #logo {
 #app main .content * .item-links-container .item-links#south-la-gateway-cities--links {
   max-height: 150px;
 }
-#app main .content * .item-links-container .item-links#eastside-nela--links {
+#app main .content * .item-links-container .item-links#nela-eastside--links {
   max-height: 150px;
 }
 #app main .content * .item-links-container .item-links#sgv-more--links {
@@ -3576,7 +3576,7 @@ dialog.close::backdrop {
   .content .south-la-gateway-cities .column:last-of-type {
     width: 390px;
   }
-  .content .eastside-nela .column {
+  .content .nela-eastside .column {
     width: 390px;
   }
   .content .sgv-more .column {
@@ -4469,7 +4469,7 @@ dialog.close::backdrop {
   #app main .content * .item-links-container .item-links#catalina--links,
   #app main .content * .item-links-container .item-links#sgv-more--links,
   #app main .content * .item-links-container .item-links#south-la-gateway-cities--links,
-  #app main .content * .item-links-container .item-links#eastside-nela--links {
+  #app main .content * .item-links-container .item-links#nela-eastside--links {
     max-height: unset !important;
   }
   #app main .content * .item-links-container .item-links#central-la--links li,
@@ -4479,7 +4479,7 @@ dialog.close::backdrop {
   #app main .content * .item-links-container .item-links#catalina--links li,
   #app main .content * .item-links-container .item-links#sgv-more--links li,
   #app main .content * .item-links-container .item-links#south-la-gateway-cities--links li,
-  #app main .content * .item-links-container .item-links#eastside-nela--links li {
+  #app main .content * .item-links-container .item-links#nela-eastside--links li {
     width: 100% !important;
   }
 }
@@ -4609,7 +4609,7 @@ dialog.close::backdrop {
     height: 48.5px !important;
     padding-right: 15px !important;
   }
-  nav .tab-nav .tab#eastside-nela-tab {
+  nav .tab-nav .tab#nela-eastside-tab {
     font-size: 14px !important;
   }
   nav .tab-nav .tab#westside-more-tab {
@@ -4705,7 +4705,7 @@ dialog.close::backdrop {
     top: 32% !important;
     left: 48% !important;
   }
-  nav .map .marker#eastside-nela {
+  nav .map .marker#nela-eastside {
     width: 55px !important;
   }
   nav .map .marker#sfv-more {
@@ -4736,6 +4736,11 @@ dialog.close::backdrop {
   }
   nav .map .marker#mt-washington-marker {
     width: 65px !important;
+  }
+  nav .map .marker#monterey-hills-hermon-marker {
+    left: 61.75% !important;
+    width: 55px !important;
+    max-width: 55px !important;
   }
   nav .map .marker#bev-crest-bev-hills-marker {
     top: 40% !important;
@@ -4814,6 +4819,16 @@ dialog.close::backdrop {
   }
   nav .map .marker#takayama-marker {
     top: 45.25% !important;
+  }
+  nav .map #south-pas-label {
+    top: 33% !important;
+    left: 75% !important;
+  }
+  nav .map #glendale-label {
+    top: 12% !important;
+  }
+  nav .map #la-river-nela {
+    left: 30% !important;
   }
   nav .map .sub-marker-container .marker {
     max-width: 80px !important;
@@ -5037,7 +5052,7 @@ dialog.close::backdrop {
     width: 120px !important;
     font-weight: 600 !important;
   }
-  nav .tab-nav .tab#eastside-nela-tab {
+  nav .tab-nav .tab#nela-eastside-tab {
     font-size: 13px !important;
   }
   nav .tab-nav .tab#westside-more-tab {
@@ -5482,7 +5497,7 @@ dialog.close::backdrop {
     max-width: 65px !important;
   }
   #mt-washington-marker {
-    left: 49% !important;
+    left: 47% !important;
   }
   #glendale-marker {
     left: 11% !important;
@@ -5506,7 +5521,7 @@ dialog.close::backdrop {
   nav .map .marker#central-la {
     width: 40px !important;
   }
-  nav .map .marker#eastside-nela {
+  nav .map .marker#nela-eastside {
     width: 45px !important;
     left: 61% !important;
   }
@@ -5585,7 +5600,7 @@ dialog.close::backdrop {
     padding-top: 8px;
     z-index: -1;
   }
-  #app nav .map .marker-container .marker#eastside-nela {
+  #app nav .map .marker-container .marker#nela-eastside {
     top: 33.5%;
     left: 61.4% !important;
     padding: 2px 4px;
