@@ -4830,6 +4830,36 @@ dialog.close::backdrop {
   nav .map #la-river-nela {
     left: 30% !important;
   }
+  nav .map #la-river-central {
+    left: 78% !important;
+  }
+  nav .map #nela-central {
+    left: 92% !important;
+  }
+  nav .map #sfv-nature {
+    top: 18% !important;
+  }
+  nav .map #sfv-glendale {
+    left: 95% !important;
+  }
+  nav .map #westside-sb {
+    top: 82% !important;
+  }
+  nav .map #sb-sp-channel {
+    top: 85.5% !important;
+  }
+  nav .map #sla-cla {
+    top: 17.5% !important;
+    left: 20% !important;
+  }
+  nav .map #sla-sb {
+    top: 79% !important;
+    left: 9% !important;
+  }
+  nav .map #sla-sgv {
+    top: 19.8% !important;
+    left: 79.25% !important;
+  }
   nav .map .sub-marker-container .marker {
     max-width: 80px !important;
   }
