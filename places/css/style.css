@@ -4836,6 +4836,9 @@ dialog.close::backdrop {
   nav .map #nela-central {
     left: 92% !important;
   }
+  nav .map #sgv-alhambra {
+    top: 50% !important;
+  }
   nav .map #sfv-nature {
     top: 18% !important;
   }
