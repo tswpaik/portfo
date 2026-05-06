@@ -4560,6 +4560,12 @@ dialog.close::backdrop {
   #tab-selector.japan {
     left: 125px !important;
   }
+  .dark .map .marker {
+    border-top: 3px solid #8fba70 !important;
+  }
+  .dark .map .marker.selected {
+    border-top-color: var(--light-red) !important;
+  }
   .header-tab {
     height: 75px !important;
     display: -webkit-box;
@@ -5162,12 +5168,6 @@ dialog.close::backdrop {
 @media only screen and (max-width: 460px) {
   .dark .map, .dark .tab-nav {
     border: none !important;
-  }
-  .dark .map .marker {
-    border-top: 3px solid #8fba70 !important;
-  }
-  .dark .map .marker.selected {
-    border-top-color: var(--light-red) !important;
   }
   .dark #mobile-toggle #button-body i {
     color: white !important;
