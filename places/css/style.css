@@ -3920,6 +3920,10 @@ dialog.close::backdrop {
     padding-left: 80px !important;
   }
 }
+.dark * {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
 .dark, .dark body {
   background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, #303030), color-stop(40%, #222)) !important;
   background-image: linear-gradient(to right, #303030 40%, #222 40%) !important;
