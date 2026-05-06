@@ -3920,10 +3920,6 @@ dialog.close::backdrop {
     padding-left: 80px !important;
   }
 }
-.dark * {
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-}
 .dark, .dark body {
   background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, #303030), color-stop(40%, #222)) !important;
   background-image: linear-gradient(to right, #303030 40%, #222 40%) !important;
@@ -4106,6 +4102,8 @@ dialog.close::backdrop {
 .dark .tab-nav .filter {
   color: white !important;
   background-color: #2a2a2a !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 .dark .tab-nav .filter .emoji {
   -webkit-transform: scale(0.9) translateY(1px) !important;
