@@ -319,7 +319,7 @@ header #header-wrapper #tab-selector {
   top: 0px;
   height: 125px;
   background-color: #eee;
-  border-top: 8px solid var(--light-red);
+  border-top: 10px solid var(--light-red);
   -webkit-transition: all 0.5s var(--ease-out-quint);
   transition: all 0.5s var(--ease-out-quint);
   -webkit-transition-property: width, left;
@@ -331,7 +331,7 @@ header #header-wrapper #tab-selector.scrolled {
   height: 85px;
 }
 header #header-wrapper #tab-selector.los-angeles {
-  width: 230px;
+  width: 232px;
   left: 30px;
 }
 header #header-wrapper #tab-selector.japan {
