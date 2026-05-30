@@ -4085,7 +4085,6 @@ dialog.close::backdrop {
 .dark .tab-nav .tab:hover {
   background: #D7612A !important;
   color: white !important;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
 }
 .dark .tab-nav .tab.selected, .dark .tab-nav .tab.selected::before {
   background: #444 !important;
