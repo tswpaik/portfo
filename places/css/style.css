@@ -4745,6 +4745,14 @@ dialog.close::backdrop {
   nav .map .marker#atwater-marker, nav .map .marker#glassell-marker, nav .map .marker#cypress-marker, nav .map .marker#lincoln-heights-marker, nav .map .marker#boyle-heights-marker {
     width: 50px !important;
   }
+  nav .map .marker#glassell-marker {
+    top: 20.25% !important;
+    width: 48px !important;
+  }
+  nav .map .marker#cypress-marker {
+    top: 32.25% !important;
+    width: 48px !important;
+  }
   nav .map .marker#boyle-heights-marker {
     top: 78% !important;
   }
