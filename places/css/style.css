@@ -4728,8 +4728,8 @@ dialog.close::backdrop {
   nav .map .marker#south-bay-harbor {
     width: 70px !important;
   }
-  nav .map .marker#echo-park-hifi-marker, nav .map .marker#elysian-park-marker {
-    width: 50px !important;
+  nav .map .marker#echo-park-hifi-marker br, nav .map .marker#elysian-park-marker br {
+    display: none !important;
   }
   nav .map .marker#ktown-marker {
     top: 68% !important;
@@ -5206,7 +5206,8 @@ dialog.close::backdrop {
     top: 69% !important;
   }
   #app nav .map .sub-marker-container .marker#elysian-park-marker {
-    top: 64% !important;
+    top: 65% !important;
+    left: 80% !important;
   }
   #baldwin-hills-marker {
     left: 5.5% !important;
@@ -5711,9 +5712,8 @@ dialog.close::backdrop {
     z-index: -1;
   }
   #app nav .map .sub-marker-container .marker#echo-park-hifi-marker {
-    left: 75.25% !important;
-    top: 55% !important;
-    width: 46px !important;
+    left: 73.25% !important;
+    top: 54% !important;
   }
   #app nav .map .sub-marker-container .marker#ktown-marker {
     top: 69.5% !important;
@@ -5731,7 +5731,7 @@ dialog.close::backdrop {
     z-index: 1;
   }
   #app nav .map .sub-marker-container .marker#silver-lake-marker {
-    top: 44% !important;
+    top: 42% !important;
     left: 64.3% !important;
     width: 46px !important;
     z-index: 1;
