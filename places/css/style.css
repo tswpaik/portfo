@@ -4728,7 +4728,10 @@ dialog.close::backdrop {
   nav .map .marker#south-bay-harbor {
     width: 70px !important;
   }
-  nav .map .marker#echo-park-hifi-marker br, nav .map .marker#elysian-park-marker br {
+  nav .map .marker#elysian-park-marker {
+    top: 62% !important;
+  }
+  nav .map .marker#elysian-park-marker br {
     display: none !important;
   }
   nav .map .marker#ktown-marker {
