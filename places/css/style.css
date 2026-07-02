@@ -4729,7 +4729,7 @@ dialog.close::backdrop {
     width: 70px !important;
   }
   nav .map .marker#echo-park-hifi-marker, nav .map .marker#elysian-park-marker {
-    width: 45px !important;
+    width: 50px !important;
   }
   nav .map .marker#ktown-marker {
     top: 68% !important;
@@ -5205,6 +5205,9 @@ dialog.close::backdrop {
   #lincoln-heights-boyle-heights-marker {
     top: 69% !important;
   }
+  #app nav .map .sub-marker-container .marker#elysian-park-marker {
+    top: 64% !important;
+  }
   #baldwin-hills-marker {
     left: 5.5% !important;
     max-width: 45px !important;
@@ -5523,7 +5526,7 @@ dialog.close::backdrop {
     top: 56% !important;
   }
   #frogtown-marker {
-    left: 78% !important;
+    left: 31.25% !important;
   }
   #weho-marker {
     left: 22.5% !important;
@@ -5708,12 +5711,9 @@ dialog.close::backdrop {
     z-index: -1;
   }
   #app nav .map .sub-marker-container .marker#echo-park-hifi-marker {
-    left: 69.25% !important;
-    top: 57.2% !important;
+    left: 75.25% !important;
+    top: 55% !important;
     width: 46px !important;
-  }
-  #app nav .map .sub-marker-container .marker#elysian-park-marker {
-    top: 57.2% !important;
   }
   #app nav .map .sub-marker-container .marker#ktown-marker {
     top: 69.5% !important;
