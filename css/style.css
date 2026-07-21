@@ -1604,6 +1604,7 @@ footer p a:hover, footer p a:focus {
 footer p span {
   font-size: inherit;
   color: inherit;
+  font-weight: inherit;
 }
 
 #development .timeline-container #thinkful-p {
